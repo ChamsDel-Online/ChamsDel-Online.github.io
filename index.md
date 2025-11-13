@@ -376,6 +376,82 @@ layout: default
     opacity: 0.95;
   }
 
+  /* Build in Public Section */
+  .v0-social-banner {
+    background: linear-gradient(135deg, #1da1f2 0%, #0c85d0 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .v0-social-banner::before {
+    content: '𝕏';
+    position: absolute;
+    font-size: 15rem;
+    opacity: 0.05;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+  }
+
+  .v0-social-banner-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .v0-social-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .v0-social-banner h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .v0-social-banner p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .v0-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: white;
+    color: #1da1f2;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: var(--shadow-lg);
+    font-size: 1.125rem;
+  }
+
+  .v0-social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
   /* Responsive */
   @media (max-width: 768px) {
     .v0-hero h1 {
@@ -509,6 +585,25 @@ layout: default
       <div class="v0-stat">
         <div class="v0-stat-number">100%</div>
         <div class="v0-stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="v0-section">
+  <div class="v0-container">
+    <div class="v0-social-banner">
+      <div class="v0-social-banner-content">
+        <span class="v0-social-badge">🚀 Building in Public</span>
+        <h3>Follow Our Journey on X</h3>
+        <p>
+          We believe in transparency and community. Follow along as we share our wins, 
+          learnings, and behind-the-scenes glimpses of building great apps.
+        </p>
+        <a href="https://x.com/chamindg" target="_blank" class="v0-social-link">
+          <span>Follow @chamindg</span>
+          <span>→</span>
+        </a>
       </div>
     </div>
   </div>
