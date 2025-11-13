@@ -578,34 +578,36 @@ layout: default
     <div class="v0-grid">
       <div class="v0-project">
         <div class="v0-project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-          ✈️
+          📋
         </div>
         <div class="v0-project-content">
-          <span class="v0-project-tag">Travel & Tourism</span>
-          <h3>TripsToGo</h3>
+          <span class="v0-project-tag">Compliance & Training</span>
+          <h3>CompliQuiz</h3>
           <p>
-            A modern travel planning platform that helps users discover and book 
-            amazing experiences. Built with React, TypeScript, and Supabase.
+            An AI-powered compliance quiz platform that helps businesses identify 
+            applicable regulatory frameworks and train teams effectively. 
+            Smart assessments for modern compliance needs.
           </p>
-          <a href="https://github.com/ChamsDel-Online/tripstogo" class="v0-project-link">
-            View Project →
+          <a href="https://CompliQuiz.ai" class="v0-project-link">
+            Visit Site →
           </a>
         </div>
       </div>
 
       <div class="v0-project">
         <div class="v0-project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-          📖
+          💭
         </div>
         <div class="v0-project-content">
-          <span class="v0-project-tag">Social & Community</span>
-          <h3>StarterStory</h3>
+          <span class="v0-project-tag">Personal Growth</span>
+          <h3>DearMeWiser</h3>
           <p>
-            iOS app for sharing and discovering entrepreneurial journeys. 
-            React Native, Expo, and beautiful UI components.
+            A thoughtful companion app that helps you tap into your inner wisdom 
+            through guided reflection and journaling. Your personal space for 
+            growth and self-discovery.
           </p>
-          <a href="#" class="v0-project-link">
-            Coming Soon →
+          <a href="https://DearMeWiser.com" class="v0-project-link">
+            Visit Site →
           </a>
         </div>
       </div>
@@ -616,13 +618,13 @@ layout: default
         </div>
         <div class="v0-project-content">
           <span class="v0-project-tag">Productivity & AI</span>
-          <h3>X Reply Assistant</h3>
+          <h3>TwitPly (an X Reply Assistant)</h3>
           <p>
             Chrome extension that uses AI to help you craft better replies on X (Twitter). 
             Smart, context-aware, and fast.
           </p>
-          <a href="https://github.com/ChamsDel-Online/x-reply-assistant" class="v0-project-link">
-            View Project →
+          <a href="#" class="v0-project-link">
+            Learn More →
           </a>
         </div>
       </div>
@@ -640,7 +642,6 @@ layout: default
       </p>
       <div class="v0-btn-group">
         <a href="mailto:contact@chamsdel.com" class="v0-btn v0-btn-primary">Get In Touch</a>
-        <a href="https://github.com/ChamsDel-Online" class="v0-btn v0-btn-secondary">View GitHub</a>
       </div>
     </div>
   </div>
