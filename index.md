@@ -723,6 +723,24 @@ layout: default
           </a>
         </div>
       </div>
+
+      <div class="v0-project">
+        <div class="v0-project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+          🍽️
+        </div>
+        <div class="v0-project-content">
+          <span class="v0-project-tag">Food & Lifestyle</span>
+          <h3>PickEats</h3>
+          <p>
+            Never stress about "what to eat" again. PickEats helps you discover 
+            the perfect meal, whether you're dining out or cooking at home. 
+            Smart food decisions made easy.
+          </p>
+          <a href="https://PickEats.app" class="v0-project-link">
+            Visit Site →
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -736,7 +754,7 @@ layout: default
         we'd love to help bring it to life.
       </p>
       <div class="v0-btn-group">
-        <a href="mailto:contact@chamsdel.com" class="v0-btn v0-btn-primary">Get In Touch</a>
+        <a href="mailto:chaminda@chamsdel.online" class="v0-btn v0-btn-primary">Get In Touch</a>
       </div>
     </div>
   </div>
