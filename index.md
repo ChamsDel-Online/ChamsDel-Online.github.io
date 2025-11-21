@@ -501,11 +501,11 @@ layout: default
 <div class="v0-section">
   <div class="v0-container">
     <div class="v0-section-header">
-      <span class="v0-section-badge">What We Do</span>
-      <h2>Building Apps End-to-End</h2>
+      <span class="v0-section-badge">What We Build</span>
+      <h2>Our Toolkit & Approach</h2>
       <p class="v0-section-intro">
-        We're a lean, fast-moving studio that turns ideas into shipped products. 
-        From mobile apps to web platforms, we handle everything.
+        Over the years, we've shipped apps across different platforms and domains. 
+        Here's what we've learned and the tools we've come to rely on.
       </p>
     </div>
 
@@ -514,8 +514,9 @@ layout: default
         <div class="v0-card-icon v0-card-icon-1">📱</div>
         <h3>Mobile Apps</h3>
         <p>
-          Native iOS and Android apps built with React Native and Expo. 
-          Fast development, beautiful UX, and seamless deployment to app stores.
+          We've built several iOS and Android apps using React Native and Expo. 
+          The cross-platform approach lets us ship faster while maintaining native feel. 
+          Each launch teaches us something new about mobile UX patterns.
         </p>
       </div>
 
@@ -523,8 +524,9 @@ layout: default
         <div class="v0-card-icon v0-card-icon-2">🌐</div>
         <h3>Web Applications</h3>
         <p>
-          Modern web apps with React, TypeScript, and cutting-edge frameworks. 
-          Responsive, performant, and built for scale.
+          From simple landing pages to complex web apps, we use React and TypeScript 
+          to build responsive experiences. The web's flexibility lets us iterate quickly 
+          and reach users everywhere.
         </p>
       </div>
 
@@ -532,8 +534,9 @@ layout: default
         <div class="v0-card-icon v0-card-icon-3">🤖</div>
         <h3>AI Integration</h3>
         <p>
-          Leverage the power of LLMs and AI to create intelligent features 
-          that enhance your product and delight users.
+          We've been experimenting with LLMs and AI features in our apps. 
+          It's fascinating to see how AI can enhance user experiences—from smart 
+          content generation to personalized interactions.
         </p>
       </div>
 
@@ -541,8 +544,9 @@ layout: default
         <div class="v0-card-icon v0-card-icon-4">🎨</div>
         <h3>UI/UX Design</h3>
         <p>
-          Beautiful, intuitive interfaces designed with user research and 
-          modern design principles. Every pixel matters.
+          Good design makes all the difference. We've learned that simplicity and 
+          clarity beat complexity every time. Each app iteration helps us refine 
+          our design instincts.
         </p>
       </div>
 
@@ -550,8 +554,9 @@ layout: default
         <div class="v0-card-icon v0-card-icon-5">🔧</div>
         <h3>Backend & APIs</h3>
         <p>
-          Robust backends with Supabase, Firebase, or custom Node.js solutions. 
-          Real-time data, auth, and scalable architecture.
+          We've used Supabase, Firebase, and custom Node.js backends depending on 
+          the project needs. The right backend choice can make or break an app's 
+          performance and scalability.
         </p>
       </div>
 
@@ -559,32 +564,10 @@ layout: default
         <div class="v0-card-icon v0-card-icon-6">🚢</div>
         <h3>Publishing & Launch</h3>
         <p>
-          We handle the entire deployment process—App Store, Google Play, 
-          web hosting, and ongoing maintenance.
+          Getting apps into the App Store, Google Play, and live on the web is 
+          always a milestone. We've navigated the submission processes, learned 
+          from rejections, and celebrated each successful launch.
         </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="v0-section" style="background: white;">
-  <div class="v0-container">
-    <div class="v0-stats">
-      <div class="v0-stat">
-        <div class="v0-stat-number">12+</div>
-        <div class="v0-stat-label">Apps Published</div>
-      </div>
-      <div class="v0-stat">
-        <div class="v0-stat-number">50K+</div>
-        <div class="v0-stat-label">Active Users</div>
-      </div>
-      <div class="v0-stat">
-        <div class="v0-stat-number">2-6</div>
-        <div class="v0-stat-label">Weeks to Launch</div>
-      </div>
-      <div class="v0-stat">
-        <div class="v0-stat-number">100%</div>
-        <div class="v0-stat-label">Client Satisfaction</div>
       </div>
     </div>
   </div>
@@ -715,11 +698,11 @@ layout: default
           <span class="v0-project-tag">Productivity & AI</span>
           <h3>TwitPly (an X Reply Assistant)</h3>
           <p>
-            Chrome extension that uses AI to help you craft better replies on X (Twitter). 
-            Smart, context-aware, and fast.
+            Reply habit tracking and AI-assisted reply generation for X (Twitter). 
+            Chrome extension dropping soon—built for creators who want to grow their audience fast by being consistently responsive.
           </p>
-          <a href="#" class="v0-project-link">
-            Learn More →
+          <a href="https://twitply.com" class="v0-project-link">
+            Visit Site →
           </a>
         </div>
       </div>
