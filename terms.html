@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms of Service - ChamsDel Online LLC">
+  <title>Terms of Service - ChamsDel Online</title>
+  
+  <style>
+  :root {
+    --color-primary: #000000;
+    --color-secondary: #666666;
+    --color-accent: #002455;
+    --color-bg: #ffffff;
+    --color-bg-alt: #fafafa;
+    --color-border: #e5e5e5;
+    --color-text: #000000;
+    --color-text-secondary: #666666;
+    --border-radius: 0.5rem;
+    --transition: all 0.2s ease;
+  }
+
+  [data-theme="dark"] {
+    --color-primary: #ffffff;
+    --color-secondary: #999999;
+    --color-accent: #3B6FA8;
+    --color-bg: #000000;
+    --color-bg-alt: #111111;
+    --color-border: #333333;
+    --color-text: #ffffff;
+    --color-text-secondary: #999999;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1.25rem;
+  }
+
+  .theme-toggle:hover {
+    background: var(--color-bg-alt);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .header {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 3rem;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+  }
+
+  .header p {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+  }
+
+  .back-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+
+  .content {
+    color: var(--color-text);
+  }
+
+  .content h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+
+  .content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .content p {
+    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+  }
+
+  .content ul, .content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+  }
+
+  .content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .content strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+  }
+
+  .footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2rem;
+    }
+
+    .theme-toggle {
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+
+  <div class="container">
+    <div class="header">
+      <a href="/" class="back-link">← Back to Home</a>
+      <h1>Terms of Service</h1>
+      <p>Last updated: January 2025</p>
+    </div>
+
+    <div class="content">
+      <p>
+        These Terms of Service ("Terms") govern your access to and use of the websites, applications, 
+        and services operated by ChamsDel Online LLC ("we," "our," or "us"), including but not limited 
+        to CompliQuiz, TwitPly, DearMeWiser, PickEats, JanFifteenth.club, and chamsdel.online 
+        (collectively, the "Services").
+      </p>
+
+      <p>
+        By accessing or using our Services, you agree to be bound by these Terms. If you disagree with 
+        any part of these Terms, you may not access or use our Services.
+      </p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        By accessing, browsing, or using our Services, you acknowledge that you have read, understood, 
+        and agree to be bound by these Terms and to comply with all applicable laws and regulations. 
+        If you do not agree with these Terms, you must not use our Services.
+      </p>
+
+      <h2>2. Description of Services</h2>
+      <p>
+        ChamsDel Online LLC provides various web-based applications and services, including:
+      </p>
+      <ul>
+        <li>Compliance assessment and training tools</li>
+        <li>Productivity and AI-powered applications</li>
+        <li>Personal growth and wellness applications</li>
+        <li>Food and lifestyle applications</li>
+        <li>Founder journey and community platforms</li>
+      </ul>
+      <p>
+        We reserve the right to modify, suspend, or discontinue any part of our Services at any time 
+        without prior notice.
+      </p>
+
+      <h2>3. User Accounts</h2>
+      <p>
+        Some of our Services may require you to create an account. When you create an account, you agree to:
+      </p>
+      <ul>
+        <li>Provide accurate, current, and complete information</li>
+        <li>Maintain and update your information to keep it accurate</li>
+        <li>Maintain the security of your account credentials</li>
+        <li>Accept responsibility for all activities under your account</li>
+        <li>Notify us immediately of any unauthorized use of your account</li>
+      </ul>
+
+      <h2>4. Acceptable Use</h2>
+      <p>You agree not to use our Services to:</p>
+      <ul>
+        <li>Violate any applicable laws or regulations</li>
+        <li>Infringe upon the rights of others</li>
+        <li>Transmit any harmful, offensive, or illegal content</li>
+        <li>Interfere with or disrupt the Services or servers</li>
+        <li>Attempt to gain unauthorized access to any part of the Services</li>
+        <li>Use automated systems to access the Services without permission</li>
+        <li>Impersonate any person or entity</li>
+        <li>Collect or store personal data about other users without consent</li>
+      </ul>
+
+      <h2>5. Intellectual Property Rights</h2>
+      <p>
+        All content, features, and functionality of our Services, including but not limited to text, 
+        graphics, logos, icons, images, audio clips, digital downloads, and software, are owned by 
+        ChamsDel Online LLC or its licensors and are protected by international copyright, trademark, 
+        patent, trade secret, and other intellectual property laws.
+      </p>
+      <p>
+        You may not reproduce, distribute, modify, create derivative works of, publicly display, 
+        publicly perform, republish, download, store, or transmit any of the material on our Services 
+        without our prior written consent.
+      </p>
+
+      <h2>6. User Content</h2>
+      <p>
+        Some Services may allow you to submit, post, or share content. By submitting content, you grant 
+        us a worldwide, non-exclusive, royalty-free, perpetual, irrevocable, and fully sublicensable 
+        right to use, reproduce, modify, adapt, publish, translate, create derivative works from, 
+        distribute, and display such content in any media.
+      </p>
+      <p>
+        You represent and warrant that you own or have the necessary rights to grant the license above 
+        and that your content does not violate any third-party rights.
+      </p>
+
+      <h2>7. Payment Terms</h2>
+      <p>
+        Some Services may require payment. By purchasing a subscription or making a payment, you agree to:
+      </p>
+      <ul>
+        <li>Provide accurate billing information</li>
+        <li>Pay all fees associated with your purchase</li>
+        <li>Authorize us to charge your payment method</li>
+        <li>Understand that all sales are final unless otherwise stated</li>
+      </ul>
+      <p>
+        We reserve the right to change our pricing at any time. Price changes will not affect existing 
+        subscriptions during their current term.
+      </p>
+
+      <h2>8. Refund Policy</h2>
+      <p>
+        Refund policies vary by Service. Please refer to the specific Service's terms or contact us at 
+        <a href="mailto:support@chamsdel.online">support@chamsdel.online</a> for refund inquiries. 
+        Generally, digital products and services are non-refundable unless required by law or specified 
+        in the Service's terms.
+      </p>
+
+      <h2>9. Disclaimers</h2>
+      <p>
+        <strong>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, 
+        EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, 
+        FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</strong>
+      </p>
+      <p>
+        We do not warrant that the Services will be uninterrupted, secure, or error-free, or that 
+        defects will be corrected. We do not warrant or make any representations regarding the use 
+        or results of the Services in terms of accuracy, reliability, or otherwise.
+      </p>
+
+      <h2>10. Limitation of Liability</h2>
+      <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY LAW, CHAMSDEL ONLINE LLC SHALL NOT BE LIABLE FOR ANY 
+        INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS 
+        OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, 
+        OR OTHER INTANGIBLE LOSSES, RESULTING FROM YOUR USE OF THE SERVICES.
+      </p>
+
+      <h2>11. Indemnification</h2>
+      <p>
+        You agree to indemnify, defend, and hold harmless ChamsDel Online LLC and its officers, 
+        directors, employees, and agents from and against any claims, liabilities, damages, losses, 
+        and expenses, including reasonable attorneys' fees, arising out of or in any way connected 
+        with your use of the Services or violation of these Terms.
+      </p>
+
+      <h2>12. Termination</h2>
+      <p>
+        We may terminate or suspend your access to our Services immediately, without prior notice, 
+        for any reason, including if you breach these Terms. Upon termination, your right to use 
+        the Services will cease immediately.
+      </p>
+
+      <h2>13. Governing Law</h2>
+      <p>
+        These Terms shall be governed by and construed in accordance with the laws of the State of 
+        Nevada, United States, without regard to its conflict of law provisions. Any disputes arising 
+        from these Terms or your use of the Services shall be subject to the exclusive jurisdiction 
+        of the courts located in Las Vegas, Nevada.
+      </p>
+
+      <h2>14. Changes to Terms</h2>
+      <p>
+        We reserve the right to modify these Terms at any time. We will notify users of any material 
+        changes by posting the new Terms on this page and updating the "Last updated" date. Your 
+        continued use of the Services after such modifications constitutes acceptance of the updated Terms.
+      </p>
+
+      <h2>15. Severability</h2>
+      <p>
+        If any provision of these Terms is found to be unenforceable or invalid, that provision shall 
+        be limited or eliminated to the minimum extent necessary, and the remaining provisions shall 
+        remain in full force and effect.
+      </p>
+
+      <h2>16. Entire Agreement</h2>
+      <p>
+        These Terms constitute the entire agreement between you and ChamsDel Online LLC regarding the 
+        use of our Services and supersede all prior agreements and understandings.
+      </p>
+
+      <h2>17. Contact Information</h2>
+      <p>
+        If you have any questions about these Terms of Service, please contact us at:
+      </p>
+      <p>
+        <strong>ChamsDel Online LLC</strong><br>
+        304 S. Jones Blvd #3646<br>
+        Las Vegas, NV 89107<br>
+        United States<br><br>
+        Email: <a href="mailto:support@chamsdel.online">support@chamsdel.online</a>
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>
+        © 2025 ChamsDel Online LLC. All rights reserved. | 
+        <a href="/">Home</a> | 
+        <a href="/privacy.html">Privacy Policy</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+    
+    function updateThemeIcon(theme) {
+      themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+  </script>
+</body>
+</html>
+

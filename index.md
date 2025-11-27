@@ -6,7 +6,7 @@ layout: default
   :root {
     --color-primary: #000000;
     --color-secondary: #666666;
-    --color-accent: #0066ff;
+    --color-accent: #134686;
     --color-bg: #ffffff;
     --color-bg-alt: #fafafa;
     --color-border: #e5e5e5;
@@ -19,7 +19,7 @@ layout: default
   [data-theme="dark"] {
     --color-primary: #ffffff;
     --color-secondary: #999999;
-    --color-accent: #3b82f6;
+    --color-accent: #4A7BA7;
     --color-bg: #000000;
     --color-bg-alt: #111111;
     --color-border: #333333;
@@ -80,12 +80,12 @@ layout: default
     display: inline-block;
     padding: 0.5rem 1rem;
     background: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-accent);
     border-radius: 2rem;
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 2rem;
-    color: var(--color-text-secondary);
+    color: var(--color-accent);
   }
 
   .v0-hero h1 {
@@ -138,23 +138,24 @@ layout: default
   }
 
   .v0-btn-primary {
-    background: var(--color-text);
-    color: var(--color-bg);
-    border-color: var(--color-text);
+    background: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
   }
 
   .v0-btn-primary:hover {
-    background: var(--color-text-secondary);
-    border-color: var(--color-text-secondary);
+    opacity: 0.9;
+    transform: translateY(-1px);
   }
 
   [data-theme="dark"] .v0-btn-primary {
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-accent);
+    color: white;
   }
 
   [data-theme="dark"] .v0-btn-primary:hover {
-    background: var(--color-secondary);
+    opacity: 0.9;
+    transform: translateY(-1px);
   }
 
   .v0-btn-secondary {
@@ -165,6 +166,8 @@ layout: default
 
   .v0-btn-secondary:hover {
     background: var(--color-bg-alt);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
   }
 
   /* Section */
@@ -186,8 +189,8 @@ layout: default
     display: inline-block;
     padding: 0.5rem 1rem;
     background: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
-    color: var(--color-text-secondary);
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
     border-radius: 2rem;
     font-size: 0.875rem;
     font-weight: 600;
@@ -227,7 +230,8 @@ layout: default
   }
 
   .v0-card:hover {
-    border-color: var(--color-text);
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 12px rgba(19, 70, 134, 0.15);
   }
 
   .v0-card-icon {
@@ -275,16 +279,16 @@ layout: default
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-accent);
+    color: white;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
   }
 
   [data-theme="dark"] .v0-step-number {
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-accent);
+    color: white;
   }
 
   .v0-step h3 {
@@ -309,7 +313,8 @@ layout: default
   }
 
   .v0-project:hover {
-    border-color: var(--color-text);
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 12px rgba(19, 70, 134, 0.15);
   }
 
   .v0-project-image {
@@ -449,12 +454,12 @@ layout: default
     display: inline-block;
     padding: 0.5rem 1rem;
     background: var(--color-bg);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-accent);
     border-radius: 2rem;
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--color-text-secondary);
+    color: var(--color-accent);
   }
 
   .v0-social-banner h3 {
@@ -478,24 +483,24 @@ layout: default
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 2rem;
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-accent);
+    color: white;
     border-radius: var(--border-radius);
     font-weight: 700;
     text-decoration: none;
     transition: var(--transition);
     font-size: 1.125rem;
-    border: 1px solid var(--color-text);
+    border: 1px solid var(--color-accent);
   }
 
   .v0-social-link:hover {
-    background: var(--color-text-secondary);
-    border-color: var(--color-text-secondary);
+    opacity: 0.9;
+    transform: translateY(-1px);
   }
 
   [data-theme="dark"] .v0-social-link {
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-accent);
+    color: white;
   }
 
   /* Footer */
@@ -507,6 +512,16 @@ layout: default
 
   .v0-footer p {
     color: var(--color-text-secondary);
+  }
+
+  .v0-footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+
+  .v0-footer a:hover {
+    text-decoration: underline;
   }
 
   /* Responsive */
@@ -555,7 +570,7 @@ layout: default
       <span class="v0-badge">Building in Public</span>
       <h1>Chaminda Delpagodage</h1>
       <p class="v0-hero-bio">
-        <strong>Father of two • CISO & VP Technical Operations</strong><br>
+        <strong>Technology executive with nearly 2 decades of experience in Cybersecurity, SRE, DevOps, and Leadership.</strong><br>
         I'm actively building my own founder journey and sharing the process publicly.
       </p>
       <p class="v0-hero-subtitle">
@@ -565,6 +580,7 @@ layout: default
       <div class="v0-btn-group">
         <a href="#projects" class="v0-btn v0-btn-primary">See What I'm Building</a>
         <a href="https://x.com/chamindg" target="_blank" class="v0-btn v0-btn-secondary">Follow @chamindg</a>
+        <a href="https://www.linkedin.com/in/chamindadelpagodage/" target="_blank" class="v0-btn v0-btn-secondary">LinkedIn</a>
       </div>
     </div>
   </div>
@@ -576,7 +592,7 @@ layout: default
       <span class="v0-section-badge">What I Build</span>
       <h2>My Toolkit & Approach</h2>
       <p class="v0-section-intro">
-        Over the years, I've shipped apps across different platforms and domains. 
+        I've shipped apps across different platforms and domains. 
         Here's what I've learned and the tools I've come to rely on.
       </p>
     </div>
@@ -586,7 +602,8 @@ layout: default
         <div class="v0-card-icon">📱</div>
         <h3>Mobile Apps</h3>
         <p>
-          I've built several iOS and Android apps using React Native and Expo. 
+          I've built several iOS apps using React Native and Expo. 
+          I use Figma for app design and Supabase for backend. 
           The cross-platform approach lets me ship faster while maintaining native feel. 
           Each launch teaches me something new about mobile UX patterns.
         </p>
@@ -597,8 +614,8 @@ layout: default
         <h3>Web Applications</h3>
         <p>
           From simple landing pages to complex web apps, I use React and TypeScript 
-          to build responsive experiences. The web's flexibility lets me iterate quickly 
-          and reach users everywhere.
+          to build responsive experiences. I use Supabase for backend and Vercel for hosting. 
+          The web's flexibility lets me iterate quickly and reach users everywhere.
         </p>
       </div>
 
@@ -607,6 +624,7 @@ layout: default
         <h3>AI Integration</h3>
         <p>
           I've been experimenting with LLMs and AI features in my apps. 
+          I use RAG (Retrieval-Augmented Generation) with LLMs for enhanced context accuracy. 
           It's fascinating to see how AI can enhance user experiences—from smart 
           content generation to personalized interactions.
         </p>
@@ -616,8 +634,8 @@ layout: default
         <div class="v0-card-icon">🎨</div>
         <h3>UI/UX Design</h3>
         <p>
-          Good design makes all the difference. I've learned that simplicity and 
-          clarity beat complexity every time. Each app iteration helps me refine 
+          Good design makes all the difference. I use Figma for app design and Canva for graphic design. 
+          I've learned that simplicity and clarity beat complexity every time. Each app iteration helps me refine 
           my design instincts.
         </p>
       </div>
@@ -626,7 +644,7 @@ layout: default
         <div class="v0-card-icon">🔧</div>
         <h3>Backend & APIs</h3>
         <p>
-          I've used Supabase, Firebase, and custom Node.js backends depending on 
+          I use Supabase as backend and Vercel for hosting APIs. I also build custom Node.js backends depending on 
           the project needs. The right backend choice can make or break an app's 
           performance and scalability.
         </p>
@@ -636,7 +654,7 @@ layout: default
         <div class="v0-card-icon">🚢</div>
         <h3>Publishing & Launch</h3>
         <p>
-          Getting apps into the App Store, Google Play, and live on the web is 
+          Getting apps into the App Store, Chrome Web Store (browser extensions), and live on the web is 
           always a milestone. I've navigated the submission processes, learned 
           from rejections, and celebrated each successful launch.
         </p>
@@ -670,8 +688,9 @@ layout: default
       <span class="v0-section-badge">The Recipe</span>
       <h2>How I Ship</h2>
       <p class="v0-section-intro">
-        No overthinking. No endless planning docs. Just ship, learn, iterate. 
-        Here's the playbook I run on every app.
+        I keep it simple: ship, learn, iterate. No overthinking, no endless planning docs. 
+        I maintain an agile mindset and embrace failing fast as a path to learning and growth. 
+        Here's the playbook I follow for every app.
       </p>
     </div>
 
@@ -698,7 +717,7 @@ layout: default
         <span class="v0-step-number">3</span>
         <h3>Learn Quick</h3>
         <p>
-          Watch what users do (not what they say). 
+          Watch what users do (not what they say). I use Reddit extensively for user feedback. 
           Double down on what works, kill what doesn't.
         </p>
       </div>
@@ -738,8 +757,9 @@ layout: default
           </div>
           <h3>CompliQuiz</h3>
           <p>
-            AI-powered compliance training that doesn't suck. Take quizzes, 
-            learn frameworks, get certified. Currently free with lifetime access—grab it while you can!
+            Discover which compliance frameworks apply to your business in 60 seconds. 
+            Scan your website, take the assessment, and get AI-powered guidance on PCI DSS, SOC 2, and more. 
+            Free assessment available—upgrade to Premium for full requirement tracking.
           </p>
           <a href="https://CompliQuiz.ai" class="v0-project-link">
             Try it Now →
@@ -798,7 +818,7 @@ layout: default
           </div>
           <h3>PickEats</h3>
           <p>
-            End the "what's for dinner?" debate. Swipe, pick, eat. We're testing with early users—
+            End the "what's for dinner?" debate. Swipe, pick, eat. I'm testing with early users—
             join the waitlist and help shape the app!
           </p>
           <a href="https://PickEats.app" class="v0-project-link">
@@ -840,6 +860,7 @@ layout: default
       </p>
       <div class="v0-btn-group">
         <a href="mailto:chaminda@chamsdel.online" class="v0-btn v0-btn-primary">Drop Me a Line</a>
+        <a href="https://x.com/chamindg" target="_blank" class="v0-btn v0-btn-secondary">Follow @chamindg</a>
       </div>
     </div>
   </div>
@@ -849,6 +870,10 @@ layout: default
   <div class="v0-container">
     <p>
       © 2025 ChamsDel Online. Shipping apps, making mistakes, learning in public. 🚀
+    </p>
+    <p style="margin-top: 1rem; font-size: 0.875rem;">
+      <a href="/privacy.html">Privacy Policy</a> | 
+      <a href="/terms.html">Terms of Service</a>
     </p>
   </div>
 </div>
