@@ -341,7 +341,6 @@ layout: default
     border-radius: 1rem;
     font-size: 0.75rem;
     font-weight: 600;
-    margin-bottom: 1rem;
   }
 
   .v0-project-status {
@@ -352,8 +351,6 @@ layout: default
     border-radius: var(--border-radius);
     font-size: 0.875rem;
     font-weight: 600;
-    margin-bottom: 1rem;
-    margin-left: 0.5rem;
   }
 
   .v0-status-live {
@@ -384,7 +381,7 @@ layout: default
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 1rem;
   }
 
@@ -392,7 +389,9 @@ layout: default
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
+    margin-top: 0;
     color: var(--color-text);
+    line-height: 1.2;
   }
 
   .v0-project p {
