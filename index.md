@@ -752,7 +752,7 @@ layout: default
         <div class="v0-project-content">
           <div class="v0-project-tags">
             <span class="v0-project-tag">Compliance & Training</span>
-            <span class="v0-project-status v0-status-live">🟢 Live & Free</span>
+            <span class="v0-project-status v0-status-live">🟢 Live</span>
           </div>
           <h3>CompliQuiz</h3>
           <p>
@@ -793,7 +793,7 @@ layout: default
         <div class="v0-project-content">
           <div class="v0-project-tags">
             <span class="v0-project-tag">Personal Growth</span>
-            <span class="v0-project-status v0-status-soon">📱 iOS Coming Soon</span>
+            <span class="v0-project-status v0-status-coming">⏳ Coming Soon</span>
           </div>
           <h3>DearMeWiser</h3>
           <p>
@@ -813,7 +813,7 @@ layout: default
         <div class="v0-project-content">
           <div class="v0-project-tags">
             <span class="v0-project-tag">Food & Lifestyle</span>
-            <span class="v0-project-status v0-status-beta">🧪 Beta • Need Feedback</span>
+            <span class="v0-project-status v0-status-beta">📋 Waitlist</span>
           </div>
           <h3>PickEats</h3>
           <p>
