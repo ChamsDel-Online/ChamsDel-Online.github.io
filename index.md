@@ -872,8 +872,8 @@ layout: default
       © 2025 ChamsDel Online. Shipping apps, making mistakes, learning in public. 🚀
     </p>
     <p style="margin-top: 1rem; font-size: 0.875rem;">
-      <a href="/privacy.html">Privacy Policy</a> | 
-      <a href="/terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Service</a>
     </p>
   </div>
 </div>
