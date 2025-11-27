@@ -4,17 +4,27 @@ layout: default
 
 <style>
   :root {
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --text-primary: #1a202c;
-    --text-secondary: #4a5568;
-    --bg-card: #ffffff;
-    --border-radius: 1rem;
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --color-primary: #000000;
+    --color-secondary: #666666;
+    --color-accent: #0066ff;
+    --color-bg: #ffffff;
+    --color-bg-alt: #fafafa;
+    --color-border: #e5e5e5;
+    --color-text: #000000;
+    --color-text-secondary: #666666;
+    --border-radius: 0.5rem;
+    --transition: all 0.2s ease;
+  }
+
+  [data-theme="dark"] {
+    --color-primary: #ffffff;
+    --color-secondary: #999999;
+    --color-accent: #3b82f6;
+    --color-bg: #000000;
+    --color-bg-alt: #111111;
+    --color-border: #333333;
+    --color-text: #ffffff;
+    --color-text-secondary: #999999;
   }
 
   * {
@@ -26,8 +36,31 @@ layout: default
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     line-height: 1.6;
-    color: var(--text-primary);
-    background: #f7fafc;
+    color: var(--color-text);
+    background: var(--color-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1.25rem;
+  }
+
+  .theme-toggle:hover {
+    background: var(--color-bg-alt);
   }
 
   .v0-container {
@@ -38,40 +71,21 @@ layout: default
 
   /* Hero Section */
   .v0-hero {
-    background: var(--gradient-primary);
-    color: white;
-    padding: 6rem 0;
+    padding: 8rem 0 6rem;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .v0-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.4;
-  }
-
-  .v0-hero-content {
-    position: relative;
-    z-index: 1;
+    border-bottom: 1px solid var(--color-border);
   }
 
   .v0-badge {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
     border-radius: 2rem;
     font-size: 0.875rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 2rem;
+    color: var(--color-text-secondary);
   }
 
   .v0-hero h1 {
@@ -79,17 +93,28 @@ layout: default
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #ffffff, #f0f0f0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+  }
+
+  .v0-hero-bio {
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+  }
+
+  .v0-hero-bio strong {
+    color: var(--color-text);
+    font-weight: 600;
   }
 
   .v0-hero-subtitle {
     font-size: 1.25rem;
     max-width: 700px;
     margin: 0 auto 2.5rem;
-    opacity: 0.95;
+    color: var(--color-text-secondary);
     line-height: 1.8;
   }
 
@@ -104,39 +129,52 @@ layout: default
     display: inline-flex;
     align-items: center;
     padding: 0.875rem 2rem;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.2s;
+    transition: var(--transition);
     font-size: 1rem;
+    border: 1px solid var(--color-border);
   }
 
   .v0-btn-primary {
-    background: white;
-    color: #667eea;
-    box-shadow: var(--shadow-lg);
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-color: var(--color-text);
   }
 
   .v0-btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-xl);
+    background: var(--color-text-secondary);
+    border-color: var(--color-text-secondary);
+  }
+
+  [data-theme="dark"] .v0-btn-primary {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
+
+  [data-theme="dark"] .v0-btn-primary:hover {
+    background: var(--color-secondary);
   }
 
   .v0-btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
+    background: transparent;
+    color: var(--color-text);
+    border-color: var(--color-border);
   }
 
   .v0-btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
+    background: var(--color-bg-alt);
   }
 
   /* Section */
   .v0-section {
     padding: 5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .v0-section:last-child {
+    border-bottom: none;
   }
 
   .v0-section-header {
@@ -147,8 +185,9 @@ layout: default
   .v0-section-badge {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: var(--gradient-accent);
-    color: white;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
     border-radius: 2rem;
     font-size: 0.875rem;
     font-weight: 600;
@@ -159,12 +198,13 @@ layout: default
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--text-primary);
+    color: var(--color-text);
+    letter-spacing: -0.02em;
   }
 
   .v0-section-intro {
     font-size: 1.125rem;
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.8;
@@ -179,46 +219,39 @@ layout: default
   }
 
   .v0-card {
-    background: var(--bg-card);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     padding: 2rem;
-    box-shadow: var(--shadow-md);
-    transition: all 0.3s;
-    border: 1px solid #e2e8f0;
+    transition: var(--transition);
   }
 
   .v0-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    border-color: var(--color-text);
   }
 
   .v0-card-icon {
     width: 3rem;
     height: 3rem;
-    border-radius: 0.75rem;
+    border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
   }
-
-  .v0-card-icon-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-  .v0-card-icon-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-  .v0-card-icon-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
-  .v0-card-icon-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
-  .v0-card-icon-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
-  .v0-card-icon-6 { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
 
   .v0-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--text-primary);
+    color: var(--color-text);
   }
 
   .v0-card p {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     line-height: 1.7;
   }
 
@@ -242,48 +275,52 @@ layout: default
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background: var(--gradient-primary);
-    color: white;
+    background: var(--color-text);
+    color: var(--color-bg);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    box-shadow: var(--shadow-lg);
+  }
+
+  [data-theme="dark"] .v0-step-number {
+    background: var(--color-text);
+    color: var(--color-bg);
   }
 
   .v0-step h3 {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
+    color: var(--color-text);
   }
 
   .v0-step p {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     line-height: 1.7;
   }
 
   /* Projects Section */
   .v0-project {
-    background: var(--bg-card);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: all 0.3s;
-    border: 1px solid #e2e8f0;
+    transition: var(--transition);
   }
 
   .v0-project:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    border-color: var(--color-text);
   }
 
   .v0-project-image {
     width: 100%;
     height: 200px;
-    background: var(--gradient-primary);
+    background: var(--color-bg-alt);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
+    border-bottom: 1px solid var(--color-border);
   }
 
   .v0-project-content {
@@ -293,11 +330,56 @@ layout: default
   .v0-project-tag {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: #edf2f7;
-    color: #4a5568;
+    background: var(--color-bg-alt);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
     border-radius: 1rem;
     font-size: 0.75rem;
     font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .v0-project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .v0-status-live {
+    background: var(--color-accent);
+    color: white;
+    border: none;
+  }
+
+  .v0-status-soon {
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+  }
+
+  .v0-status-beta {
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+  }
+
+  .v0-status-coming {
+    background: var(--color-bg-alt);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+  }
+
+  .v0-project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
     margin-bottom: 1rem;
   }
 
@@ -305,10 +387,11 @@ layout: default
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
+    color: var(--color-text);
   }
 
   .v0-project p {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
@@ -316,47 +399,21 @@ layout: default
   .v0-project-link {
     display: inline-flex;
     align-items: center;
-    color: #667eea;
+    color: var(--color-accent);
     font-weight: 600;
     text-decoration: none;
+    transition: var(--transition);
   }
 
   .v0-project-link:hover {
+    opacity: 0.8;
     text-decoration: underline;
-  }
-
-  /* Stats Section */
-  .v0-stats {
-    background: white;
-    border-radius: var(--border-radius);
-    padding: 3rem;
-    box-shadow: var(--shadow-lg);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
-    text-align: center;
-  }
-
-  .v0-stat-number {
-    font-size: 3rem;
-    font-weight: 800;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-  }
-
-  .v0-stat-label {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    font-weight: 500;
   }
 
   /* Contact Section */
   .v0-cta {
-    background: var(--gradient-primary);
-    color: white;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
     padding: 5rem 0;
     text-align: center;
     border-radius: var(--border-radius);
@@ -367,66 +424,50 @@ layout: default
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
   }
 
   .v0-cta p {
     font-size: 1.125rem;
     margin-bottom: 2rem;
-    opacity: 0.95;
+    color: var(--color-text-secondary);
   }
 
   /* Build in Public Section */
   .v0-social-banner {
-    background: linear-gradient(135deg, #1da1f2 0%, #0c85d0 100%);
-    color: white;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
     padding: 3rem;
     border-radius: var(--border-radius);
     text-align: center;
-    box-shadow: var(--shadow-xl);
     position: relative;
-    overflow: hidden;
-  }
-
-  .v0-social-banner::before {
-    content: '𝕏';
-    position: absolute;
-    font-size: 15rem;
-    opacity: 0.05;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 900;
-  }
-
-  .v0-social-banner-content {
-    position: relative;
-    z-index: 1;
   }
 
   .v0-social-badge {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
     border-radius: 2rem;
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--color-text-secondary);
   }
 
   .v0-social-banner h3 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--color-text);
   }
 
   .v0-social-banner p {
     font-size: 1.125rem;
     margin-bottom: 2rem;
-    opacity: 0.95;
+    color: var(--color-text-secondary);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -437,23 +478,43 @@ layout: default
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 2rem;
-    background: white;
-    color: #1da1f2;
-    border-radius: 0.5rem;
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-radius: var(--border-radius);
     font-weight: 700;
     text-decoration: none;
-    transition: all 0.2s;
-    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
     font-size: 1.125rem;
+    border: 1px solid var(--color-text);
   }
 
   .v0-social-link:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-xl);
+    background: var(--color-text-secondary);
+    border-color: var(--color-text-secondary);
+  }
+
+  [data-theme="dark"] .v0-social-link {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
+
+  /* Footer */
+  .v0-footer {
+    padding: 3rem 0;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .v0-footer p {
+    color: var(--color-text-secondary);
   }
 
   /* Responsive */
   @media (max-width: 768px) {
+    .v0-hero {
+      padding: 6rem 0 4rem;
+    }
+
     .v0-hero h1 {
       font-size: 2.5rem;
     }
@@ -478,21 +539,32 @@ layout: default
       width: 100%;
       justify-content: center;
     }
+
+    .theme-toggle {
+      top: 1rem;
+      right: 1rem;
+    }
   }
 </style>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
 
 <div class="v0-hero">
   <div class="v0-container">
     <div class="v0-hero-content">
-      <span class="v0-badge">🚀 ChamsDel Online · App Studio</span>
-      <h1>We Build & Publish Apps That Matter</h1>
+      <span class="v0-badge">Building in Public</span>
+      <h1>Chaminda Delpagodage</h1>
+      <p class="v0-hero-bio">
+        <strong>Father of two • CISO & VP Technical Operations</strong><br>
+        I'm actively building my own founder journey and sharing the process publicly.
+      </p>
       <p class="v0-hero-subtitle">
-        From concept to launch, we create beautiful, functional applications that users love. 
-        AI-powered development meets thoughtful design.
+        Shipping apps across different platforms—from mobile to web, experimenting with AI, 
+        and learning from each launch. Some hit, some miss, all ship.
       </p>
       <div class="v0-btn-group">
-        <a href="#projects" class="v0-btn v0-btn-primary">View Our Work</a>
-        <a href="#contact" class="v0-btn v0-btn-secondary">Start a Project</a>
+        <a href="#projects" class="v0-btn v0-btn-primary">See What I'm Building</a>
+        <a href="https://x.com/chamindg" target="_blank" class="v0-btn v0-btn-secondary">Follow @chamindg</a>
       </div>
     </div>
   </div>
@@ -501,71 +573,71 @@ layout: default
 <div class="v0-section">
   <div class="v0-container">
     <div class="v0-section-header">
-      <span class="v0-section-badge">What We Build</span>
-      <h2>Our Toolkit & Approach</h2>
+      <span class="v0-section-badge">What I Build</span>
+      <h2>My Toolkit & Approach</h2>
       <p class="v0-section-intro">
-        Over the years, we've shipped apps across different platforms and domains. 
-        Here's what we've learned and the tools we've come to rely on.
+        Over the years, I've shipped apps across different platforms and domains. 
+        Here's what I've learned and the tools I've come to rely on.
       </p>
     </div>
 
     <div class="v0-grid">
       <div class="v0-card">
-        <div class="v0-card-icon v0-card-icon-1">📱</div>
+        <div class="v0-card-icon">📱</div>
         <h3>Mobile Apps</h3>
         <p>
-          We've built several iOS and Android apps using React Native and Expo. 
-          The cross-platform approach lets us ship faster while maintaining native feel. 
-          Each launch teaches us something new about mobile UX patterns.
+          I've built several iOS and Android apps using React Native and Expo. 
+          The cross-platform approach lets me ship faster while maintaining native feel. 
+          Each launch teaches me something new about mobile UX patterns.
         </p>
       </div>
 
       <div class="v0-card">
-        <div class="v0-card-icon v0-card-icon-2">🌐</div>
+        <div class="v0-card-icon">🌐</div>
         <h3>Web Applications</h3>
         <p>
-          From simple landing pages to complex web apps, we use React and TypeScript 
-          to build responsive experiences. The web's flexibility lets us iterate quickly 
+          From simple landing pages to complex web apps, I use React and TypeScript 
+          to build responsive experiences. The web's flexibility lets me iterate quickly 
           and reach users everywhere.
         </p>
       </div>
 
       <div class="v0-card">
-        <div class="v0-card-icon v0-card-icon-3">🤖</div>
+        <div class="v0-card-icon">🤖</div>
         <h3>AI Integration</h3>
         <p>
-          We've been experimenting with LLMs and AI features in our apps. 
+          I've been experimenting with LLMs and AI features in my apps. 
           It's fascinating to see how AI can enhance user experiences—from smart 
           content generation to personalized interactions.
         </p>
       </div>
 
       <div class="v0-card">
-        <div class="v0-card-icon v0-card-icon-4">🎨</div>
+        <div class="v0-card-icon">🎨</div>
         <h3>UI/UX Design</h3>
         <p>
-          Good design makes all the difference. We've learned that simplicity and 
-          clarity beat complexity every time. Each app iteration helps us refine 
-          our design instincts.
+          Good design makes all the difference. I've learned that simplicity and 
+          clarity beat complexity every time. Each app iteration helps me refine 
+          my design instincts.
         </p>
       </div>
 
       <div class="v0-card">
-        <div class="v0-card-icon v0-card-icon-5">🔧</div>
+        <div class="v0-card-icon">🔧</div>
         <h3>Backend & APIs</h3>
         <p>
-          We've used Supabase, Firebase, and custom Node.js backends depending on 
+          I've used Supabase, Firebase, and custom Node.js backends depending on 
           the project needs. The right backend choice can make or break an app's 
           performance and scalability.
         </p>
       </div>
 
       <div class="v0-card">
-        <div class="v0-card-icon v0-card-icon-6">🚢</div>
+        <div class="v0-card-icon">🚢</div>
         <h3>Publishing & Launch</h3>
         <p>
           Getting apps into the App Store, Google Play, and live on the web is 
-          always a milestone. We've navigated the submission processes, learned 
+          always a milestone. I've navigated the submission processes, learned 
           from rejections, and celebrated each successful launch.
         </p>
       </div>
@@ -577,11 +649,11 @@ layout: default
   <div class="v0-container">
     <div class="v0-social-banner">
       <div class="v0-social-banner-content">
-        <span class="v0-social-badge">🚀 Building in Public</span>
-        <h3>Follow Our Journey on X</h3>
+        <span class="v0-social-badge">Everything in the Open</span>
+        <h3>Follow the Journey</h3>
         <p>
-          We believe in transparency and community. Follow along as we share our wins, 
-          learnings, and behind-the-scenes glimpses of building great apps.
+          I share it all on X—wins, failures, revenue numbers, and lessons learned. 
+          No BS, no highlight reel. Real indie hacking in real time.
         </p>
         <a href="https://x.com/chamindg" target="_blank" class="v0-social-link">
           <span>Follow @chamindg</span>
@@ -595,111 +667,99 @@ layout: default
 <div class="v0-section" id="process">
   <div class="v0-container">
     <div class="v0-section-header">
-      <span class="v0-section-badge">Our Process</span>
-      <h2>How We Work</h2>
+      <span class="v0-section-badge">The Recipe</span>
+      <h2>How I Ship</h2>
       <p class="v0-section-intro">
-        A proven process that gets you from idea to launch quickly, 
-        without sacrificing quality or cutting corners.
+        No overthinking. No endless planning docs. Just ship, learn, iterate. 
+        Here's the playbook I run on every app.
       </p>
     </div>
 
     <div class="v0-process">
       <div class="v0-step">
         <span class="v0-step-number">1</span>
-        <h3>Discovery</h3>
+        <h3>Idea → MVP</h3>
         <p>
-          We dive deep into your vision, users, and goals. 
-          Define scope, features, and timeline together.
+          Got a problem worth solving? Build the smallest version 
+          that tests the hypothesis. 2-4 weeks max.
         </p>
       </div>
 
       <div class="v0-step">
         <span class="v0-step-number">2</span>
-        <h3>Design</h3>
+        <h3>Ship Fast</h3>
         <p>
-          Create wireframes and high-fidelity mockups. 
-          Iterate until the design feels perfect.
+          Launch to early users ASAP. Real feedback beats 
+          perfect code every time.
         </p>
       </div>
 
       <div class="v0-step">
         <span class="v0-step-number">3</span>
-        <h3>Build</h3>
+        <h3>Learn Quick</h3>
         <p>
-          Rapid development with weekly demos. 
-          You'll see progress every step of the way.
+          Watch what users do (not what they say). 
+          Double down on what works, kill what doesn't.
         </p>
       </div>
 
       <div class="v0-step">
         <span class="v0-step-number">4</span>
-        <h3>Launch</h3>
+        <h3>Repeat</h3>
         <p>
-          Deploy to production, submit to app stores, 
-          and celebrate with real users.
+          Iterate weekly. Some apps pop off, others fizzle. 
+          Keep shipping either way.
         </p>
       </div>
     </div>
   </div>
 </div>
 
-<div class="v0-section" id="projects" style="background: white;">
+<div class="v0-section" id="projects">
   <div class="v0-container">
     <div class="v0-section-header">
-      <span class="v0-section-badge">Our Work</span>
-      <h2>Current Projects</h2>
+      <span class="v0-section-badge">The Lab</span>
+      <h2>What I'm Shipping</h2>
       <p class="v0-section-intro">
-        Check out what we're building right now. Each project is a labor of love.
+        Multiple apps in flight. Some live, some launching soon. All built in public. 
+        Jump in, try them out, and let me know what you think!
       </p>
     </div>
 
     <div class="v0-grid">
       <div class="v0-project">
-        <div class="v0-project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="v0-project-image">
           📋
         </div>
         <div class="v0-project-content">
-          <span class="v0-project-tag">Compliance & Training</span>
+          <div class="v0-project-tags">
+            <span class="v0-project-tag">Compliance & Training</span>
+            <span class="v0-project-status v0-status-live">🟢 Live & Free</span>
+          </div>
           <h3>CompliQuiz</h3>
           <p>
-            An AI-powered compliance quiz platform that helps businesses identify 
-            applicable regulatory frameworks and train teams effectively. 
-            Smart assessments for modern compliance needs.
+            AI-powered compliance training that doesn't suck. Take quizzes, 
+            learn frameworks, get certified. Currently free with lifetime access—grab it while you can!
           </p>
           <a href="https://CompliQuiz.ai" class="v0-project-link">
-            Visit Site →
+            Try it Now →
           </a>
         </div>
       </div>
 
       <div class="v0-project">
-        <div class="v0-project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-          💭
-        </div>
-        <div class="v0-project-content">
-          <span class="v0-project-tag">Personal Growth</span>
-          <h3>DearMeWiser</h3>
-          <p>
-            A thoughtful companion app that helps you tap into your inner wisdom 
-            through guided reflection and journaling. Your personal space for 
-            growth and self-discovery.
-          </p>
-          <a href="https://DearMeWiser.com" class="v0-project-link">
-            Visit Site →
-          </a>
-        </div>
-      </div>
-
-      <div class="v0-project">
-        <div class="v0-project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+        <div class="v0-project-image">
           🤖
         </div>
         <div class="v0-project-content">
-          <span class="v0-project-tag">Productivity & AI</span>
-          <h3>TwitPly (an X Reply Assistant)</h3>
+          <div class="v0-project-tags">
+            <span class="v0-project-tag">Productivity & AI</span>
+            <span class="v0-project-status v0-status-live">🟢 Live</span>
+          </div>
+          <h3>TwitPly</h3>
           <p>
             Reply habit tracking and AI-assisted reply generation for X (Twitter). 
-            Chrome extension dropping soon—built for creators who want to grow their audience fast by being consistently responsive.
+            Chrome extension built for creators who want to grow their audience fast by being consistently responsive.
           </p>
           <a href="https://twitply.com" class="v0-project-link">
             Visit Site →
@@ -708,18 +768,60 @@ layout: default
       </div>
 
       <div class="v0-project">
-        <div class="v0-project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+        <div class="v0-project-image">
+          💭
+        </div>
+        <div class="v0-project-content">
+          <div class="v0-project-tags">
+            <span class="v0-project-tag">Personal Growth</span>
+            <span class="v0-project-status v0-status-soon">📱 iOS Coming Soon</span>
+          </div>
+          <h3>DearMeWiser</h3>
+          <p>
+            Your pocket therapist. Journal, reflect, and tap into your inner wisdom. 
+            iOS app launching on the App Store soon—join the waitlist to get early access!
+          </p>
+          <a href="https://DearMeWiser.com" class="v0-project-link">
+            Join Waitlist →
+          </a>
+        </div>
+      </div>
+
+      <div class="v0-project">
+        <div class="v0-project-image">
           🍽️
         </div>
         <div class="v0-project-content">
-          <span class="v0-project-tag">Food & Lifestyle</span>
+          <div class="v0-project-tags">
+            <span class="v0-project-tag">Food & Lifestyle</span>
+            <span class="v0-project-status v0-status-beta">🧪 Beta • Need Feedback</span>
+          </div>
           <h3>PickEats</h3>
           <p>
-            Never stress about "what to eat" again. PickEats helps you discover 
-            the perfect meal, whether you're dining out or cooking at home. 
-            Smart food decisions made easy.
+            End the "what's for dinner?" debate. Swipe, pick, eat. We're testing with early users—
+            join the waitlist and help shape the app!
           </p>
           <a href="https://PickEats.app" class="v0-project-link">
+            Join Waitlist →
+          </a>
+        </div>
+      </div>
+
+      <div class="v0-project">
+        <div class="v0-project-image">
+          🎯
+        </div>
+        <div class="v0-project-content">
+          <div class="v0-project-tags">
+            <span class="v0-project-tag">Founder Journey</span>
+            <span class="v0-project-status v0-status-coming">⏳ Coming Soon</span>
+          </div>
+          <h3>JanFifteenth.club</h3>
+          <p>
+            A platform for working parents ready to be more than just a parent and an employee. 
+            Discover your Ikigai niche, connect with like-minded parents, and build something that matters—on your schedule.
+          </p>
+          <a href="https://janfifteenth.club" class="v0-project-link">
             Visit Site →
           </a>
         </div>
@@ -731,22 +833,45 @@ layout: default
 <div class="v0-section">
   <div class="v0-container">
     <div class="v0-cta">
-      <h2 id="contact">Ready to Build Something Great?</h2>
+      <h2 id="contact">Want to Chat?</h2>
       <p>
-        Whether you have a fully-formed idea or just a spark, 
-        we'd love to help bring it to life.
+        Got questions? Feedback on my apps? Just want to say hi? 
+        I'm building in public—let's connect!
       </p>
       <div class="v0-btn-group">
-        <a href="mailto:chaminda@chamsdel.online" class="v0-btn v0-btn-primary">Get In Touch</a>
+        <a href="mailto:chaminda@chamsdel.online" class="v0-btn v0-btn-primary">Drop Me a Line</a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="v0-section" style="background: white; padding: 3rem 0; text-align: center;">
+<div class="v0-footer">
   <div class="v0-container">
-    <p style="color: var(--text-secondary);">
-      © 2025 ChamsDel Online. Building the future, one app at a time.
+    <p>
+      © 2025 ChamsDel Online. Shipping apps, making mistakes, learning in public. 🚀
     </p>
   </div>
 </div>
+
+<script>
+  // Theme toggle functionality
+  const themeToggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', currentTheme);
+  updateThemeIcon(currentTheme);
+  
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+  });
+  
+  function updateThemeIcon(theme) {
+    themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+  }
+</script>
