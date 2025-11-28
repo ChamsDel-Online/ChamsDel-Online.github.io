@@ -846,8 +846,8 @@ layout: default
           </div>
           <h3>JanFifteenth.club</h3>
           <p>
-            A platform for working parents ready to be more than just a parent and an employee. 
-            Discover your Ikigai niche, connect with like-minded parents, and build something that matters—on your schedule.
+            Still searching for your niche after months of exploration? Join a community of people finding their niche. 
+            Discover your Ikigai, connect with like-minded members, and build something that matters—on your schedule.
           </p>
           <a href="https://janfifteenth.club" class="v0-project-link">
             Visit Site →
