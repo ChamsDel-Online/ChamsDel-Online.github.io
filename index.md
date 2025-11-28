@@ -2,6 +2,10 @@
 layout: default
 ---
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
   :root {
     --color-primary: #000000;
@@ -103,11 +107,14 @@ layout: default
     margin: 0 auto 2rem;
     color: var(--color-text-secondary);
     line-height: 1.8;
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
   }
 
   .v0-hero-bio strong {
     color: var(--color-text);
     font-weight: 600;
+    font-family: 'Caveat', cursive;
   }
 
   .v0-hero-subtitle {
@@ -116,6 +123,8 @@ layout: default
     margin: 0 auto 2.5rem;
     color: var(--color-text-secondary);
     line-height: 1.8;
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
   }
 
   .v0-btn-group {
