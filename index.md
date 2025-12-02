@@ -817,7 +817,7 @@ layout: default
           <p>
             Free tool for analyzing Twitter account performance. Upload your account_overview_analytics.csv to explore interactive charts: time-series metrics, follower growth with milestone celebrations, correlation heatmaps, and scatter plots. Track impressions, engagements, follows, and discover patterns in your Twitter analytics.
           </p>
-          <a href="https://x-growth-history-chart-3aua.vercel.app/" class="v0-project-link">
+          <a href="https://x-charts.xyz/" class="v0-project-link">
             Try it Now →
           </a>
         </div>
