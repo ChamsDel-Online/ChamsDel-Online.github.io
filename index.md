@@ -877,7 +877,7 @@ layout: default
             Still searching for your niche after months of exploration? Join a community of people finding their niche. 
             Discover your Ikigai, connect with like-minded members, and build something that matters—on your schedule.
           </p>
-          <a href="https://janfifteenth.club" class="v0-project-link">
+          <a href="https://ikigainiche.app/" class="v0-project-link">
             Visit Site →
           </a>
         </div>
