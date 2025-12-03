@@ -870,9 +870,9 @@ layout: default
         <div class="v0-project-content">
           <div class="v0-project-tags">
             <span class="v0-project-tag">Founder Journey</span>
-            <span class="v0-project-status v0-status-coming">⏳ Coming Soon</span>
+            <span class="v0-project-status v0-status-live">🟢 Live</span>
           </div>
-          <h3>JanFifteenth.club</h3>
+          <h3>IkigaiNiche.app</h3>
           <p>
             Still searching for your niche after months of exploration? Join a community of people finding their niche. 
             Discover your Ikigai, connect with like-minded members, and build something that matters—on your schedule.
