@@ -587,7 +587,7 @@ layout: default
       <span class="v0-badge">Building in Public</span>
       <h1>Chaminda Delpagodage</h1>
       <p class="v0-hero-bio">
-        <strong>Technology executive with nearly 2 decades of experience in Cybersecurity, SRE, DevOps, and Leadership.</strong><br>
+        <strong>Technology executive with nearly 2 decades of experience in Cybersecurity, Systems Engineering, and Leadership. Ex-PayPal.</strong><br>
         I'm actively building my own founder journey and sharing the process publicly.
       </p>
       <p class="v0-hero-subtitle">
@@ -765,6 +765,26 @@ layout: default
     <div class="v0-grid">
       <div class="v0-project">
         <div class="v0-project-image">
+          💭
+        </div>
+        <div class="v0-project-content">
+          <div class="v0-project-tags">
+            <span class="v0-project-tag">Personal Growth</span>
+            <span class="v0-project-status v0-status-live">🟢 In TestFlight</span>
+          </div>
+          <h3>DearMeWiser</h3>
+          <p>
+            Your pocket therapist. Journal, reflect, and tap into your inner wisdom. 
+            iOS app in beta testing—join TestFlight to get early access!
+          </p>
+          <a href="https://testflight.apple.com/join/YQMkfRDU" class="v0-project-link">
+            Beta Test It →
+          </a>
+        </div>
+      </div>
+
+      <div class="v0-project">
+        <div class="v0-project-image">
           📋
         </div>
         <div class="v0-project-content">
@@ -819,26 +839,6 @@ layout: default
           </p>
           <a href="https://x-charts.xyz/" class="v0-project-link">
             Try it Now →
-          </a>
-        </div>
-      </div>
-
-      <div class="v0-project">
-        <div class="v0-project-image">
-          💭
-        </div>
-        <div class="v0-project-content">
-          <div class="v0-project-tags">
-            <span class="v0-project-tag">Personal Growth</span>
-            <span class="v0-project-status v0-status-coming">⏳ Coming Soon</span>
-          </div>
-          <h3>DearMeWiser</h3>
-          <p>
-            Your pocket therapist. Journal, reflect, and tap into your inner wisdom. 
-            iOS app launching on the App Store soon—join the waitlist to get early access!
-          </p>
-          <a href="https://DearMeWiser.com" class="v0-project-link">
-            Join Waitlist →
           </a>
         </div>
       </div>
