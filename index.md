@@ -857,9 +857,6 @@ layout: default
             End the "what's for dinner?" debate. Swipe, pick, eat. I'm testing with early users—
             join the waitlist and help shape the app!
           </p>
-          <a href="https://PickEats.app" class="v0-project-link">
-            Join Waitlist →
-          </a>
         </div>
       </div>
 
