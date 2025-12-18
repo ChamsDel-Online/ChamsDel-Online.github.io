@@ -69,7 +69,7 @@ After deployment, you can add a custom domain:
 
 For issues or questions:
 - Email: chaminda@chamsdel.online
-- X: [@chamindg](https://x.com/chamindg)
+- X: [@chams_builds](https://x.com/chams_builds)
 
 ---
 

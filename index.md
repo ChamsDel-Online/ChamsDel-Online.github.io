@@ -596,7 +596,7 @@ layout: default
       </p>
       <div class="v0-btn-group">
         <a href="#projects" class="v0-btn v0-btn-primary">See What I'm Building</a>
-        <a href="https://x.com/chamindg" target="_blank" class="v0-btn v0-btn-secondary">Follow @chamindg</a>
+        <a href="https://x.com/chams_builds" target="_blank" class="v0-btn v0-btn-secondary">Follow @chams_builds</a>
         <a href="https://www.linkedin.com/in/chamindadelpagodage/" target="_blank" class="v0-btn v0-btn-secondary">LinkedIn</a>
       </div>
     </div>
@@ -690,8 +690,8 @@ layout: default
           I share it all on X—wins, failures, revenue numbers, and lessons learned. 
           No BS, no highlight reel. Real indie hacking in real time.
         </p>
-        <a href="https://x.com/chamindg" target="_blank" class="v0-social-link">
-          <span>Follow @chamindg</span>
+        <a href="https://x.com/chams_builds" target="_blank" class="v0-social-link">
+          <span>Follow @chams_builds</span>
           <span>→</span>
         </a>
       </div>
@@ -893,7 +893,7 @@ layout: default
       </p>
       <div class="v0-btn-group">
         <a href="mailto:chaminda@chamsdel.online" class="v0-btn v0-btn-primary">Drop Me a Line</a>
-        <a href="https://x.com/chamindg" target="_blank" class="v0-btn v0-btn-secondary">Follow @chamindg</a>
+        <a href="https://x.com/chams_builds" target="_blank" class="v0-btn v0-btn-secondary">Follow @chams_builds</a>
       </div>
     </div>
   </div>
