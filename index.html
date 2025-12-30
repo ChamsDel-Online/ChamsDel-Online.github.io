@@ -345,6 +345,43 @@
     box-shadow: 0 4px 12px rgba(19, 70, 134, 0.15);
   }
 
+  .v0-project-featured {
+    border: 2px solid var(--color-accent);
+    box-shadow: 0 8px 24px rgba(19, 70, 134, 0.25);
+    background: linear-gradient(to bottom, var(--color-bg), var(--color-bg-alt));
+    position: relative;
+  }
+
+  .v0-project-featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent), rgba(19, 70, 134, 0.5));
+  }
+
+  .v0-project-featured:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 12px 32px rgba(19, 70, 134, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .v0-badge-current {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background: linear-gradient(135deg, var(--color-accent), rgba(19, 70, 134, 0.8));
+    color: white;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 8px rgba(19, 70, 134, 0.3);
+  }
+
   .v0-project-image {
     width: 100%;
     height: 200px;
@@ -835,11 +872,12 @@
         </div>
       </div>
 
-      <div class="v0-project">
+      <div class="v0-project v0-project-featured">
         <div class="v0-project-image">
           📌
         </div>
         <div class="v0-project-content">
+          <div class="v0-badge-current">🚧 Currently Building</div>
           <div class="v0-project-tags">
             <span class="v0-project-tag">Productivity & Tools</span>
             <span class="v0-project-status v0-status-live">🟢 Live</span>
@@ -847,6 +885,9 @@
           <h3>TwitPick</h3>
           <p>
             Smart reply prioritization for X (Twitter) powered by data. Prioritize which replies matter most and make smarter engagement decisions. Everything runs locally in your browser—no auto-posting, no backend tracking.
+          </p>
+          <p style="margin-top: 1rem; padding: 1rem; background: var(--color-bg-alt); border-radius: var(--border-radius); border-left: 3px solid var(--color-accent);">
+            <strong>🎉 Beta Testing Available:</strong> Get 80% off and a 30-day free trial. Join now and help shape the future of TwitPick!
           </p>
           <a href="https://twitpick.com" class="v0-project-link">
             Visit Site →
