@@ -866,7 +866,7 @@ layout: default
           📌
         </div>
         <div class="v0-project-content">
-          <div class="v0-badge-current">🚧 Currently Building</div>
+          <div class="v0-badge-current">⭐ Current Focus</div>
           <div class="v0-project-tags">
             <span class="v0-project-tag">Productivity & Tools</span>
             <span class="v0-project-status v0-status-live">🟢 Live</span>
