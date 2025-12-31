@@ -445,6 +445,13 @@
     border: 1px solid var(--color-border);
   }
 
+  .v0-status-killed {
+    background: var(--color-bg-alt);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+    opacity: 0.7;
+  }
+
   .v0-project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -951,6 +958,28 @@
           <a href="https://ikigainiche.app/" class="v0-project-link">
             Visit Site →
           </a>
+        </div>
+      </div>
+
+      <div class="v0-project">
+        <div class="v0-project-image">
+          ✈️
+        </div>
+        <div class="v0-project-content">
+          <div class="v0-project-tags">
+            <span class="v0-project-tag">Travel & Planning</span>
+            <span class="v0-project-status v0-status-killed">⚰️ Killed</span>
+          </div>
+          <h3>TripsToGo.ai</h3>
+          <p>
+            AI-Powered Group Travel Planner. The smartest way to plan group travel. Plan trips effortlessly with friends, family, or colleagues.
+          </p>
+          <p style="margin-top: 1rem; padding: 0.75rem; background: var(--color-bg-alt); border-radius: var(--border-radius); font-size: 0.875rem; color: var(--color-text-secondary);">
+            <strong>Why it was killed:</strong> Too complex and the scope was too big for a solo builder.
+          </p>
+          <span class="v0-project-link" style="opacity: 0.5; cursor: not-allowed; text-decoration: line-through;">
+            TripsToGo.ai
+          </span>
         </div>
       </div>
     </div>
