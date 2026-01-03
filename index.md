@@ -111,7 +111,7 @@ layout: default
   }
 
   .v0-hero-bio {
-    font-size: 1.40625rem;
+    font-size: 1.7578125rem;
     max-width: 700px;
     margin: 0 auto 2rem;
     color: var(--color-text-secondary);
@@ -127,7 +127,7 @@ layout: default
   }
 
   .v0-hero-subtitle {
-    font-size: 1.5625rem;
+    font-size: 1.953125rem;
     max-width: 700px;
     margin: 0 auto 2.5rem;
     color: var(--color-text-secondary);
@@ -599,7 +599,7 @@ layout: default
     }
 
     .v0-hero-subtitle {
-      font-size: 1.40625rem;
+      font-size: 1.7578125rem;
     }
 
     .v0-section h2 {
