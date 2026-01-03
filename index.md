@@ -812,7 +812,7 @@ layout: default
 
     <div class="v0-grid">
       <div class="v0-project v0-project-featured">
-        <div class="v0-badge-current">⭐ Current Focus</div>
+        <div class="v0-badge-current">⭐ Actively Building</div>
         <div class="v0-project-image">
           💭
         </div>
@@ -877,7 +877,7 @@ layout: default
       </div>
 
       <div class="v0-project v0-project-featured">
-        <div class="v0-badge-current">⭐ Current Focus</div>
+        <div class="v0-badge-current">⭐ Actively Building</div>
         <div class="v0-project-image">
           📌
         </div>
