@@ -634,13 +634,13 @@ layout: default
       <span class="v0-badge">$0 → $100k MRR Journey</span>
       <h1>Chaminda Delpagodage</h1>
       <p class="v0-hero-bio">
-        <strong>Dad with a 9-5, building in public using AI.</strong><br>
-        For 20 years, I thought building products required big teams and huge budgets. Then AI tools proved me wrong. Now I'm building digital products in public, starting from $0, aiming for $100k MRR.
+        <strong>Hey, I'm Chaminda (Chams) — immigrated from 🇱🇰 to 🇺🇸 at 30, built a 20+ year career in tech (now leading as CISO/SRE at scale). Dad of two, full-time corporate life, but always wanted to create my own products.</strong>
       </p>
       <p class="v0-hero-subtitle">
-        Not to sell you a course. Not to flex.<br>
-        To show other parents this is actually possible.<br><br>
-        I'm documenting everything: every product I build, every tool I use, every win and failure, every lesson learned balancing dad life + corporate life + builder life.
+        For two decades I believed building real digital things required big teams, huge budgets, and sacrificing family time. AI killed that excuse.<br><br>
+        Now at 43, it's round 2: building useful apps and tools at night, starting from $0, chasing $100k MRR — all in public. No courses, no hype. Just transparent sharing: every ship, every fail, every revenue update, every lesson on balancing dad duties + day job + builder life.<br><br>
+        If you're a parent who's thought "I wish I could build something meaningful without quitting everything," follow along. You don't need to be a full-time founder. You just need to start.<br><br>
+        Follow the real-time journey on X: @chams_builds
       </p>
       <div class="v0-btn-group">
         <a href="#projects" class="v0-btn v0-btn-primary">See What I'm Building</a>
@@ -811,27 +811,20 @@ layout: default
     </div>
 
     <div class="v0-grid">
-      <div class="v0-project v0-project-featured">
-        <div class="v0-badge-current">⭐ Actively Building</div>
+      <div class="v0-project">
         <div class="v0-project-image">
           💭
         </div>
         <div class="v0-project-content">
           <div class="v0-project-tags">
             <span class="v0-project-tag">Personal Growth</span>
-            <span class="v0-project-status v0-status-live">🟢 In TestFlight</span>
+            <span class="v0-project-status v0-status-beta">⏸️ Paused</span>
           </div>
           <h3>DearMeWiser</h3>
           <p>
             Your pocket therapist. Journal, reflect, and tap into your inner wisdom. 
             iOS app in beta testing—join TestFlight to get early access!
           </p>
-          <p style="margin-top: 1rem; padding: 1rem; background: var(--color-bg-alt); border-radius: var(--border-radius); border-left: 3px solid var(--color-accent);">
-            <strong>📱 Currently in Apple TestFlight:</strong> The app is in beta testing and will be released to the App Store soon. Join TestFlight to get early access!
-          </p>
-          <a href="https://testflight.apple.com/join/YQMkfRDU" class="v0-project-link">
-            Beta Test It →
-          </a>
         </div>
       </div>
 
