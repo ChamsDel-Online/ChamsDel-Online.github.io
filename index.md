@@ -634,7 +634,7 @@ layout: default
       <span class="v0-badge">$0 → $100k MRR Journey</span>
       <h1>Chaminda Delpagodage</h1>
       <p class="v0-hero-bio">
-        <strong>Hey, I'm Chaminda (Chams) — immigrated from 🇱🇰 to 🇺🇸 at 30, built a 20+ year career in tech (now leading as CISO/SRE at scale). Dad of two, full-time corporate life, but always wanted to create my own products.</strong>
+        <strong>Hey, I'm Chaminda (Chams) — Built a 20+ year career in tech (now leading as CISO/SRE at scale). Immigrated from 🇱🇰 to 🇺🇸 at 30. Dad of two, full-time corporate life, but always wanted to create my own products.</strong>
       </p>
       <p class="v0-hero-subtitle">
         For two decades I believed building real digital things required big teams, huge budgets, and sacrificing family time. AI killed that excuse.<br><br>
