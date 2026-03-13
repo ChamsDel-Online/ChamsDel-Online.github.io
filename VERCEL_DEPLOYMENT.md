@@ -45,6 +45,7 @@ git push origin main
 
 - ✅ `index.html` - Your complete website with all styles and content
 - ✅ `vercel.json` - Configuration file for Vercel deployment
+- ✅ `api/ai-tools.js` - Serverless endpoint for AI-powered builder tools
 - ✅ Responsive design that works on all devices
 - ✅ SEO meta tags for better search visibility
 - ✅ Modern v0-inspired design
@@ -61,9 +62,39 @@ After deployment, you can add a custom domain:
 ## Environment
 
 - No build step required
-- Zero dependencies
+- Zero npm dependencies
 - Lightning-fast deployment
 - Free SSL certificate included
+
+## Required Environment Variables
+
+Add this in Vercel Project Settings -> Environment Variables:
+
+- `OPENAI_API_KEY`
+
+The homepage now includes two AI-backed tools. The browser calls `/api/ai-tools`, and that serverless function calls OpenAI securely using the environment variable above.
+
+## Local Development With `.env.local`
+
+For local testing, create a file named `.env.local` in the project root:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Then set your key:
+
+```bash
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+Run the local Vercel runtime:
+
+```bash
+vercel dev
+```
+
+`vercel dev` will load `.env.local`, so the AI tools can call OpenAI through the local `/api/ai-tools` endpoint.
 
 ## Support
 
@@ -74,4 +105,3 @@ For issues or questions:
 ---
 
 Built with 💜 by ChamsDel Online
-

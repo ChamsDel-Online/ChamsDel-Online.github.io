@@ -1,19 +1,24 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
-      "src": "/privacy.html",
-      "dest": "/privacy.html"
+      "handle": "filesystem"
     },
     {
-      "src": "/terms.html",
-      "dest": "/terms.html"
+      "src": "/products/?",
+      "dest": "/products/index.html"
+    },
+    {
+      "src": "/products/([^/]+)/?",
+      "dest": "/products/$1/index.html"
+    },
+    {
+      "src": "/blog/?",
+      "dest": "/blog/index.html"
+    },
+    {
+      "src": "/blog/([^/]+)/?",
+      "dest": "/blog/$1/index.html"
     },
     {
       "src": "/(.*)",
@@ -21,4 +26,3 @@
     }
   ]
 }
-
