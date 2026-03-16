@@ -1047,7 +1047,6 @@
         top: 10px;
       }
 
-      .topbar-inner,
       .footer-row {
         flex-direction: column;
         align-items: flex-start;
@@ -1074,11 +1073,47 @@
 
     @media (max-width: 640px) {
       .site-shell {
-        width: min(calc(100% - 20px), var(--content-width));
+        width: min(calc(100% - 16px), var(--content-width));
+      }
+
+      .topbar {
+        top: 8px;
+        margin-top: 8px;
+      }
+
+      .topbar-inner {
+        padding: 10px 14px;
+        gap: 10px;
+        flex-wrap: nowrap;
+      }
+
+      .brand {
+        font-size: 0.82rem;
+        gap: 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .brand-mark {
+        width: 10px;
+        height: 10px;
       }
 
       .nav {
         gap: 12px;
+        font-size: 0.82rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-anchor {
+        display: none;
       }
 
       .hero {
@@ -1087,6 +1122,12 @@
 
       section {
         padding-bottom: 80px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand span:last-child {
+        display: none;
       }
     }
 
@@ -1110,12 +1151,12 @@
         <span>ChamsDel Online</span>
       </div>
       <nav class="nav" aria-label="Primary">
-        <a href="#story">Story</a>
-        <a href="#duality">Dual Life</a>
+        <a class="nav-anchor" href="#story">Story</a>
+        <a class="nav-anchor" href="#duality">Dual Life</a>
         <a href="/products/">Products</a>
         <a href="/blog/">Blog</a>
         <a href="/tools/">Tools</a>
-        <a href="#manifesto">Manifesto</a>
+        <a class="nav-anchor" href="#manifesto">Manifesto</a>
         <a href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">Follow</a>
       </nav>
     </div>
