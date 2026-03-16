@@ -25,6 +25,41 @@
     <loc>https://chamsdel.online/products/ikigainiche/</loc>
   </url>
   <url>
+    <loc>https://chamsdel.online/tools/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/time-budget-calculator/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/saas-idea-scorecard/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/saas-pricing-calculator/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/mvp-launch-checklist/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/build-in-public-post-generator/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/x-analytics-chart/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://chamsdel.online/blog/</loc>
   </url>
   <url>
