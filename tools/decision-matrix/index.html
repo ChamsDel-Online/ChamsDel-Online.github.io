@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6VPXH0LQK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-L6VPXH0LQK");
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weighted Decision Matrix — Free Decision-Making Tool | ChamsDel Online</title>
+  <meta name="description" content="Compare options with a weighted decision matrix. Add criteria, assign weights, score each option, and find the best choice. Free, runs in your browser.">
+  <meta name="keywords" content="decision matrix tool, weighted decision matrix, decision making tool free, compare options tool, structured decision making, pugh matrix">
+  <meta name="author" content="Chaminda Delpagodage">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#08111f">
+  <link rel="canonical" href="https://chamsdel.online/tools/decision-matrix/">
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.88em' font-size='84'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Weighted Decision Matrix — Free Decision-Making Tool | ChamsDel Online">
+  <meta property="og:description" content="Compare options with a weighted decision matrix. Add criteria, assign weights, score each option, and find the best choice. Free, runs in your browser.">
+  <meta property="og:url" content="https://chamsdel.online/tools/decision-matrix/">
+  <meta property="og:image" content="https://chamsdel.online/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Weighted Decision Matrix by ChamsDel Online">
+  <meta property="og:site_name" content="ChamsDel Online">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Weighted Decision Matrix — Free Decision-Making Tool | ChamsDel Online">
+  <meta name="twitter:description" content="Compare options with a weighted decision matrix. Add criteria, assign weights, score each option, and find the best choice. Free, runs in your browser.">
+  <meta name="twitter:image" content="https://chamsdel.online/og-image.png">
+  <meta name="twitter:image:alt" content="Weighted Decision Matrix by ChamsDel Online">
+  <meta name="twitter:site" content="@chams_builds">
+  <meta name="twitter:creator" content="@chams_builds">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Weighted Decision Matrix",
+    "url": "https://chamsdel.online/tools/decision-matrix/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "description": "A free browser-based weighted decision matrix tool. Add criteria with weights, score multiple options, and find the best choice using structured decision-making.",
+    "isAccessibleForFree": true,
+    "author": { "@type": "Person", "name": "Chaminda Delpagodage", "url": "https://chamsdel.online" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chamsdel.online/" },
+      { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://chamsdel.online/tools/" },
+      { "@type": "ListItem", "position": 3, "name": "Weighted Decision Matrix", "item": "https://chamsdel.online/tools/decision-matrix/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <div class="site-shell topbar">
+    <div class="topbar-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>ChamsDel Online</span></div>
+      <nav class="nav"><a href="/">Home</a><a href="/products/">Products</a><a href="/tools/">Tools</a><a href="/blog/">Blog</a></nav>
+    </div>
+  </div>
+
+  <main class="site-shell page stack">
+    <section class="hero-card">
+      <div class="eyebrow">Free Tool · Decision Making</div>
+      <h1 class="product-title">Weighted Decision <span>Matrix</span></h1>
+      <p class="lead">Stop overthinking and start comparing. Define your criteria, weight what matters most, score each option, and let the math surface the best choice. For deeper decision support on high-stakes choices, this pairs well with <a class="tool-link" href="/products/hardchoice/">HardChoice</a>.</p>
+    </section>
+
+    <section class="tool-card" style="padding:26px">
+      <div class="project-tag">Free Tool 11</div>
+      <h2 style="margin:12px 0 8px;font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.1">Weighted Decision Matrix</h2>
+      <p>Compare options objectively by scoring them against weighted criteria. Everything runs in your browser — no server, no signup.</p>
+
+      <div id="dm-setup" style="margin-top:20px">
+        <h3 style="font-size:1rem;color:var(--muted);margin:0 0 12px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-family:'Space Grotesk',sans-serif">Criteria</h3>
+        <div id="dm-criteria"></div>
+        <button class="button-ghost" type="button" id="dm-add-criterion" style="margin-top:10px;font-size:.85rem">+ Add Criterion</button>
+
+        <h3 style="font-size:1rem;color:var(--muted);margin:20px 0 12px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-family:'Space Grotesk',sans-serif">Options</h3>
+        <div id="dm-options"></div>
+        <button class="button-ghost" type="button" id="dm-add-option" style="margin-top:10px;font-size:.85rem">+ Add Option</button>
+      </div>
+
+      <div id="dm-matrix" style="margin-top:24px"></div>
+
+      <div class="tool-result" data-result="decision-matrix"></div>
+    </section>
+
+    <section class="panel">
+      <h2 class="card-title">How weighted scoring works</h2>
+      <p class="copy">Each criterion gets a weight from 1 to 10 reflecting how important it is relative to the others. Each option is then scored 1 to 10 against every criterion. The tool multiplies each score by its weight, sums the weighted scores per option, and divides by the total weight to produce a normalised score out of 100. Higher is better.</p>
+      <ol class="list" style="margin-top:14px">
+        <li>Define the criteria that matter to your decision and assign importance weights.</li>
+        <li>Add the options you are deciding between.</li>
+        <li>Score each option honestly against every criterion.</li>
+        <li>Read the results — the highest score is your analytically best choice.</li>
+      </ol>
+      <p class="copy" style="margin-top:14px">Everything updates instantly in your browser. No server, no signup, no tracking.</p>
+    </section>
+
+    <section class="grid two">
+      <article class="panel">
+        <div class="project-tag">Related product</div>
+        <h2 class="card-title">HardChoice</h2>
+        <p class="copy">When the stakes are higher and you need guided frameworks beyond a simple matrix, HardChoice walks you through the full decision process.</p>
+        <a class="card-link" href="/products/hardchoice/">Learn more →</a>
+      </article>
+      <article class="panel">
+        <div class="project-tag">Related tool</div>
+        <h2 class="card-title">SaaS Idea Scorecard</h2>
+        <p class="copy">Use a weighted scorecard purpose-built for validating micro SaaS ideas before you commit to building.</p>
+        <a class="card-link" href="/tools/saas-idea-scorecard/">Use the scorecard →</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-shell footer">
+    <div class="footer-row">
+      <div class="footer-copy">Free tool by <a class="text-link" href="/">Chaminda Delpagodage</a></div>
+      <div class="footer-links">
+        <a class="text-link" href="/tools/">All free tools</a>
+        <a class="text-link" href="/products/">Products</a>
+        <a class="text-link" href="/privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      /* ---- state ---- */
+      var criteria = [
+        { name: "Cost", weight: 8 },
+        { name: "Features", weight: 7 },
+        { name: "Ease of Use", weight: 9 }
+      ];
+      var options = [
+        { name: "Option A" },
+        { name: "Option B" }
+      ];
+      /* scores[criterionIndex][optionIndex] */
+      var scores = [
+        [7, 5],
+        [6, 8],
+        [8, 6]
+      ];
+
+      var MAX_CRITERIA = 6;
+      var MAX_OPTIONS = 5;
+
+      /* ---- helpers ---- */
+      function clamp(v, lo, hi) { return Math.min(Math.max(v, lo), hi); }
+      function escapeHtml(s) {
+        return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+      }
+
+      /* ---- render criteria list ---- */
+      function renderCriteria() {
+        var wrap = document.getElementById("dm-criteria");
+        var html = "";
+        for (var i = 0; i < criteria.length; i++) {
+          html +=
+            '<div style="display:flex;gap:8px;align-items:flex-end;margin-bottom:8px">' +
+              '<label class="tool-field" style="flex:1;margin:0">' +
+                '<span class="tool-label">Criterion ' + (i + 1) + '</span>' +
+                '<input class="tool-input" type="text" data-ci="' + i + '" data-cf="name" value="' + escapeHtml(criteria[i].name) + '">' +
+              '</label>' +
+              '<label class="tool-field" style="width:90px;margin:0">' +
+                '<span class="tool-label">Weight</span>' +
+                '<input class="tool-input" type="number" min="1" max="10" step="1" data-ci="' + i + '" data-cf="weight" value="' + criteria[i].weight + '">' +
+              '</label>' +
+              (criteria.length > 1 ? '<button class="button-ghost" type="button" data-remove-criterion="' + i + '" style="font-size:.8rem;padding:8px 10px;margin-bottom:0;white-space:nowrap" title="Remove criterion">&#x2715;</button>' : '') +
+            '</div>';
+        }
+        wrap.innerHTML = html;
+        document.getElementById("dm-add-criterion").style.display = criteria.length >= MAX_CRITERIA ? "none" : "";
+      }
+
+      /* ---- render options list ---- */
+      function renderOptions() {
+        var wrap = document.getElementById("dm-options");
+        var html = "";
+        for (var i = 0; i < options.length; i++) {
+          html +=
+            '<div style="display:flex;gap:8px;align-items:flex-end;margin-bottom:8px">' +
+              '<label class="tool-field" style="flex:1;margin:0">' +
+                '<span class="tool-label">Option ' + (i + 1) + '</span>' +
+                '<input class="tool-input" type="text" data-oi="' + i + '" value="' + escapeHtml(options[i].name) + '">' +
+              '</label>' +
+              (options.length > 1 ? '<button class="button-ghost" type="button" data-remove-option="' + i + '" style="font-size:.8rem;padding:8px 10px;margin-bottom:0;white-space:nowrap" title="Remove option">&#x2715;</button>' : '') +
+            '</div>';
+        }
+        wrap.innerHTML = html;
+        document.getElementById("dm-add-option").style.display = options.length >= MAX_OPTIONS ? "none" : "";
+      }
+
+      /* ---- render scoring matrix ---- */
+      function renderMatrix() {
+        var wrap = document.getElementById("dm-matrix");
+        if (criteria.length === 0 || options.length === 0) { wrap.innerHTML = ""; return; }
+
+        var cols = options.length + 2; /* criterion name + weight + N options */
+        var html = '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.9rem">';
+
+        /* header */
+        html += '<thead><tr style="border-bottom:1px solid var(--line)">';
+        html += '<th style="text-align:left;padding:8px 6px;color:var(--muted);font-weight:500">Criterion</th>';
+        html += '<th style="text-align:center;padding:8px 6px;color:var(--muted);font-weight:500;width:70px">Weight</th>';
+        for (var o = 0; o < options.length; o++) {
+          html += '<th style="text-align:center;padding:8px 6px;color:var(--fg);font-weight:600">' + escapeHtml(options[o].name || "Option " + (o + 1)) + '</th>';
+        }
+        html += '</tr></thead><tbody>';
+
+        /* rows */
+        for (var c = 0; c < criteria.length; c++) {
+          html += '<tr style="border-bottom:1px solid var(--line)">';
+          html += '<td style="padding:8px 6px;color:var(--fg)">' + escapeHtml(criteria[c].name || "Criterion " + (c + 1)) + '</td>';
+          html += '<td style="text-align:center;padding:8px 6px;color:var(--muted)">' + criteria[c].weight + '</td>';
+          for (var oo = 0; oo < options.length; oo++) {
+            var val = (scores[c] && scores[c][oo] != null) ? scores[c][oo] : 5;
+            html += '<td style="text-align:center;padding:6px 4px"><input class="tool-input" type="number" min="1" max="10" step="1" data-sc="' + c + '" data-so="' + oo + '" value="' + val + '" style="width:60px;text-align:center;margin:0"></td>';
+          }
+          html += '</tr>';
+        }
+
+        html += '</tbody></table></div>';
+        wrap.innerHTML = html;
+      }
+
+      /* ---- calculate and render results ---- */
+      function renderResults() {
+        var container = document.querySelector('[data-result="decision-matrix"]');
+        if (!container || criteria.length === 0 || options.length === 0) { if (container) container.innerHTML = ""; return; }
+
+        var totalWeight = 0;
+        for (var c = 0; c < criteria.length; c++) {
+          totalWeight += criteria[c].weight;
+        }
+        if (totalWeight === 0) totalWeight = 1;
+
+        var results = [];
+        for (var o = 0; o < options.length; o++) {
+          var weightedSum = 0;
+          for (var cc = 0; cc < criteria.length; cc++) {
+            var sc = (scores[cc] && scores[cc][o] != null) ? scores[cc][o] : 5;
+            weightedSum += sc * criteria[cc].weight;
+          }
+          var normalised = Math.round((weightedSum / totalWeight) * 10);
+          results.push({ name: options[o].name || "Option " + (o + 1), score: normalised });
+        }
+
+        /* sort descending */
+        var sorted = results.slice().sort(function (a, b) { return b.score - a.score; });
+        var winner = sorted[0];
+        var maxScore = Math.max(winner.score, 1);
+
+        var html =
+          '<div class="tool-kpis">' +
+            '<div class="tool-kpi"><span>Winner</span><strong>' + escapeHtml(winner.name) + '</strong></div>' +
+            '<div class="tool-kpi"><span>Score</span><strong>' + winner.score + '/100</strong></div>' +
+            '<div class="tool-kpi"><span>Options Compared</span><strong>' + options.length + '</strong></div>' +
+          '</div>';
+
+        /* bar chart */
+        html += '<div style="margin-top:18px">';
+        for (var s = 0; s < sorted.length; s++) {
+          var pct = Math.round((sorted[s].score / maxScore) * 100);
+          var isWinner = s === 0;
+          html +=
+            '<div style="margin-bottom:10px">' +
+              '<div style="display:flex;justify-content:space-between;margin-bottom:4px;font-size:.85rem">' +
+                '<span style="color:var(--fg);font-weight:' + (isWinner ? '600' : '400') + '">' + escapeHtml(sorted[s].name) + '</span>' +
+                '<span style="color:var(--muted)">' + sorted[s].score + '/100</span>' +
+              '</div>' +
+              '<div style="height:12px;border-radius:6px;background:rgba(255,255,255,0.06);overflow:hidden">' +
+                '<div style="height:100%;width:' + pct + '%;border-radius:6px;background:' + (isWinner ? 'var(--accent)' : 'rgba(255,255,255,0.18)') + ';transition:width .3s ease"></div>' +
+              '</div>' +
+            '</div>';
+        }
+        html += '</div>';
+
+        container.innerHTML = html;
+      }
+
+      /* ---- ensure scores array is sized correctly ---- */
+      function syncScores() {
+        var newScores = [];
+        for (var c = 0; c < criteria.length; c++) {
+          newScores[c] = [];
+          for (var o = 0; o < options.length; o++) {
+            newScores[c][o] = (scores[c] && scores[c][o] != null) ? scores[c][o] : 5;
+          }
+        }
+        scores = newScores;
+      }
+
+      /* ---- full re-render ---- */
+      function renderAll() {
+        syncScores();
+        renderCriteria();
+        renderOptions();
+        renderMatrix();
+        renderResults();
+      }
+
+      /* ---- event delegation ---- */
+      document.addEventListener("click", function (e) {
+        var btn;
+
+        /* add criterion */
+        if (e.target.id === "dm-add-criterion") {
+          if (criteria.length < MAX_CRITERIA) {
+            criteria.push({ name: "", weight: 5 });
+            renderAll();
+          }
+          return;
+        }
+
+        /* add option */
+        if (e.target.id === "dm-add-option") {
+          if (options.length < MAX_OPTIONS) {
+            options.push({ name: "" });
+            renderAll();
+          }
+          return;
+        }
+
+        /* remove criterion */
+        btn = e.target.closest("[data-remove-criterion]");
+        if (btn) {
+          var ci = parseInt(btn.getAttribute("data-remove-criterion"), 10);
+          criteria.splice(ci, 1);
+          scores.splice(ci, 1);
+          renderAll();
+          return;
+        }
+
+        /* remove option */
+        btn = e.target.closest("[data-remove-option]");
+        if (btn) {
+          var oi = parseInt(btn.getAttribute("data-remove-option"), 10);
+          options.splice(oi, 1);
+          for (var c = 0; c < scores.length; c++) {
+            if (scores[c]) scores[c].splice(oi, 1);
+          }
+          renderAll();
+          return;
+        }
+      });
+
+      /* input changes on criteria / options / scores */
+      document.addEventListener("input", function (e) {
+        var el = e.target;
+
+        /* criterion name */
+        if (el.hasAttribute("data-ci") && el.getAttribute("data-cf") === "name") {
+          criteria[parseInt(el.getAttribute("data-ci"), 10)].name = el.value;
+          renderMatrix();
+          renderResults();
+          return;
+        }
+
+        /* criterion weight */
+        if (el.hasAttribute("data-ci") && el.getAttribute("data-cf") === "weight") {
+          criteria[parseInt(el.getAttribute("data-ci"), 10)].weight = clamp(parseInt(el.value, 10) || 1, 1, 10);
+          renderMatrix();
+          renderResults();
+          return;
+        }
+
+        /* option name */
+        if (el.hasAttribute("data-oi")) {
+          options[parseInt(el.getAttribute("data-oi"), 10)].name = el.value;
+          renderMatrix();
+          renderResults();
+          return;
+        }
+
+        /* score */
+        if (el.hasAttribute("data-sc") && el.hasAttribute("data-so")) {
+          var sc = parseInt(el.getAttribute("data-sc"), 10);
+          var so = parseInt(el.getAttribute("data-so"), 10);
+          if (!scores[sc]) scores[sc] = [];
+          scores[sc][so] = clamp(parseInt(el.value, 10) || 1, 1, 10);
+          renderResults();
+          return;
+        }
+      });
+
+      /* ---- initial render ---- */
+      renderAll();
+    }());
+  </script>
+</body>
+</html>

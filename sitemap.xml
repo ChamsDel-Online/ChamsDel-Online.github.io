@@ -60,6 +60,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://chamsdel.online/tools/x-bio-generator/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/compliance-framework-finder/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/niche-clarity-scorecard/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/tweet-hook-generator/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chamsdel.online/tools/decision-matrix/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://chamsdel.online/blog/</loc>
   </url>
   <url>
