@@ -59,45 +59,144 @@
     </section>
 
     <section class="page">
-      <div class="grid three">
-        <article class="product-card">
+      <div class="filter-bar" id="filterBar">
+        <div class="filter-group">
+          <span class="filter-label">Status</span>
+          <button class="filter-chip active" data-filter="all">All</button>
+          <button class="filter-chip" data-filter="status:shipping">Shipping</button>
+          <button class="filter-chip" data-filter="status:live">Live</button>
+          <button class="filter-chip" data-filter="status:dev">Dev</button>
+          <button class="filter-chip" data-filter="status:paused">Paused</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Category</span>
+          <button class="filter-chip" data-filter="category:x-growth">X Growth</button>
+          <button class="filter-chip" data-filter="category:cybersecurity">Cybersecurity</button>
+          <button class="filter-chip" data-filter="category:personal-growth">Personal Growth</button>
+        </div>
+      </div>
+
+      <p class="filter-summary" id="filterSummary"></p>
+
+      <div class="grid three" id="productGrid">
+        <article class="product-card" data-status="live" data-category="cybersecurity">
           <div class="eyebrow">Live</div>
           <h2 class="card-title">CompliQuiz</h2>
           <p class="copy">Compliance learning, made more engaging and memorable for teams that need better training experiences.</p>
           <a class="card-link" href="/products/compliquiz/">Explore product page</a>
         </article>
-        <article class="product-card">
-          <div class="eyebrow">Live</div>
+        <article class="product-card" data-status="shipping" data-category="x-growth">
+          <div class="eyebrow">Shipping</div>
           <h2 class="card-title">ReplyWisely</h2>
           <p class="copy">A Chrome extension for replying smarter on X with better targeting, visibility, and follow-through.</p>
           <a class="card-link" href="/products/replywisely/">Explore product page</a>
         </article>
-        <article class="product-card">
-          <div class="eyebrow">Live</div>
+        <article class="product-card" data-status="shipping" data-category="x-growth">
+          <div class="eyebrow">Shipping</div>
           <h2 class="card-title">TwitMix</h2>
           <p class="copy">A content repurposing tool that turns bookmarked tweets into fresh posts you can actually publish.</p>
           <a class="card-link" href="/products/twitmix/">Explore product page</a>
         </article>
-        <article class="product-card">
-          <div class="eyebrow">Under construction</div>
+        <article class="product-card" data-status="paused" data-category="personal-growth">
+          <div class="eyebrow">Paused</div>
           <h2 class="card-title">DearMeWiser</h2>
           <p class="copy">A reflective app focused on self-conversation, personal growth, and emotional clarity.</p>
           <a class="card-link" href="/products/dearmewiser/">Explore product page</a>
         </article>
-        <article class="product-card">
-          <div class="eyebrow">Under construction</div>
+        <article class="product-card" data-status="dev" data-category="personal-growth">
+          <div class="eyebrow">In development</div>
           <h2 class="card-title">HardChoice</h2>
           <p class="copy">A structured decision-making tool for people working through high-stakes personal and professional choices.</p>
           <a class="card-link" href="/products/hardchoice/">Explore product page</a>
         </article>
-        <article class="product-card">
+        <article class="product-card" data-status="live" data-category="personal-growth">
           <div class="eyebrow">Live</div>
           <h2 class="card-title">IkigaiNiche</h2>
           <p class="copy">An exploration engine for identifying niches aligned with strengths, interests, and market opportunity.</p>
           <a class="card-link" href="/products/ikigainiche/">Explore product page</a>
         </article>
+        <article class="product-card" data-status="shipping" data-category="cybersecurity">
+          <div class="eyebrow">Shipping</div>
+          <h2 class="card-title">FinSec Scorecard</h2>
+          <p class="copy">A diagnostic scorecard helping small FinTech companies assess PCI DSS and SOC 2 readiness of their AWS infrastructure.</p>
+          <a class="card-link" href="/products/finsecscorecard/">Explore product page</a>
+        </article>
       </div>
     </section>
+
+    <script>
+    (function () {
+      const grid = document.getElementById('productGrid');
+      const cards = grid.querySelectorAll('.product-card');
+      const chips = document.querySelectorAll('.filter-chip');
+      const summary = document.getElementById('filterSummary');
+
+      const LABELS = {
+        'all': 'All products',
+        'status:shipping': 'Shipping now',
+        'status:live': 'Live',
+        'status:dev': 'In development',
+        'status:paused': 'Paused',
+        'category:x-growth': 'X Growth tools',
+        'category:cybersecurity': 'Cybersecurity & compliance',
+        'category:personal-growth': 'Personal growth'
+      };
+
+      function applyFilter(filter) {
+        let visible = 0;
+        cards.forEach(function (card) {
+          let show = true;
+          if (filter !== 'all') {
+            var parts = filter.split(':');
+            var attr = 'data-' + parts[0];
+            show = card.getAttribute(attr) === parts[1];
+          }
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+
+        chips.forEach(function (c) {
+          c.classList.toggle('active', c.dataset.filter === filter);
+        });
+
+        if (filter === 'all') {
+          summary.textContent = '';
+        } else {
+          summary.textContent = (LABELS[filter] || filter) + ' — ' + visible + ' product' + (visible !== 1 ? 's' : '');
+        }
+      }
+
+      function filterFromURL() {
+        var params = new URLSearchParams(window.location.search);
+        var status = params.get('status');
+        var category = params.get('category');
+        if (status) return 'status:' + status;
+        if (category) return 'category:' + category;
+        return 'all';
+      }
+
+      function setURL(filter) {
+        var url = new URL(window.location);
+        url.searchParams.delete('status');
+        url.searchParams.delete('category');
+        if (filter !== 'all') {
+          var parts = filter.split(':');
+          url.searchParams.set(parts[0], parts[1]);
+        }
+        history.replaceState(null, '', url);
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var filter = chip.dataset.filter;
+          setURL(filter);
+          applyFilter(filter);
+        });
+      });
+
+      applyFilter(filterFromURL());
+    })();
+    </script>
   </main>
 
   <footer class="site-shell footer">
