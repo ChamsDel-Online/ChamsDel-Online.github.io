@@ -1,104 +1,112 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">ChamsDel Online OG Image</title>
-  <desc id="desc">Cinematic social sharing image for ChamsDel Online featuring the founder story and builder tools message.</desc>
+  <title id="title">ChamsDel Online social sharing image</title>
+  <desc id="desc">Founder story and builder tools social card for ChamsDel Online.</desc>
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07111d" />
-      <stop offset="55%" stop-color="#0a1a2f" />
-      <stop offset="100%" stop-color="#050b14" />
+      <stop offset="0%" stop-color="#06111d"/>
+      <stop offset="58%" stop-color="#0b1d33"/>
+      <stop offset="100%" stop-color="#060d18"/>
     </linearGradient>
-    <radialGradient id="glowBlue" cx="20%" cy="16%" r="55%">
-      <stop offset="0%" stop-color="#59c9ff" stop-opacity="0.34" />
-      <stop offset="100%" stop-color="#59c9ff" stop-opacity="0" />
+    <radialGradient id="glowBlue" cx="16%" cy="15%" r="54%">
+      <stop offset="0%" stop-color="#8de1ff" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#8de1ff" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowRose" cx="84%" cy="22%" r="34%">
-      <stop offset="0%" stop-color="#f79ac0" stop-opacity="0.28" />
-      <stop offset="100%" stop-color="#f79ac0" stop-opacity="0" />
+    <radialGradient id="glowRose" cx="88%" cy="20%" r="35%">
+      <stop offset="0%" stop-color="#f79ac0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f79ac0" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowWarm" cx="52%" cy="100%" r="42%">
-      <stop offset="0%" stop-color="#ffbf84" stop-opacity="0.22" />
-      <stop offset="100%" stop-color="#ffbf84" stop-opacity="0" />
+    <radialGradient id="glowWarm" cx="56%" cy="100%" r="42%">
+      <stop offset="0%" stop-color="#ffbf84" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#ffbf84" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="panelStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#a7dfff" stop-opacity="0.36" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="0%" stop-color="#b9e8ff" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
     </linearGradient>
-    <linearGradient id="spark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8de1ff" />
-      <stop offset="100%" stop-color="#f79ac0" />
+    <linearGradient id="chipBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8de1ff"/>
+      <stop offset="100%" stop-color="#5ec9ff"/>
     </linearGradient>
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.35" />
-    </filter>
-    <pattern id="grid" width="120" height="120" patternUnits="userSpaceOnUse">
-      <path d="M 120 0 L 0 0 0 120" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" />
+    <linearGradient id="chipRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f79ac0"/>
+      <stop offset="100%" stop-color="#ffbf84"/>
+    </linearGradient>
+    <pattern id="grid" width="116" height="116" patternUnits="userSpaceOnUse">
+      <path d="M116 0H0V116" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
     </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
   </defs>
 
-  <rect width="1200" height="630" fill="url(#bg)" />
-  <rect width="1200" height="630" fill="url(#glowBlue)" />
-  <rect width="1200" height="630" fill="url(#glowRose)" />
-  <rect width="1200" height="630" fill="url(#glowWarm)" />
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.45" />
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glowBlue)"/>
+  <rect width="1200" height="630" fill="url(#glowRose)"/>
+  <rect width="1200" height="630" fill="url(#glowWarm)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.44"/>
 
-  <g opacity="0.85">
-    <circle cx="150" cy="120" r="3" fill="#8de1ff" />
-    <circle cx="220" cy="88" r="2" fill="#eff7ff" />
-    <circle cx="1010" cy="126" r="3" fill="#f79ac0" />
-    <circle cx="940" cy="182" r="2" fill="#eff7ff" />
-    <circle cx="1080" cy="510" r="3" fill="#ffbf84" />
+  <g opacity="0.9">
+    <circle cx="145" cy="116" r="3" fill="#8de1ff"/>
+    <circle cx="214" cy="82" r="2" fill="#eff7ff"/>
+    <circle cx="1028" cy="128" r="3" fill="#f79ac0"/>
+    <circle cx="958" cy="170" r="2" fill="#eff7ff"/>
+    <circle cx="1102" cy="510" r="3" fill="#ffbf84"/>
   </g>
 
-  <g filter="url(#softShadow)">
-    <rect x="62" y="64" width="1076" height="502" rx="34" fill="#0b1627" fill-opacity="0.72" stroke="url(#panelStroke)" stroke-width="1.4" />
-    <path d="M62 64 H1138 V566 H62 Z" fill="none" stroke="#8de1ff" stroke-opacity="0.08" />
-    <path d="M62 64 C240 144 438 112 618 88 C790 64 963 105 1138 172" fill="none" stroke="#8de1ff" stroke-opacity="0.14" stroke-width="1.5" />
-    <path d="M62 566 C248 494 432 510 612 538 C792 566 955 548 1138 492" fill="none" stroke="#ffbf84" stroke-opacity="0.12" stroke-width="1.5" />
+  <g filter="url(#shadow)">
+    <rect x="58" y="56" width="1084" height="518" rx="36" fill="#0b1729" fill-opacity="0.74" stroke="url(#panelStroke)" stroke-width="1.4"/>
+    <path d="M58 56C256 148 447 108 620 84C792 61 967 103 1142 178" fill="none" stroke="#8de1ff" stroke-opacity="0.16" stroke-width="1.5"/>
+    <path d="M58 574C248 494 431 508 610 538C790 566 958 549 1142 488" fill="none" stroke="#ffbf84" stroke-opacity="0.12" stroke-width="1.5"/>
   </g>
 
-  <g transform="translate(112 112)">
+  <g transform="translate(112 108)">
     <g>
-      <rect x="0" y="0" width="220" height="42" rx="21" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" />
-      <circle cx="24" cy="21" r="7" fill="url(#spark)" />
-      <text x="44" y="27" fill="#dceeff" font-size="18" font-family="Arial, Helvetica, sans-serif" letter-spacing="2.5">CHAMSDEL ONLINE</text>
+      <rect x="0" y="0" width="274" height="46" rx="23" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <circle cx="23" cy="23" r="8" fill="#8de1ff"/>
+      <path d="M23 12L25.8 20.2L34 23L25.8 25.8L23 34L20.2 25.8L12 23L20.2 20.2Z" fill="#eff7ff" fill-opacity="0.95"/>
+      <text x="45" y="29" fill="#deefff" font-size="18" letter-spacing="2.3" font-family="Arial, Helvetica, sans-serif">CHAMSDEL ONLINE</text>
     </g>
 
-    <text x="0" y="132" fill="#eff7ff" font-size="82" font-weight="600" font-family="Georgia, 'Times New Roman', serif">Fatherhood.</text>
-    <text x="0" y="214" fill="#eff7ff" font-size="82" font-weight="600" font-family="Georgia, 'Times New Roman', serif">Late-night builds.</text>
-    <text x="0" y="296" fill="#8de1ff" font-size="82" font-weight="600" font-family="Georgia, 'Times New Roman', serif">Tools for builders.</text>
+    <text x="0" y="138" fill="#eff7ff" font-size="84" font-weight="600" font-family="Georgia, 'Times New Roman', serif">Fatherhood.</text>
+    <text x="0" y="220" fill="#8de1ff" font-size="84" font-weight="600" font-family="Georgia, 'Times New Roman', serif">Late-night builds.</text>
+    <text x="0" y="302" fill="#f2f8ff" font-size="84" font-weight="600" font-family="Georgia, 'Times New Roman', serif">Builder tools.</text>
 
-    <text x="0" y="366" fill="#c8d9ea" font-size="29" font-family="Arial, Helvetica, sans-serif">
-      Cinematic founder story plus free tools for planning, pricing,
-    </text>
-    <text x="0" y="404" fill="#c8d9ea" font-size="29" font-family="Arial, Helvetica, sans-serif">
-      launches, content, and the path to becoming an indie maker.
-    </text>
+    <text x="0" y="372" fill="#cfdef0" font-size="24" font-family="Arial, Helvetica, sans-serif">Stories, experiments, and practical tools for indie builders.</text>
 
-    <g transform="translate(0 434)">
-      <rect x="0" y="0" width="194" height="52" rx="26" fill="#8de1ff" fill-opacity="0.12" stroke="#8de1ff" stroke-opacity="0.34" />
-      <text x="26" y="33" fill="#eff7ff" font-size="21" font-family="Arial, Helvetica, sans-serif">Builder tools</text>
+    <g transform="translate(0 424)">
+      <rect x="0" y="0" width="200" height="54" rx="27" fill="#8de1ff" fill-opacity="0.12" stroke="#8de1ff" stroke-opacity="0.34"/>
+      <text x="29" y="35" fill="#eff7ff" font-size="22" font-family="Arial, Helvetica, sans-serif">Product stories</text>
 
-      <rect x="212" y="0" width="232" height="52" rx="26" fill="#f79ac0" fill-opacity="0.09" stroke="#f79ac0" stroke-opacity="0.3" />
-      <text x="238" y="33" fill="#eff7ff" font-size="21" font-family="Arial, Helvetica, sans-serif">Indie maker story</text>
+      <rect x="218" y="0" width="186" height="54" rx="27" fill="#f79ac0" fill-opacity="0.11" stroke="#f79ac0" stroke-opacity="0.32"/>
+      <text x="249" y="35" fill="#eff7ff" font-size="22" font-family="Arial, Helvetica, sans-serif">Build in public</text>
 
-      <rect x="462" y="0" width="176" height="52" rx="26" fill="#ffbf84" fill-opacity="0.1" stroke="#ffbf84" stroke-opacity="0.34" />
-      <text x="489" y="33" fill="#eff7ff" font-size="21" font-family="Arial, Helvetica, sans-serif">ChamsDel</text>
+      <rect x="422" y="0" width="178" height="54" rx="27" fill="#ffbf84" fill-opacity="0.12" stroke="#ffbf84" stroke-opacity="0.34"/>
+      <text x="453" y="35" fill="#eff7ff" font-size="22" font-family="Arial, Helvetica, sans-serif">Free tools</text>
     </g>
   </g>
 
-  <g transform="translate(856 132)">
-    <rect x="0" y="0" width="212" height="284" rx="26" fill="#0f2138" fill-opacity="0.78" stroke="#a7dfff" stroke-opacity="0.2" />
-    <rect x="22" y="24" width="168" height="104" rx="18" fill="#112740" stroke="#8de1ff" stroke-opacity="0.14" />
-    <path d="M42 108 C74 80 100 78 130 92 C152 102 168 100 190 74" fill="none" stroke="#8de1ff" stroke-width="4" stroke-linecap="round" />
-    <path d="M42 96 C68 126 102 128 132 116 C158 106 171 113 190 134" fill="none" stroke="#f79ac0" stroke-width="3" stroke-linecap="round" opacity="0.92" />
-    <rect x="22" y="152" width="76" height="76" rx="18" fill="#102236" stroke="#ffffff" stroke-opacity="0.08" />
-    <rect x="114" y="152" width="76" height="76" rx="18" fill="#102236" stroke="#ffffff" stroke-opacity="0.08" />
-    <circle cx="60" cy="190" r="17" fill="#8de1ff" fill-opacity="0.22" stroke="#8de1ff" stroke-opacity="0.36" />
-    <path d="M53 190 L58 195 L69 182" fill="none" stroke="#8de1ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="152" cy="190" r="17" fill="#ffbf84" fill-opacity="0.22" stroke="#ffbf84" stroke-opacity="0.4" />
-    <text x="145" y="197" fill="#ffbf84" font-size="22" font-family="Arial, Helvetica, sans-serif">$</text>
-    <rect x="22" y="246" width="168" height="16" rx="8" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="22" y="246" width="122" height="16" rx="8" fill="url(#spark)" opacity="0.82" />
-  </g>
+  <g transform="translate(854 112)">
+    <rect x="0" y="0" width="234" height="404" rx="30" fill="#0f223b" fill-opacity="0.82" stroke="#a7dfff" stroke-opacity="0.24"/>
 
+    <g transform="translate(57 44)">
+      <circle cx="60" cy="60" r="53" fill="#102946" stroke="#8de1ff" stroke-opacity="0.28"/>
+      <circle cx="60" cy="60" r="31" fill="none" stroke="#ffbf84" stroke-width="3" stroke-opacity="0.88"/>
+      <path d="M60 28L68 52L92 60L68 68L60 92L52 68L28 60L52 52Z" fill="url(#chipRose)"/>
+      <circle cx="88" cy="37" r="6" fill="#ffbf84"/>
+    </g>
+
+    <g transform="translate(28 174)">
+      <rect x="0" y="0" width="178" height="52" rx="16" fill="#0f2946" stroke="#ffffff" stroke-opacity="0.1"/>
+      <rect x="0" y="68" width="178" height="52" rx="16" fill="#0f2946" stroke="#ffffff" stroke-opacity="0.1"/>
+      <rect x="0" y="136" width="178" height="52" rx="16" fill="#0f2946" stroke="#ffffff" stroke-opacity="0.1"/>
+
+      <rect x="14" y="16" width="44" height="20" rx="10" fill="url(#chipBlue)" opacity="0.9"/>
+      <rect x="14" y="84" width="44" height="20" rx="10" fill="url(#chipRose)" opacity="0.9"/>
+      <rect x="14" y="152" width="44" height="20" rx="10" fill="#ffbf84" opacity="0.9"/>
+
+      <text x="70" y="32" fill="#eff7ff" font-size="18" font-family="Arial, Helvetica, sans-serif">Story-led</text>
+      <text x="70" y="100" fill="#eff7ff" font-size="18" font-family="Arial, Helvetica, sans-serif">Product-first</text>
+      <text x="70" y="168" fill="#eff7ff" font-size="18" font-family="Arial, Helvetica, sans-serif">Builder tools</text>
+    </g>
+  </g>
 </svg>
