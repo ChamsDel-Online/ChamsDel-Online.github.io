@@ -46,9 +46,9 @@
 
   <main class="site-shell page">
     <section class="hero-card">
-      <div class="eyebrow">Product Hub</div>
-      <h1 class="title">Every product gets its own <span>home on the web.</span></h1>
-      <p class="lead">
+      <div class="eyebrow" id="heroEyebrow">Product Hub</div>
+      <h1 class="title" id="heroTitle">Every product gets its own <span>home on the web.</span></h1>
+      <p class="lead" id="heroLead">
         Explore everything being built. Each product has its own page with its purpose, status, story, and related writing.
       </p>
       <div class="actions">
@@ -128,6 +128,9 @@
       const cards = grid.querySelectorAll('.product-card');
       const chips = document.querySelectorAll('.filter-chip');
       const summary = document.getElementById('filterSummary');
+      const heroEyebrow = document.getElementById('heroEyebrow');
+      const heroTitle = document.getElementById('heroTitle');
+      const heroLead = document.getElementById('heroLead');
 
       const LABELS = {
         'all': 'All products',
@@ -138,6 +141,62 @@
         'category:cybersecurity': 'Cybersecurity & compliance',
         'category:personal-growth': 'Personal growth'
       };
+
+      const DEFAULT_HERO = {
+        eyebrow: 'Product Hub',
+        title: 'Every product gets its own <span>home on the web.</span>',
+        lead: 'Explore everything being built. Each product has its own page with its purpose, status, story, and related writing.'
+      };
+
+      const HERO_BY_CATEGORY = {
+        'x-growth': {
+          eyebrow: 'X Growth Tools',
+          title: 'Tools to help you <span>grow faster on X.</span>',
+          lead: 'A focused set of products for better content repurposing, smarter replies, and consistent audience growth on X.'
+        },
+        'cybersecurity': {
+          eyebrow: 'Cybersecurity',
+          title: 'Security and compliance <span>made practical.</span>',
+          lead: 'Products designed to help teams improve readiness, close security gaps, and move toward stronger compliance outcomes.'
+        },
+        'personal-growth': {
+          eyebrow: 'Personal Growth',
+          title: 'Products for better <span>clarity and decisions.</span>',
+          lead: 'Tools supporting reflection, self-awareness, and smarter decision-making across personal and professional life.'
+        }
+      };
+
+      function toTitleCase(slug) {
+        return slug
+          .split('-')
+          .filter(Boolean)
+          .map(function (part) {
+            return part.charAt(0).toUpperCase() + part.slice(1);
+          })
+          .join(' ');
+      }
+
+      function heroForCategory(category) {
+        if (!category) return DEFAULT_HERO;
+        if (HERO_BY_CATEGORY[category]) return HERO_BY_CATEGORY[category];
+        var name = toTitleCase(category);
+        return {
+          eyebrow: name + ' Tools',
+          title: name + ' <span>product collection.</span>',
+          lead: 'Explore products in the ' + name + ' group and see what is shipping, live, and actively being improved.'
+        };
+      }
+
+      function applyHero(filter) {
+        var category = null;
+        if (filter.indexOf('category:') === 0) {
+          category = filter.split(':')[1];
+        }
+        var hero = heroForCategory(category);
+        heroEyebrow.textContent = hero.eyebrow;
+        heroTitle.innerHTML = hero.title;
+        heroLead.textContent = hero.lead;
+      }
 
       function applyFilter(filter) {
         let visible = 0;
@@ -161,6 +220,8 @@
         } else {
           summary.textContent = (LABELS[filter] || filter) + ' — ' + visible + ' product' + (visible !== 1 ? 's' : '');
         }
+
+        applyHero(filter);
       }
 
       function filterFromURL() {
