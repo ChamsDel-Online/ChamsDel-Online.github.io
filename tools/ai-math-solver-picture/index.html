@@ -207,22 +207,84 @@
   <!-- Cloudflare Turnstile -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <style>
-    .math-drop {
-      border: 1.5px dashed rgba(141, 225, 255, 0.45);
-      border-radius: 18px;
-      padding: 28px 20px;
-      text-align: center;
-      background: rgba(10, 22, 38, 0.4);
-      transition: border-color 0.2s, background 0.2s;
-      cursor: pointer;
+    .math-stage {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
     }
-    .math-drop.is-hover { border-color: var(--accent); background: rgba(141, 225, 255, 0.08); }
+    @media (min-width: 820px) {
+      .math-stage { grid-template-columns: 1.05fr 1fr; align-items: start; }
+    }
+    .math-drop {
+      position: relative;
+      border: 1.5px dashed rgba(141, 225, 255, 0.45);
+      border-radius: 20px;
+      padding: 36px 22px;
+      text-align: center;
+      background:
+        radial-gradient(120% 80% at 50% 0%, rgba(141, 225, 255, 0.10), transparent 60%),
+        rgba(10, 22, 38, 0.55);
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+      cursor: pointer;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      overflow: hidden;
+    }
+    .math-drop:hover, .math-drop:focus-visible { border-color: var(--accent); }
+    .math-drop.is-hover { border-color: var(--accent); background: rgba(141, 225, 255, 0.10); transform: translateY(-1px); }
+    .math-drop.is-filled { cursor: default; padding: 0; border-style: solid; border-color: rgba(141, 225, 255, 0.25); background: rgba(10, 22, 38, 0.55); }
     .math-drop input[type="file"] { display: none; }
-    .math-drop-hint { color: var(--muted); margin-top: 8px; font-size: 0.9rem; }
-    .math-preview { margin-top: 16px; text-align: center; }
-    .math-preview img { max-width: 100%; max-height: 320px; border-radius: 14px; border: 1px solid var(--line); }
-    .math-preview .preview-meta { color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
-    .math-turnstile { margin: 14px 0; display: flex; justify-content: center; }
+    .math-drop-icon {
+      width: 56px; height: 56px; border-radius: 16px;
+      display: grid; place-items: center;
+      background: linear-gradient(135deg, rgba(141, 225, 255, 0.22), rgba(247, 154, 192, 0.22));
+      border: 1px solid rgba(141, 225, 255, 0.35);
+      color: var(--accent);
+    }
+    .math-drop-title { font-weight: 600; font-size: 1.02rem; }
+    .math-drop-hint { color: var(--muted); font-size: 0.85rem; max-width: 360px; line-height: 1.4; }
+    .math-drop-badges { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-top: 4px; }
+    .math-drop-badges span {
+      font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 999px;
+      border: 1px solid var(--line); color: var(--muted);
+      background: rgba(10, 22, 38, 0.5);
+    }
+    .math-preview-wrap { position: relative; width: 100%; }
+    .math-preview-wrap img {
+      display: block; width: 100%; max-height: 360px;
+      object-fit: contain; background: #020812;
+      border-radius: 18px 18px 0 0;
+    }
+    .math-preview-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 14px; color: var(--muted); font-size: 0.82rem;
+      border-top: 1px solid var(--line);
+    }
+    .math-preview-replace {
+      background: none; border: none; cursor: pointer;
+      color: var(--accent); font: inherit; font-size: 0.82rem;
+      text-decoration: underline; padding: 0;
+    }
+    .math-sidecar { display: flex; flex-direction: column; gap: 14px; }
+    .math-sidecar .tool-field { margin: 0; }
+    .math-turnstile {
+      display: flex; justify-content: center;
+      padding: 14px; border-radius: 16px;
+      background: rgba(10, 22, 38, 0.45);
+      border: 1px solid var(--line);
+    }
+    .math-actions-row {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px;
+    }
+    .math-actions-row .button { flex: 1 1 220px; }
+    .math-actions-row .button:disabled {
+      opacity: 0.45; cursor: not-allowed; filter: grayscale(0.3);
+    }
     .math-steps { counter-reset: step; list-style: none; padding: 0; margin: 8px 0 0; }
     .math-steps li {
       counter-increment: step;
@@ -293,32 +355,53 @@
       <h2 style="margin:12px 0 8px;font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.1">Solve a math problem from a picture</h2>
       <p>Snap or upload a photo of the problem. The AI reads the image, transcribes the equation or question, picks the right method, and shows its working. On mobile, the upload button opens your camera directly.</p>
 
-      <label class="math-drop" id="mathDrop" tabindex="0" role="button" aria-label="Upload a picture of your math problem">
-        <strong>Tap to upload a photo — or drag &amp; drop / paste an image</strong>
-        <div class="math-drop-hint">PNG, JPEG, WEBP, or GIF · up to 8&nbsp;MB · resized to 1600&nbsp;px before sending</div>
-        <input id="mathFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif" capture="environment">
-      </label>
+      <div class="math-stage">
+        <label class="math-drop" id="mathDrop" tabindex="0" role="button" aria-label="Upload a picture of your math problem">
+          <div class="math-drop-empty" id="mathDropEmpty">
+            <div class="math-drop-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="3"/>
+                <circle cx="12" cy="12" r="3.2"/>
+                <path d="M8 5l1.2-1.8h5.6L16 5"/>
+              </svg>
+            </div>
+            <div class="math-drop-title">Tap to upload or snap a photo</div>
+            <div class="math-drop-hint">Drag &amp; drop an image, paste from clipboard, or pick from your camera roll. On mobile, the camera opens directly.</div>
+            <div class="math-drop-badges">
+              <span>PNG · JPEG · WEBP</span>
+              <span>≤ 8 MB</span>
+              <span>Resized to 1600 px</span>
+            </div>
+          </div>
+          <div class="math-preview-wrap" id="mathPreview" hidden>
+            <img id="mathPreviewImg" alt="Preview of the uploaded math problem">
+            <div class="math-preview-meta">
+              <span id="mathPreviewMeta"></span>
+              <button type="button" class="math-preview-replace" id="mathReplaceBtn">Replace image</button>
+            </div>
+          </div>
+          <input id="mathFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif" capture="environment">
+        </label>
 
-      <div class="math-preview" id="mathPreview" hidden>
-        <img id="mathPreviewImg" alt="Preview of the uploaded math problem">
-        <div class="preview-meta" id="mathPreviewMeta"></div>
+        <div class="math-sidecar">
+          <label class="tool-field">
+            <span class="tool-label">Optional: level or topic</span>
+            <input class="tool-input" id="mathHint" type="text" placeholder="e.g. high school algebra · first-year calculus · SAT prep">
+          </label>
+
+          <div class="math-turnstile">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAC9FXI-v4YgWFEhU" data-theme="dark" data-callback="onTurnstileSuccess"></div>
+          </div>
+
+          <div class="math-actions-row">
+            <button class="button" type="button" id="mathSolveBtn" disabled>Solve the math problem</button>
+            <button class="button-ghost" type="button" id="mathResetBtn" hidden>Clear image</button>
+          </div>
+          <p class="tool-note" style="margin:0">Images are sent to OpenAI for solving and are not stored on our servers. The CAPTCHA blocks bots without tracking you.</p>
+        </div>
       </div>
 
-      <label class="tool-field" style="margin-top:16px;display:block">
-        <span class="tool-label">Optional: what level or topic is this? (helps pick the right method)</span>
-        <input class="tool-input" id="mathHint" type="text" placeholder="e.g. high school algebra · first-year calculus · SAT prep">
-      </label>
-
-      <div class="math-turnstile">
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAC9FXI-v4YgWFEhU" data-theme="dark" data-callback="onTurnstileSuccess"></div>
-      </div>
-
-      <div class="tool-actions">
-        <button class="button" type="button" id="mathSolveBtn" disabled>Solve the math problem</button>
-        <button class="button-ghost" type="button" id="mathResetBtn" hidden>Clear image</button>
-      </div>
-      <p class="tool-note">Images are sent to OpenAI for solving and are not stored on our servers. The CAPTCHA blocks bots without tracking you.</p>
-      <div class="tool-result" data-result="math"></div>
+      <div class="tool-result" data-result="math" style="margin-top:18px"></div>
     </section>
 
     <section class="panel">
@@ -437,10 +520,12 @@
       var MAX_BYTES = 8 * 1024 * 1024;
 
       var dropZone = document.getElementById("mathDrop");
+      var dropEmpty = document.getElementById("mathDropEmpty");
       var fileInput = document.getElementById("mathFile");
       var preview = document.getElementById("mathPreview");
       var previewImg = document.getElementById("mathPreviewImg");
       var previewMeta = document.getElementById("mathPreviewMeta");
+      var replaceBtn = document.getElementById("mathReplaceBtn");
       var solveBtn = document.getElementById("mathSolveBtn");
       var resetBtn = document.getElementById("mathResetBtn");
       var hintInput = document.getElementById("mathHint");
@@ -513,6 +598,8 @@
           previewImg.src = result.dataUrl;
           previewMeta.textContent = result.width + " × " + result.height + " px · " + Math.round(result.dataUrl.length / 1024) + " KB";
           preview.hidden = false;
+          dropEmpty.hidden = true;
+          dropZone.classList.add("is-filled");
           resetBtn.hidden = false;
           setIdle();
           updateButton();
@@ -522,9 +609,18 @@
         });
       }
 
-      dropZone.addEventListener("click", function () { fileInput.click(); });
+      dropZone.addEventListener("click", function (e) {
+        if (dropZone.classList.contains("is-filled")) return;
+        fileInput.click();
+      });
       dropZone.addEventListener("keydown", function (e) {
+        if (dropZone.classList.contains("is-filled")) return;
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fileInput.click(); }
+      });
+      replaceBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        fileInput.click();
       });
       fileInput.addEventListener("change", function () {
         if (fileInput.files && fileInput.files[0]) loadFile(fileInput.files[0]);
@@ -555,6 +651,8 @@
         fileInput.value = "";
         previewImg.src = "";
         preview.hidden = true;
+        dropEmpty.hidden = false;
+        dropZone.classList.remove("is-filled");
         resetBtn.hidden = true;
         setIdle();
         updateButton();
