@@ -34,6 +34,57 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    .product-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 28px 0 0;
+    }
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      font-size: 0.88rem;
+      letter-spacing: 0.01em;
+    }
+    .stat-pill strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .stat-pill .stat-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--muted);
+    }
+    .stat-pill.is-live .stat-dot { background: var(--success); }
+    .stat-pill.is-shipping .stat-dot { background: var(--accent); }
+    .stat-pill.is-paused .stat-dot { background: rgba(255, 255, 255, 0.35); }
+    .hub-note {
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 68ch;
+      margin: 0 0 28px;
+    }
+    .cta-panel {
+      margin-top: 32px;
+      text-align: left;
+    }
+    .cta-panel .cta-title {
+      margin: 14px 0 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+  </style>
 </head>
 <body>
   <div class="site-shell topbar">
@@ -50,11 +101,12 @@
 
   <main class="site-shell page">
     <section class="hero-card">
-      <div class="eyebrow" id="heroEyebrow">Product Hub</div>
-      <h1 class="title" id="heroTitle">Every product gets its own <span>home on the web.</span></h1>
+      <div class="eyebrow" id="heroEyebrow">Built in Public</div>
+      <h1 class="title" id="heroTitle">Every product, documented from idea to <span>launch.</span></h1>
       <p class="lead" id="heroLead">
-        Explore everything being built. Each product has its own page with its purpose, status, story, and related writing.
+        A living index of what is shipping, what is live, and what is paused. Each card opens a page with the product's purpose, current status, story behind it, and the writing that shaped it.
       </p>
+      <div class="product-stats" id="productStats" aria-label="Product portfolio at a glance"></div>
       <div class="actions">
         <a class="button" href="/blog/">Browse supporting articles</a>
         <a class="button-ghost" href="/">Back to homepage</a>
@@ -62,6 +114,9 @@
     </section>
 
     <section class="page">
+      <p class="hub-note">
+        Each product lives as its own page so the purpose, status, and related writing stay in one place. Progress gets documented in public — including what is working, what is stuck, and what is coming next — so anyone following along can trace how an idea actually moves.
+      </p>
       <div class="filter-bar" id="filterBar">
         <div class="filter-group">
           <span class="filter-label">Status</span>
@@ -126,6 +181,16 @@
       </div>
     </section>
 
+    <section class="cta-panel">
+      <div class="eyebrow">Follow the build</div>
+      <h2 class="cta-title">New products ship here first.</h2>
+      <p class="copy">The journal captures what is being learned along the way. X is where launches, small wins, and mid-build updates land.</p>
+      <div class="actions">
+        <a class="button" href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">Follow on X</a>
+        <a class="button-ghost" href="/blog/">Read the journal</a>
+      </div>
+    </section>
+
     <script>
     (function () {
       const grid = document.getElementById('productGrid');
@@ -147,9 +212,9 @@
       };
 
       const DEFAULT_HERO = {
-        eyebrow: 'Product Hub',
-        title: 'Every product gets its own <span>home on the web.</span>',
-        lead: 'Explore everything being built. Each product has its own page with its purpose, status, story, and related writing.'
+        eyebrow: 'Built in Public',
+        title: 'Every product, documented from idea to <span>launch.</span>',
+        lead: 'A living index of what is shipping, what is live, and what is paused. Each card opens a page with the product\u2019s purpose, current status, story behind it, and the writing that shaped it.'
       };
 
       const HERO_BY_CATEGORY = {
@@ -256,6 +321,30 @@
         });
       });
 
+      function renderStats() {
+        var stats = document.getElementById('productStats');
+        if (!stats) return;
+        var counts = { live: 0, shipping: 0, paused: 0 };
+        var categories = {};
+        cards.forEach(function (card) {
+          var status = card.getAttribute('data-status');
+          var category = card.getAttribute('data-category');
+          if (counts[status] !== undefined) counts[status]++;
+          if (category) categories[category] = true;
+        });
+        var categoryCount = Object.keys(categories).length;
+        var pills = [
+          { key: 'live', label: 'Live', count: counts.live },
+          { key: 'shipping', label: 'Shipping', count: counts.shipping },
+          { key: 'paused', label: 'Paused', count: counts.paused },
+          { key: 'categories', label: categoryCount === 1 ? 'Category' : 'Categories', count: categoryCount }
+        ];
+        stats.innerHTML = pills.filter(function (p) { return p.count > 0; }).map(function (p) {
+          return '<span class="stat-pill is-' + p.key + '"><span class="stat-dot" aria-hidden="true"></span><strong>' + p.count + '</strong> ' + p.label + '</span>';
+        }).join('');
+      }
+
+      renderStats();
       applyFilter(filterFromURL());
     })();
     </script>
