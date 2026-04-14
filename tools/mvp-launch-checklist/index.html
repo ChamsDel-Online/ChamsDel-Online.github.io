@@ -84,13 +84,13 @@
     <section class="hero-card">
       <div class="eyebrow">Free Tool · Launch</div>
       <h1 class="product-title">MVP Launch Readiness <span>Checklist</span></h1>
-      <p class="lead">Eight fundamentals that decide whether a launch lands or leaks confidence. Check the ones you have in place and get a readiness score. Push above 75% before doing a real audience-facing announcement.</p>
+      <p class="lead">Eight fundamentals that decide whether a launch lands or leaks confidence. Check the ones you have in place and get a readiness score. Push above 75% before doing a real audience-facing announcement. For the announcement side, pair this with <a class="tool-link" href="https://twitmix.com" target="_blank" rel="noopener noreferrer">TwitMix</a> for launch-thread content and <a class="tool-link" href="https://replywisely.com" target="_blank" rel="noopener noreferrer">ReplyWisely</a> for reply engagement in the first 24 hours.</p>
     </section>
 
     <section class="tool-card" style="padding:26px">
       <div class="project-tag">Free Tool 04</div>
       <h2 style="margin:12px 0 8px;font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.1">MVP Launch Readiness Checklist</h2>
-      <p>Check the basics before you tweet, post, or send people to a product that still leaks confidence.</p>
+      <p>Check the basics before you tweet, post, or send people to a product that still leaks confidence. When the list is green and you're drafting the announcement, <a class="tool-link" href="https://twitmix.com" target="_blank" rel="noopener noreferrer">TwitMix</a> helps remix what you've already written into a launch thread, and <a class="tool-link" href="https://replywisely.com" target="_blank" rel="noopener noreferrer">ReplyWisely</a> helps you keep up with the replies that arrive.</p>
       <form class="tool-checklist" data-tool="launch">
         <label class="tool-check"><input type="checkbox" name="item" checked> <span>A clear one-sentence value proposition exists above the fold.</span></label>
         <label class="tool-check"><input type="checkbox" name="item" checked> <span>The signup or CTA works on mobile and desktop.</span></label>
@@ -110,6 +110,18 @@
     </section>
 
     <section class="grid two">
+      <article class="panel">
+        <div class="project-tag">Related product</div>
+        <h2 class="card-title">TwitMix</h2>
+        <p class="copy">Turn your launch notes and saved posts into a launch thread you can actually publish — remix bookmarked inspiration into fresh drafts.</p>
+        <a class="card-link" href="/products/twitmix/">Explore TwitMix →</a>
+      </article>
+      <article class="panel">
+        <div class="project-tag">Related product</div>
+        <h2 class="card-title">ReplyWisely</h2>
+        <p class="copy">The first 24 hours after launch are reply-driven. ReplyWisely helps you target the replies that actually move the needle.</p>
+        <a class="card-link" href="/products/replywisely/">Explore ReplyWisely →</a>
+      </article>
       <article class="panel">
         <div class="project-tag">Related tool</div>
         <h2 class="card-title">Time Budget Calculator</h2>
@@ -147,10 +159,14 @@
         if (score >= 85) verdict = "Ready to ship. Stop polishing and get real users in.";
         else if (score < 60) verdict = "Not ready yet. Too many trust-breaking basics are still missing.";
 
+        var nudge = score >= 75
+          ? "<p>Readiness looks good. Draft the announcement with <a class=\"tool-link\" href=\"https://twitmix.com\" target=\"_blank\" rel=\"noopener noreferrer\">TwitMix</a> and have <a class=\"tool-link\" href=\"https://replywisely.com\" target=\"_blank\" rel=\"noopener noreferrer\">ReplyWisely</a> ready for the reply wave.</p>"
+          : "<p>Tighten the basics first. Once you're above 75%, <a class=\"tool-link\" href=\"https://twitmix.com\" target=\"_blank\" rel=\"noopener noreferrer\">TwitMix</a> helps with the launch thread and <a class=\"tool-link\" href=\"https://replywisely.com\" target=\"_blank\" rel=\"noopener noreferrer\">ReplyWisely</a> with post-launch engagement.</p>";
         container.innerHTML =
           "<strong>" + score + "% launch readiness</strong>" +
           "<p>" + verdict + "</p>" +
-          "<p>" + checked + " of " + total + " essentials are covered. Push this above 75% before doing a real audience-facing launch.</p>";
+          "<p>" + checked + " of " + total + " essentials are covered. Push this above 75% before doing a real audience-facing launch.</p>" +
+          nudge;
       }
 
       var form = document.querySelector('[data-tool="launch"]');

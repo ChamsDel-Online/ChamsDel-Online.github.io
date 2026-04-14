@@ -84,7 +84,7 @@
     <section class="hero-card">
       <div class="eyebrow">Free Tool · Revenue</div>
       <h1 class="product-title">Indie Hacker Pricing <span>Calculator</span></h1>
-      <p class="lead">Stop guessing your price. Enter your target monthly income, tool costs, expected paying customers, and a buffer for tax and churn. The calculator backs into a recommended price instantly.</p>
+      <p class="lead">Stop guessing your price. Enter your target monthly income, tool costs, expected paying customers, and a buffer for tax and churn. The calculator backs into a recommended price instantly. The math works only when the niche supports the price — <a class="tool-link" href="/products/ikigainiche/">IkigaiNiche</a> helps you pick one with actual willingness to pay.</p>
     </section>
 
     <section class="tool-card" style="padding:26px">
@@ -124,6 +124,12 @@
     </section>
 
     <section class="grid two">
+      <article class="panel">
+        <div class="project-tag">Related product</div>
+        <h2 class="card-title">IkigaiNiche</h2>
+        <p class="copy">Pricing collapses in weak niches. IkigaiNiche maps where passion, skill, demand, and reward overlap so your number has a market that can actually pay it.</p>
+        <a class="card-link" href="/products/ikigainiche/">Explore IkigaiNiche →</a>
+      </article>
       <article class="panel">
         <div class="project-tag">Related tool</div>
         <h2 class="card-title">SaaS Idea Scorecard</h2>
@@ -178,7 +184,8 @@
             "<div class=\"tool-kpi\"><span>Revenue goal</span><strong>" + formatCurrency(requiredRevenue) + "</strong></div>" +
             "<div class=\"tool-kpi\"><span>At " + customers + " customers</span><strong>" + formatCurrency(recommendedPrice) + "</strong></div>" +
             "<div class=\"tool-kpi\"><span>If price rises 20%</span><strong>" + stretchCustomers + " users</strong></div>" +
-          "</div>";
+          "</div>" +
+          "<p>The price is only defensible if the niche supports it. If you are not sure yours does, pressure-test it with <a class=\"tool-link\" href=\"/products/ikigainiche/\">IkigaiNiche</a> before committing to a launch page.</p>";
       }
 
       var form = document.querySelector('[data-tool="pricing"]');

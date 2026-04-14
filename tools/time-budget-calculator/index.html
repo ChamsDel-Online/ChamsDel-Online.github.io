@@ -84,7 +84,7 @@
     <section class="hero-card">
       <div class="eyebrow">Free Tool · Planning</div>
       <h1 class="product-title">Side Project Time Budget <span>Calculator</span></h1>
-      <p class="lead">Plan around your real life. Enter your weeknight build sessions, minutes per session, and weekend hours to get an instant picture of what kind of project fits your roadmap window.</p>
+      <p class="lead">Plan around your real life. Enter your weeknight build sessions, minutes per session, and weekend hours to get an instant picture of what kind of project fits your roadmap window. Hours only compound when they're aimed at the right niche — pair this with <a class="tool-link" href="/products/ikigainiche/">IkigaiNiche</a> before you commit the roadmap.</p>
     </section>
 
     <section class="tool-card" style="padding:26px">
@@ -124,6 +124,12 @@
     </section>
 
     <section class="grid two">
+      <article class="panel">
+        <div class="project-tag">Related product</div>
+        <h2 class="card-title">IkigaiNiche</h2>
+        <p class="copy">Limited hours punish fuzzy niches. IkigaiNiche maps where your passion, skill, demand, and reward overlap so every session moves a project worth finishing.</p>
+        <a class="card-link" href="/products/ikigainiche/">Explore IkigaiNiche →</a>
+      </article>
       <article class="panel">
         <div class="project-tag">Related tool</div>
         <h2 class="card-title">SaaS Idea Scorecard</h2>
@@ -177,7 +183,8 @@
             "<div class=\"tool-kpi\"><span>30-day capacity</span><strong>" + (weeklyHours * 4.3).toFixed(0) + "h</strong></div>" +
             "<div class=\"tool-kpi\"><span>90-minute sessions</span><strong>" + Math.round((weeklyHours * 60) / 90) + "</strong></div>" +
             "<div class=\"tool-kpi\"><span>Roadmap size</span><strong>" + (roadmapHours < 40 ? "Tiny" : roadmapHours < 80 ? "Lean" : "Solid") + "</strong></div>" +
-          "</div>";
+          "</div>" +
+          "<p>Hours this tight reward sharp niches. If you are not sure yours is sharp enough yet, spend an early hour on <a class=\"tool-link\" href=\"/products/ikigainiche/\">IkigaiNiche</a> before the rest go into building.</p>";
       }
 
       var form = document.querySelector('[data-tool="time-budget"]');
