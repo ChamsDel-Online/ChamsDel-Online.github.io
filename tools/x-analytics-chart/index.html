@@ -66,6 +66,44 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I export my X analytics as a CSV?",
+        "acceptedAnswer": { "@type": "Answer", "text": "On desktop, go to analytics.x.com, sign in, open the Overview tab, pick the date range you want, and click Export data. X returns a file called account_overview_analytics.csv. That's the exact file this tool reads — upload it here and everything parses in your browser with no server involved." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I read X analytics without getting lost in the numbers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ignore the vanity metrics. Start with impressions (reach), then engagement rate (impressions divided by engagements), then profile visits, then follows. Read them in that order: reach tells you if people are seeing you, engagement tells you if they care, visits and follows tell you if they want more. Everything else is noise until those four line up." }
+      },
+      {
+        "@type": "Question",
+        "name": "What X metrics should I actually track for growth?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Four: impressions per week, engagement rate, profile visits per week, and net follower growth per week. Log them every Sunday. The chart above lets you compare any of them across 7-day, 1-month, 3-month, and all-time windows so you can tell whether a spike was a viral post or a real shift in baseline." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my engagement rate dropping even though impressions are up?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Usually one of three reasons: a single viral post inflated impressions without matching engagement, the algorithm is pushing you to a wider audience that cares less about your niche, or your recent posts leaned into reach-optimized hooks instead of resonant ones. Compare your top-performing days in this tool to find the posts that actually converted impressions into engagement." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe to upload my X analytics CSV to this tool?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Nothing leaves your browser. The CSV is parsed client-side in JavaScript — there's no backend, no server upload, no tracking of the file contents. You can open devtools and confirm no network requests carry your data. Close the tab and the file is gone." }
+      },
+      {
+        "@type": "Question",
+        "name": "Analytics tell me what's working. How do I turn that into more followers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Analytics show which posts drive profile visits. The gap between visit and follow is almost always bio or reply presence. Fix the bio first, then work the replies. ReplyWisely helps you stay visible in the right conversations every day, so when your posts send profile visitors, more of them follow." }
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,6 +187,24 @@
         <p class="copy">Turn the analytics you learn here into better day-to-day reply targeting on X.</p>
         <a class="card-link" href="/products/replywisely/">View ReplyWisely →</a>
       </article>
+    </section>
+
+    <section class="panel" id="faq">
+      <h2 class="card-title">Frequently asked questions</h2>
+      <div class="copy">
+        <h3 style="margin-top:14px">How do I export my X analytics as a CSV?</h3>
+        <p>On desktop, go to analytics.x.com, sign in, open the Overview tab, pick the date range you want, and click Export data. X returns a file called <code>account_overview_analytics.csv</code>. That's the exact file this tool reads — upload it here and everything parses in your browser with no server involved.</p>
+        <h3 style="margin-top:14px">How do I read X analytics without getting lost in the numbers?</h3>
+        <p>Ignore the vanity metrics. Start with impressions (reach), then engagement rate (impressions divided by engagements), then profile visits, then follows. Read them in that order: reach tells you if people are seeing you, engagement tells you if they care, visits and follows tell you if they want more. Everything else is noise until those four line up.</p>
+        <h3 style="margin-top:14px">What X metrics should I actually track for growth?</h3>
+        <p>Four: impressions per week, engagement rate, profile visits per week, and net follower growth per week. Log them every Sunday. The chart above lets you compare any of them across 7-day, 1-month, 3-month, and all-time windows so you can tell whether a spike was a viral post or a real shift in baseline.</p>
+        <h3 style="margin-top:14px">Why is my engagement rate dropping even though impressions are up?</h3>
+        <p>Usually one of three reasons: a single viral post inflated impressions without matching engagement, the algorithm is pushing you to a wider audience that cares less about your niche, or your recent posts leaned into reach-optimized hooks instead of resonant ones. Compare your top-performing days in this tool to find the posts that actually converted impressions into engagement.</p>
+        <h3 style="margin-top:14px">Is it safe to upload my X analytics CSV to this tool?</h3>
+        <p>Yes. Nothing leaves your browser. The CSV is parsed client-side in JavaScript — there's no backend, no server upload, no tracking of the file contents. You can open devtools and confirm no network requests carry your data. Close the tab and the file is gone.</p>
+        <h3 style="margin-top:14px">Analytics tell me what's working. How do I turn that into more followers?</h3>
+        <p>Analytics show which posts drive profile visits. The gap between visit and follow is almost always bio or reply presence. Fix the bio first, then work the replies. <a class="tool-link" href="/products/replywisely/">ReplyWisely</a> helps you stay visible in the right conversations every day, so when your posts send profile visitors, more of them follow.</p>
+      </div>
     </section>
   </main>
 

@@ -1,13 +1,15 @@
 const OPENAI_API_URL = "https://api.openai.com/v1/responses";
 const MODEL = "gpt-4.1-mini";
 
+const MAX_BODY_BYTES = 8 * 1024 * 1024;
+
 function readJsonBody(req) {
   return new Promise((resolve, reject) => {
     let body = "";
 
     req.on("data", (chunk) => {
       body += chunk;
-      if (body.length > 100000) {
+      if (body.length > MAX_BODY_BYTES) {
         reject(new Error("Request body too large."));
       }
     });
@@ -172,6 +174,86 @@ function buildIdeaPrompt(payload) {
   };
 }
 
+// Cloudflare Turnstile test secret key — ALWAYS PASSES. Replace via env var
+// TURNSTILE_SECRET_KEY in production. See https://developers.cloudflare.com/turnstile/troubleshooting/testing/
+const TURNSTILE_DEV_SECRET = "1x0000000000000000000000000000000AA";
+
+async function verifyTurnstile(token, remoteIp) {
+  const secret = process.env.TURNSTILE_SECRET_KEY || TURNSTILE_DEV_SECRET;
+  const params = new URLSearchParams();
+  params.append("secret", secret);
+  params.append("response", token || "");
+  if (remoteIp) params.append("remoteip", remoteIp);
+
+  const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: params.toString()
+  });
+  const data = await response.json().catch(() => ({}));
+  return Boolean(data && data.success);
+}
+
+function clientIp(req) {
+  const forwarded = req.headers && req.headers["x-forwarded-for"];
+  if (typeof forwarded === "string" && forwarded) return forwarded.split(",")[0].trim();
+  return (req.socket && req.socket.remoteAddress) || "";
+}
+
+function buildMathSolverPrompt(payload) {
+  const image = text(payload.image, "");
+  const hint = text(payload.hint, "");
+  const imageUrl = /^data:image\/(png|jpeg|jpg|webp|gif);base64,/i.test(image) ? image : "";
+  if (!imageUrl) {
+    throw new Error("A valid image (PNG, JPEG, WEBP, or GIF) is required.");
+  }
+
+  const userText =
+    "Solve the math problem shown in the image. " +
+    "If more than one problem is visible, focus on the clearest one. " +
+    "Work through the solution step by step, state the final answer clearly, and identify the topic. " +
+    (hint ? "Learner context: " + hint : "");
+
+  return {
+    prompt:
+      "You are a careful math tutor. You receive an image of a math problem (printed or handwritten) and must " +
+      "return a structured solution. Guidelines: " +
+      "(1) If the image does not contain a math problem, set problemDetected to an empty string and explain in the explanation field. " +
+      "(2) Transcribe the problem exactly as seen into problemDetected, using plain text math notation (x^2, sqrt(...), /, *, etc.). " +
+      "(3) Give 2-8 clear solution steps, each one a single short sentence. " +
+      "(4) Use precise, exact answers (fractions or simplified radicals) when appropriate; give decimal approximations only when asked or needed. " +
+      "(5) Keep the explanation under 60 words, focused on the method used. " +
+      "(6) Confidence is 'high' for clear printed problems, 'medium' for clear handwriting, 'low' for blurry or ambiguous input.",
+    schema: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        problemDetected: { type: "string" },
+        topic: { type: "string" },
+        steps: {
+          type: "array",
+          items: { type: "string" },
+          minItems: 1,
+          maxItems: 8
+        },
+        answer: { type: "string" },
+        explanation: { type: "string" },
+        confidence: { type: "string", enum: ["high", "medium", "low"] }
+      },
+      required: ["problemDetected", "topic", "steps", "answer", "explanation", "confidence"]
+    },
+    input: [
+      {
+        role: "user",
+        content: [
+          { type: "input_text", text: userText },
+          { type: "input_image", image_url: imageUrl }
+        ]
+      }
+    ]
+  };
+}
+
 function buildContentPrompt(payload) {
   return {
     prompt:
@@ -213,12 +295,23 @@ module.exports = async function handler(req, res) {
     const type = text(body.type, "");
     const payload = body && typeof body.payload === "object" ? body.payload : {};
 
-    if (type !== "idea-score" && type !== "content") {
+    if (type !== "idea-score" && type !== "content" && type !== "math-solver") {
       return sendJson(res, 400, { error: "Unsupported AI tool type." });
     }
 
-    const request =
-      type === "idea-score" ? buildIdeaPrompt(payload) : buildContentPrompt(payload);
+    if (type === "math-solver") {
+      const captchaToken = text(body.captchaToken, "");
+      const captchaOk = await verifyTurnstile(captchaToken, clientIp(req));
+      if (!captchaOk) {
+        return sendJson(res, 403, { error: "Captcha verification failed. Please try again." });
+      }
+    }
+
+    let request;
+    if (type === "idea-score") request = buildIdeaPrompt(payload);
+    else if (type === "content") request = buildContentPrompt(payload);
+    else request = buildMathSolverPrompt(payload);
+
     const result = await callOpenAI(request, request.input);
 
     return sendJson(res, 200, result);
