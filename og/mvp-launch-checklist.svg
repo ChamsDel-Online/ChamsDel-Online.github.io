@@ -1,31 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <style>
-      .bg      { fill: #0E0E0B; }
-      .label   { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 13px; fill: #4A9B6F; letter-spacing: 1.04px; }
-      .headline{ font-family: 'Lora', Georgia, serif; font-weight: 400; font-size: 56px; fill: #F2EDE4; letter-spacing: -1px; }
-      .sub     { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 22px; fill: #9E9A91; }
-      .byline  { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 18px; fill: #9E9A91; }
-      .bar     { fill: #C8913A; }
-      .grid    { stroke: rgba(200,145,58,0.06); stroke-width: 1; fill: none; }
+      .bg      { fill: #F5EFE4; }
+      .pill    { fill: #9FE3A1; }
+      .label   { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; fill: #0F1419; }
+      .headline{ font-family: 'Fraunces', 'Lora', Georgia, serif; font-weight: 600; font-size: 62px; fill: #0F1419; letter-spacing: -1.2px; }
+      .sub     { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 22px; fill: #3F4650; }
+      .byline  { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 18px; fill: #3F4650; }
+      .bar     { fill: #FF704D; }
+      .curve   { stroke: rgba(15,20,25,0.05); stroke-width: 2; fill: none; }
     </style>
   </defs>
   <rect class="bg" width="1200" height="630"/>
-  <g class="grid" transform="translate(820,100)">
-    <line x1="0"   y1="0"   x2="0"   y2="430"/>
-    <line x1="80"  y1="0"   x2="80"  y2="430"/>
-    <line x1="160" y1="0"   x2="160" y2="430"/>
-    <line x1="240" y1="0"   x2="240" y2="430"/>
-    <line x1="0"   y1="0"   x2="300" y2="0"/>
-    <line x1="0"   y1="107" x2="300" y2="107"/>
-    <line x1="0"   y1="214" x2="300" y2="214"/>
-    <line x1="0"   y1="321" x2="300" y2="321"/>
-    <line x1="0"   y1="428" x2="300" y2="428"/>
+  <circle class="curve" cx="1300" cy="-50" r="700"/>
+  <circle class="curve" cx="-100" cy="750" r="600"/>
+
+  <g transform="translate(80,88)">
+    <rect class="pill" x="0" y="0" rx="999" ry="999" width="118" height="36"/>
+    <text class="label" x="14" y="23">Free Tool</text>
   </g>
-  <text class="label" x="80" y="92">FREE TOOL  CHAMSDEL.ONLINE</text>
-  <text class="headline" x="80" y="260">Is your MVP actually</text>
-  <text class="headline" x="80" y="335">ready to ship?</text>
-  <text class="sub" x="80" y="400">Check the basics before you leak confidence.</text>
+
+  <text class="headline" x="80" y="275">Is your MVP actually</text>
+  <text class="headline" x="80" y="355">ready to ship?</text>
+  <text class="sub" x="80" y="430">Check the basics before you leak confidence.</text>
+
   <text class="byline" x="80" y="558">Chaminda Delpagodage. @chams_builds</text>
-  <rect class="bar" x="1072" y="555" width="48" height="3"/>
+  <rect class="bar" x="1072" y="553" width="48" height="4" rx="2" ry="2"/>
 </svg>
