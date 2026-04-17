@@ -3,119 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | ChamsDel Online</title>
-  <meta name="description" content="Explore the products Chaminda is building and documenting in public, from live tools to projects under construction.">
-  <link rel="canonical" href="https://chamsdel.online/products/">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>What I'm Building | ChamsDel Online</title>
+  <meta name="description" content="Every product I'm currently building, with status and context. Real problems. Built in public. Updated as things ship or change.">
+  <meta name="author" content="Chaminda Delpagodage">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F5EFE4">
+  <link rel="canonical" href="https://chamsdel.online/products/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Products | ChamsDel Online">
-  <meta property="og:description" content="A hub for the products Chaminda is building, launching, and documenting.">
+  <meta property="og:site_name" content="ChamsDel Online">
+  <meta property="og:title" content="What I'm Building">
+  <meta property="og:description" content="Every product I'm currently building, with status and context. Real problems. Built in public. Updated as things ship or change.">
   <meta property="og:url" content="https://chamsdel.online/products/">
-  <meta property="og:image" content="https://chamsdel.online/og-image.png?v=20260404">
-  <meta property="og:image:secure_url" content="https://chamsdel.online/og-image.png?v=20260404">
-  <meta property="og:image:type" content="image/png">
+  <meta property="og:image" content="https://chamsdel.online/og/products.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="ChamsDel Online founder story and builder tools social sharing image">
-  <meta property="og:site_name" content="ChamsDel Online">
+  <meta property="og:image:alt" content="What I'm Building. Products by Chaminda Delpagodage.">
   <meta property="og:locale" content="en_US">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Products | ChamsDel Online">
-  <meta name="twitter:description" content="A hub for the products Chaminda is building, launching, and documenting.">
-  <meta name="twitter:image" content="https://chamsdel.online/og-image.png?v=20260404">
-  <meta name="twitter:image:alt" content="ChamsDel Online founder story and builder tools social sharing image">
   <meta name="twitter:site" content="@chams_builds">
   <meta name="twitter:creator" content="@chams_builds">
+  <meta name="twitter:title" content="What I'm Building">
+  <meta name="twitter:description" content="Every product I'm currently building, with status and context. Real problems. Built in public. Updated as things ship or change.">
+  <meta name="twitter:image" content="https://chamsdel.online/og/products.png">
+  <meta name="twitter:image:alt" content="What I'm Building. Products by Chaminda Delpagodage.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "What I'm Building",
+    "url": "https://chamsdel.online/products/",
+    "author": { "@type": "Person", "name": "Chaminda Delpagodage" },
+    "description": "Every product I'm currently building, with status and context."
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
-  <style>
-    .product-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 28px 0 0;
-    }
-    .stat-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--muted);
-      font-size: 0.88rem;
-      letter-spacing: 0.01em;
-    }
-    .stat-pill strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-    .stat-pill .stat-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--muted);
-    }
-    .stat-pill.is-live .stat-dot { background: var(--success); }
-    .stat-pill.is-shipping .stat-dot { background: var(--accent); }
-    .stat-pill.is-paused .stat-dot { background: rgba(255, 255, 255, 0.35); }
-    .hub-note {
-      color: var(--muted);
-      line-height: 1.8;
-      max-width: 68ch;
-      margin: 0 0 28px;
-    }
-    .cta-panel {
-      margin-top: 32px;
-      text-align: left;
-    }
-    .cta-panel .cta-title {
-      margin: 14px 0 10px;
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 600;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-    }
-  </style>
 </head>
 <body>
-  <div class="site-shell topbar">
+  <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>ChamsDel Online</span></div>
-      <nav class="nav" aria-label="Primary">
-        <a href="/">Home</a>
+      <a class="brand" href="/" aria-label="ChamsDel Online home"><span>Chams.</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/#story">Story</a>
         <a href="/products/">Products</a>
         <a href="/blog/">Blog</a>
-        <a href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">Follow</a>
+        <a href="/tools/">Tools</a>
+        <a class="button" href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">Follow @chams_builds</a>
       </nav>
     </div>
-  </div>
+  </header>
 
   <main class="site-shell page">
-    <section class="hero-card">
-      <div class="eyebrow" id="heroEyebrow">Built in Public</div>
-      <h1 class="title" id="heroTitle">Every product, documented from idea to <span>launch.</span></h1>
+    <section>
+      <span class="eyebrow" id="heroEyebrow">Built in public</span>
+      <h1 class="product-title" id="heroTitle">What I'm building.</h1>
       <p class="lead" id="heroLead">
-        A living index of what is shipping, what is live, and what is paused. Each card opens a page with the product's purpose, current status, story behind it, and the writing that shaped it.
+        Every product I'm currently working on, with status and context. Real problems. Built in public. Updated as things ship or change.
       </p>
       <div class="product-stats" id="productStats" aria-label="Product portfolio at a glance"></div>
       <div class="actions">
-        <a class="button" href="/blog/">Browse supporting articles</a>
+        <a class="button" href="/blog/">Read the journal</a>
         <a class="button-ghost" href="/">Back to homepage</a>
       </div>
     </section>
 
-    <section class="page">
-      <p class="hub-note">
-        Each product lives as its own page so the purpose, status, and related writing stay in one place. Progress gets documented in public — including what is working, what is stuck, and what is coming next — so anyone following along can trace how an idea actually moves.
+    <section>
+      <p class="section-copy">
+        Each product lives as its own page so the purpose, status, and related writing stay in one place. Progress gets documented in public, including what is working, what is stuck, and what is coming next, so anyone following along can trace how an idea actually moves.
       </p>
       <div class="filter-bar" id="filterBar">
         <div class="filter-group">
@@ -136,58 +99,66 @@
       <p class="filter-summary" id="filterSummary"></p>
 
       <div class="grid three" id="productGrid">
-        <article class="product-card" data-status="live" data-category="cybersecurity">
-          <div class="eyebrow">Live</div>
-          <h2 class="card-title">CompliQuiz</h2>
-          <p class="copy">Compliance learning, made more engaging and memorable for teams that need better training experiences.</p>
-          <a class="card-link" href="/products/compliquiz/">Explore product page</a>
+        <article class="card product-card" data-status="shipping" data-category="local-business">
+          <span class="eyebrow">Shipping</span>
+          <h2>NeverMissAgain AI</h2>
+          <p>AI text-back for missed calls. Built for small businesses that can't afford to let a voicemail decide whether a lead becomes revenue.</p>
+          <a class="tool-link" href="/products/nevermissagain/">Explore product page</a>
         </article>
-        <article class="product-card" data-status="shipping" data-category="x-growth">
-          <div class="eyebrow">Shipping</div>
-          <h2 class="card-title">ReplyWisely</h2>
-          <p class="copy">A Chrome extension for replying smarter on X with better targeting, visibility, and follow-through.</p>
-          <a class="card-link" href="/products/replywisely/">Explore product page</a>
+        <article class="card product-card" data-status="live" data-category="cybersecurity">
+          <span class="eyebrow">Live</span>
+          <h2>CompliQuiz</h2>
+          <p>Plain-English compliance assessment. Find out which frameworks apply to your small business and where to focus first.</p>
+          <a class="tool-link" href="/products/compliquiz/">Explore product page</a>
         </article>
-        <article class="product-card" data-status="shipping" data-category="x-growth">
-          <div class="eyebrow">Shipping</div>
-          <h2 class="card-title">TwitMix</h2>
-          <p class="copy">A content repurposing tool that turns bookmarked tweets into fresh posts you can actually publish.</p>
-          <a class="card-link" href="/products/twitmix/">Explore product page</a>
+        <article class="card product-card" data-status="shipping" data-category="x-growth">
+          <span class="eyebrow">Shipping</span>
+          <h2>ReplyWisely</h2>
+          <p>A Chrome extension that helps small accounts grow on X by scoring replies for visibility potential and tracking what's actually working.</p>
+          <a class="tool-link" href="/products/replywisely/">Explore product page</a>
         </article>
-        <article class="product-card" data-status="paused" data-category="personal-growth">
-          <div class="eyebrow">Paused</div>
-          <h2 class="card-title">DearMeWiser</h2>
-          <p class="copy">A reflective app focused on self-conversation, personal growth, and emotional clarity.</p>
-          <a class="card-link" href="/products/dearmewiser/">Explore product page</a>
+        <article class="card product-card" data-status="shipping" data-category="x-growth">
+          <span class="eyebrow">Shipping</span>
+          <h2>TwitMix</h2>
+          <p>Turn bookmarked posts into fresh, original content. Saved inspiration becomes something you actually publish.</p>
+          <a class="tool-link" href="/products/twitmix/">Explore product page</a>
         </article>
-        <article class="product-card" data-status="live" data-category="personal-growth">
-          <div class="eyebrow">Live</div>
-          <h2 class="card-title">HardChoice</h2>
-          <p class="copy">A live decision-making app for couples working through high-stakes personal and professional choices together.</p>
-          <a class="card-link" href="/products/hardchoice/">Explore product page</a>
+        <article class="card product-card" data-status="paused" data-category="personal-growth">
+          <span class="eyebrow">Paused</span>
+          <h2>DearMeWiser</h2>
+          <p>A personal growth app built around reflection and clarity. Still being shaped.</p>
+          <a class="tool-link" href="/products/dearmewiser/">Explore product page</a>
         </article>
-        <article class="product-card" data-status="live" data-category="personal-growth">
-          <div class="eyebrow">Live</div>
-          <h2 class="card-title">IkigaiNiche</h2>
-          <p class="copy">An exploration engine for identifying niches aligned with strengths, interests, and market opportunity.</p>
-          <a class="card-link" href="/products/ikigainiche/">Explore product page</a>
+        <article class="card product-card" data-status="live" data-category="personal-growth">
+          <span class="eyebrow">Live</span>
+          <h2>HardChoice</h2>
+          <p>A structured decision tool for couples navigating high-stakes choices. Less friction, clearer thinking.</p>
+          <a class="tool-link" href="/products/hardchoice/">Explore product page</a>
         </article>
-        <article class="product-card" data-status="shipping" data-category="cybersecurity">
-          <div class="eyebrow">Shipping</div>
-          <h2 class="card-title">FinSec Scorecard</h2>
-          <p class="copy">A diagnostic scorecard helping small FinTech companies assess PCI DSS and SOC 2 readiness of their AWS infrastructure.</p>
-          <a class="card-link" href="/products/finsecscorecard/">Explore product page</a>
+        <article class="card product-card" data-status="live" data-category="personal-growth">
+          <span class="eyebrow">Live</span>
+          <h2>IkigaiNiche</h2>
+          <p>Discover aligned business opportunities at the intersection of your strengths, interests, and real market demand.</p>
+          <a class="tool-link" href="/products/ikigainiche/">Explore product page</a>
+        </article>
+        <article class="card product-card" data-status="shipping" data-category="cybersecurity">
+          <span class="eyebrow">Shipping</span>
+          <h2>FinSec Scorecard</h2>
+          <p>A diagnostic for small fintech companies assessing PCI DSS and SOC 2 readiness of their AWS infrastructure.</p>
+          <a class="tool-link" href="/products/finsecscorecard/">Explore product page</a>
         </article>
       </div>
     </section>
 
-    <section class="cta-panel">
-      <div class="eyebrow">Follow the build</div>
-      <h2 class="cta-title">New products ship here first.</h2>
-      <p class="copy">The journal captures what is being learned along the way. X is where launches, small wins, and mid-build updates land.</p>
-      <div class="actions">
-        <a class="button" href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">Follow on X</a>
-        <a class="button-ghost" href="/blog/">Read the journal</a>
+    <section>
+      <div class="cta-panel">
+        <span class="eyebrow">Follow the build</span>
+        <h2>New products ship here first.</h2>
+        <p class="section-copy">The journal captures what I'm learning along the way. X is where launches, small wins, and mid-build updates land.</p>
+        <div class="cta-actions">
+          <a class="button" href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">Follow @chams_builds</a>
+          <a class="button-ghost" href="/blog/">Read the journal</a>
+        </div>
       </div>
     </section>
 
@@ -212,26 +183,26 @@
       };
 
       const DEFAULT_HERO = {
-        eyebrow: 'Built in Public',
-        title: 'Every product, documented from idea to <span>launch.</span>',
-        lead: 'A living index of what is shipping, what is live, and what is paused. Each card opens a page with the product\u2019s purpose, current status, story behind it, and the writing that shaped it.'
+        eyebrow: 'Built in public',
+        title: "What I'm building.",
+        lead: "Every product I'm currently working on, with status and context. Real problems. Built in public. Updated as things ship or change."
       };
 
       const HERO_BY_CATEGORY = {
         'x-growth': {
-          eyebrow: 'X Growth Tools',
-          title: 'Tools to help you <span>grow faster on X.</span>',
-          lead: 'A focused set of products for better content repurposing, smarter replies, and consistent audience growth on X.'
+          eyebrow: 'X Growth',
+          title: 'Tools to grow faster on X.',
+          lead: 'A focused set of products for content repurposing, smarter replies, and consistent growth on X.'
         },
         'cybersecurity': {
           eyebrow: 'Cybersecurity',
-          title: 'Security and compliance <span>made practical.</span>',
-          lead: 'Products designed to help teams improve readiness, close security gaps, and move toward stronger compliance outcomes.'
+          title: 'Security and compliance, made practical.',
+          lead: 'Products to help teams improve readiness, close security gaps, and move toward stronger compliance outcomes.'
         },
         'personal-growth': {
           eyebrow: 'Personal Growth',
-          title: 'Products for better <span>clarity and decisions.</span>',
-          lead: 'Tools supporting reflection, self-awareness, and smarter decision-making across personal and professional life.'
+          title: 'Better clarity, better decisions.',
+          lead: 'Tools for reflection, self-awareness, and smarter decision-making across personal and professional life.'
         }
       };
 
@@ -250,8 +221,8 @@
         if (HERO_BY_CATEGORY[category]) return HERO_BY_CATEGORY[category];
         var name = toTitleCase(category);
         return {
-          eyebrow: name + ' Tools',
-          title: name + ' <span>product collection.</span>',
+          eyebrow: name,
+          title: name + ' product collection.',
           lead: 'Explore products in the ' + name + ' group and see what is shipping, live, and actively being improved.'
         };
       }
@@ -263,7 +234,7 @@
         }
         var hero = heroForCategory(category);
         heroEyebrow.textContent = hero.eyebrow;
-        heroTitle.innerHTML = hero.title;
+        heroTitle.textContent = hero.title;
         heroLead.textContent = hero.lead;
       }
 
@@ -287,7 +258,7 @@
         if (filter === 'all') {
           summary.textContent = '';
         } else {
-          summary.textContent = (LABELS[filter] || filter) + ' — ' + visible + ' product' + (visible !== 1 ? 's' : '');
+          summary.textContent = (LABELS[filter] || filter) + '. ' + visible + ' product' + (visible !== 1 ? 's' : '') + '.';
         }
 
         applyHero(filter);
@@ -350,12 +321,14 @@
     </script>
   </main>
 
-  <footer class="site-shell footer">
+  <footer class="footer">
     <div class="footer-row">
-      <div class="footer-copy">Products by Chaminda Delpagodage, built and documented in public.</div>
+      <div class="footer-copy">ChamsDel Online LLC. Built by Chaminda Delpagodage.</div>
       <div class="footer-links">
         <a class="text-link" href="/privacy.html">Privacy</a>
         <a class="text-link" href="/terms.html">Terms</a>
+        <a class="text-link" href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">X</a>
+        <a class="text-link" href="https://www.linkedin.com/in/chamindadelpagodage/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
