@@ -812,23 +812,6 @@ layout: default
     <div class="v0-grid">
       <div class="v0-project">
         <div class="v0-project-image">
-          💭
-        </div>
-        <div class="v0-project-content">
-          <div class="v0-project-tags">
-            <span class="v0-project-tag">Personal Growth</span>
-            <span class="v0-project-status v0-status-beta">⏸️ Paused</span>
-          </div>
-          <h3>DearMeWiser</h3>
-          <p>
-            Your pocket therapist. Journal, reflect, and tap into your inner wisdom. 
-            iOS app in beta testing—join TestFlight to get early access!
-          </p>
-        </div>
-      </div>
-
-      <div class="v0-project">
-        <div class="v0-project-image">
           📋
         </div>
         <div class="v0-project-content">

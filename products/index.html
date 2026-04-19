@@ -86,13 +86,13 @@
           <button class="filter-chip active" data-filter="all">All</button>
           <button class="filter-chip" data-filter="status:shipping">Shipping</button>
           <button class="filter-chip" data-filter="status:live">Live</button>
-          <button class="filter-chip" data-filter="status:paused">Paused</button>
         </div>
         <div class="filter-group">
           <span class="filter-label">Category</span>
           <button class="filter-chip" data-filter="category:x-growth">X Growth</button>
           <button class="filter-chip" data-filter="category:cybersecurity">Cybersecurity</button>
           <button class="filter-chip" data-filter="category:personal-growth">Personal Growth</button>
+          <button class="filter-chip" data-filter="category:founder-tools">Founder Tools</button>
         </div>
       </div>
 
@@ -100,52 +100,52 @@
 
       <div class="grid three" id="productGrid">
         <article class="card product-card" data-status="shipping" data-category="local-business">
-          <span class="eyebrow">Shipping</span>
+          <span class="eyebrow">Local businesses</span>
           <h2>NeverMissAgain AI</h2>
           <p>AI text-back for missed calls. Built for small businesses that can't afford to let a voicemail decide whether a lead becomes revenue.</p>
           <a class="tool-link" href="/products/nevermissagain/">Explore product page</a>
         </article>
         <article class="card product-card" data-status="live" data-category="cybersecurity">
-          <span class="eyebrow">Live</span>
+          <span class="eyebrow">Small businesses</span>
           <h2>CompliQuiz</h2>
           <p>Plain-English compliance assessment. Find out which frameworks apply to your small business and where to focus first.</p>
           <a class="tool-link" href="/products/compliquiz/">Explore product page</a>
         </article>
         <article class="card product-card" data-status="shipping" data-category="x-growth">
-          <span class="eyebrow">Shipping</span>
+          <span class="eyebrow">Growing X accounts</span>
           <h2>ReplyWisely</h2>
           <p>A Chrome extension that helps small accounts grow on X by scoring replies for visibility potential and tracking what's actually working.</p>
           <a class="tool-link" href="/products/replywisely/">Explore product page</a>
         </article>
         <article class="card product-card" data-status="shipping" data-category="x-growth">
-          <span class="eyebrow">Shipping</span>
+          <span class="eyebrow">Content creators</span>
           <h2>TwitMix</h2>
           <p>Turn bookmarked posts into fresh, original content. Saved inspiration becomes something you actually publish.</p>
           <a class="tool-link" href="/products/twitmix/">Explore product page</a>
         </article>
-        <article class="card product-card" data-status="paused" data-category="personal-growth">
-          <span class="eyebrow">Paused</span>
-          <h2>DearMeWiser</h2>
-          <p>A personal growth app built around reflection and clarity. Still being shaped.</p>
-          <a class="tool-link" href="/products/dearmewiser/">Explore product page</a>
-        </article>
         <article class="card product-card" data-status="live" data-category="personal-growth">
-          <span class="eyebrow">Live</span>
+          <span class="eyebrow">Couples</span>
           <h2>HardChoice</h2>
           <p>A structured decision tool for couples navigating high-stakes choices. Less friction, clearer thinking.</p>
           <a class="tool-link" href="/products/hardchoice/">Explore product page</a>
         </article>
         <article class="card product-card" data-status="live" data-category="personal-growth">
-          <span class="eyebrow">Live</span>
+          <span class="eyebrow">Founders</span>
           <h2>IkigaiNiche</h2>
           <p>Discover aligned business opportunities at the intersection of your strengths, interests, and real market demand.</p>
           <a class="tool-link" href="/products/ikigainiche/">Explore product page</a>
         </article>
         <article class="card product-card" data-status="shipping" data-category="cybersecurity">
-          <span class="eyebrow">Shipping</span>
+          <span class="eyebrow">Fintech founders</span>
           <h2>FinSec Scorecard</h2>
           <p>A diagnostic for small fintech companies assessing PCI DSS and SOC 2 readiness of their AWS infrastructure.</p>
           <a class="tool-link" href="/products/finsecscorecard/">Explore product page</a>
+        </article>
+        <article class="card product-card" data-status="live" data-category="founder-tools">
+          <span class="eyebrow">Founders &amp; builders</span>
+          <h2>DomainNameNow</h2>
+          <p>Find a brand-ready, actually-available domain name in minutes. Built for founders and indie builders who refuse to let naming delay a launch.</p>
+          <a class="tool-link" href="/products/domainnamenow/">Explore product page</a>
         </article>
       </div>
     </section>
@@ -179,7 +179,8 @@
         'status:paused': 'Paused',
         'category:x-growth': 'X Growth tools',
         'category:cybersecurity': 'Cybersecurity & compliance',
-        'category:personal-growth': 'Personal growth'
+        'category:personal-growth': 'Personal growth',
+        'category:founder-tools': 'Founder tools'
       };
 
       const DEFAULT_HERO = {
@@ -203,6 +204,11 @@
           eyebrow: 'Personal Growth',
           title: 'Better clarity, better decisions.',
           lead: 'Tools for reflection, self-awareness, and smarter decision-making across personal and professional life.'
+        },
+        'founder-tools': {
+          eyebrow: 'Founder Tools',
+          title: 'Remove the friction between idea and launch.',
+          lead: 'Products that help founders and indie builders get past the small, sticky steps (naming, validating, shipping) that quietly stall real progress.'
         }
       };
 
