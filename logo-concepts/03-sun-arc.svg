@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">ChamsDel sunrise arc</title>
+  <desc id="desc">A rising sun arc above a horizon — the 5am builder mark.</desc>
+
+  <rect width="64" height="64" rx="14" fill="#F5EFE4"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" fill="none" stroke="#0F1419" stroke-opacity="0.08" stroke-width="1.5"/>
+
+  <circle cx="32" cy="40" r="13" fill="#FF704D"/>
+
+  <rect x="9" y="40" width="46" height="2.4" rx="1.2" fill="#0F1419"/>
+
+  <g stroke="#0F1419" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.85">
+    <line x1="32" y1="13" x2="32" y2="18"/>
+    <line x1="14.5" y1="22.5" x2="18" y2="26"/>
+    <line x1="49.5" y1="22.5" x2="46" y2="26"/>
+    <line x1="9.5"  y1="32"   x2="14"  y2="32"/>
+    <line x1="54.5" y1="32"   x2="50"  y2="32"/>
+  </g>
+</svg>

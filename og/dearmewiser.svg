@@ -27,4 +27,8 @@
 
   <text class="byline" x="80" y="558">Chaminda Delpagodage. @chams_builds</text>
   <rect class="bar" x="1072" y="553" width="48" height="4" rx="2" ry="2"/>
+  <g class="brandmark" transform="translate(1052,128)">
+    <text x="0" y="0" font-family="Fraunces, 'Lora', Georgia, serif" font-weight="600" font-size="60" letter-spacing="-2" fill="#0F1419">c</text>
+    <circle cx="45" cy="-4" r="8" fill="#FF704D"/>
+  </g>
 </svg>

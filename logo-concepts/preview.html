@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChamsDel — logo concepts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F5EFE4;
+      --ink: #0F1419;
+      --muted: #3F4650;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 56px 48px 96px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      letter-spacing: -1px;
+      font-size: 40px;
+      margin: 0 0 8px;
+    }
+    .lede {
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 0 48px;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 48px;
+      padding: 32px 0;
+      border-top: 1px solid rgba(15,20,25,0.1);
+      align-items: center;
+    }
+    .row h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 22px;
+      margin: 0 0 6px;
+    }
+    .row p { color: var(--muted); margin: 0; font-size: 14px; max-width: 280px; }
+    .sizes { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+    .size {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .header-mock {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 999px;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 22px;
+    }
+    .header-mock img { width: 28px; height: 28px; display: block; }
+    .dark-tile {
+      padding: 16px;
+      background: var(--ink);
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>ChamsDel — logo concepts</h1>
+  <p class="lede">Three directions for a mark that fits the warm, editorial theme. Each shown at favicon scale (16px / 32px), header scale (28px), large display (96px), and on the dark footer panel.</p>
+
+  <section class="row">
+    <div>
+      <h2>01 · Serif monogram</h2>
+      <p>Italic CD set in Fraunces, with a small orange accent dot. Reads like a publication mark — closest to your headline vibe.</p>
+    </div>
+    <div class="sizes">
+      <div class="size"><img src="01-serif-monogram.svg" width="16" height="16"><span>16</span></div>
+      <div class="size"><img src="01-serif-monogram.svg" width="32" height="32"><span>32</span></div>
+      <div class="size header-mock"><img src="01-serif-monogram.svg"><span>ChamsDel</span></div>
+      <div class="size"><img src="01-serif-monogram.svg" width="96" height="96"><span>96</span></div>
+      <div class="size dark-tile"><img src="01-serif-monogram.svg" width="64" height="64"></div>
+    </div>
+  </section>
+
+  <section class="row">
+    <div>
+      <h2>02 · Editorial period</h2>
+      <p>Lowercase serif c with an oversized orange period — riffs on the "Chams." period rhythm of the wordmark. Distinct, confident, slightly playful.</p>
+    </div>
+    <div class="sizes">
+      <div class="size"><img src="02-editorial-period.svg" width="16" height="16"><span>16</span></div>
+      <div class="size"><img src="02-editorial-period.svg" width="32" height="32"><span>32</span></div>
+      <div class="size header-mock"><img src="02-editorial-period.svg"><span>ChamsDel</span></div>
+      <div class="size"><img src="02-editorial-period.svg" width="96" height="96"><span>96</span></div>
+      <div class="size dark-tile"><img src="02-editorial-period.svg" width="64" height="64"></div>
+    </div>
+  </section>
+
+  <section class="row">
+    <div>
+      <h2>03 · 5am sun arc</h2>
+      <p>Rising orange sun on a dark horizon, with rays. References the "5am build sessions" stat. More iconic, less typographic.</p>
+    </div>
+    <div class="sizes">
+      <div class="size"><img src="03-sun-arc.svg" width="16" height="16"><span>16</span></div>
+      <div class="size"><img src="03-sun-arc.svg" width="32" height="32"><span>32</span></div>
+      <div class="size header-mock"><img src="03-sun-arc.svg"><span>ChamsDel</span></div>
+      <div class="size"><img src="03-sun-arc.svg" width="96" height="96"><span>96</span></div>
+      <div class="size dark-tile"><img src="03-sun-arc.svg" width="64" height="64"></div>
+    </div>
+  </section>
+</body>
+</html>
