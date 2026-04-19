@@ -159,10 +159,21 @@ textarea:focus-visible {
   font-family: var(--font-serif);
   font-size: 1.55rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   color: var(--text-primary);
   text-transform: none;
   font-style: italic;
+}
+
+.brand span::after {
+  content: "";
+  display: inline-block;
+  width: 0.32em;
+  height: 0.32em;
+  background: var(--accent-orange);
+  border-radius: 50%;
+  margin-left: 0.18em;
+  vertical-align: 0.06em;
 }
 
 .brand-mark { display: none; }
