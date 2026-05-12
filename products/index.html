@@ -99,18 +99,6 @@
       <p class="filter-summary" id="filterSummary"></p>
 
       <div class="grid three" id="productGrid">
-        <article class="card product-card" data-status="shipping" data-category="local-business">
-          <span class="eyebrow">Local businesses</span>
-          <h2>NeverMissAgain AI</h2>
-          <p>AI text-back for missed calls. Built for small businesses that can't afford to let a voicemail decide whether a lead becomes revenue.</p>
-          <a class="tool-link" href="/products/nevermissagain/">Explore product page</a>
-        </article>
-        <article class="card product-card" data-status="live" data-category="cybersecurity">
-          <span class="eyebrow">Small businesses</span>
-          <h2>CompliQuiz</h2>
-          <p>Plain-English compliance assessment. Find out which frameworks apply to your small business and where to focus first.</p>
-          <a class="tool-link" href="/products/compliquiz/">Explore product page</a>
-        </article>
         <article class="card product-card" data-status="shipping" data-category="x-growth">
           <span class="eyebrow">Growing X accounts</span>
           <h2>ReplyWisely</h2>
@@ -142,6 +130,110 @@
           <a class="tool-link" href="/products/domainnamenow/">Explore product page</a>
         </article>
       </div>
+    </section>
+
+    <section id="graveyard" aria-labelledby="graveyard-heading">
+      <div class="section-header">
+        <span class="eyebrow">What didn't work</span>
+        <h2 id="graveyard-heading" class="section-title">Killed products. Lessons kept.</h2>
+        <p class="section-copy">
+          Build in public means showing the cuts, not just the launches. Each card here is a real product I shipped or built and then shut down, plus one idea I never built. The postmortems explain why and what's worth keeping for the next builder.
+        </p>
+      </div>
+
+      <div class="grid three">
+        <article class="card product-card">
+          <span class="project-status killed">Killed &middot; May 2026</span>
+          <h2>CampfireX</h2>
+          <p>Private circles for business owners. 8 days, 200 clicks, zero customers. Network-effects math doesn't work at a 1,200-follower audience.</p>
+          <a class="tool-link" href="/blog/why-i-killed-campfirex/">Read postmortem</a>
+        </article>
+        <article class="card product-card">
+          <span class="project-status killed">Killed &middot; May 2026</span>
+          <h2>CompliQuiz</h2>
+          <p>A framework-discovery quiz for small businesses. Killed because awareness problems get solved for free. Execution is where founders actually pay.</p>
+          <a class="tool-link" href="/blog/why-i-killed-compliquiz/">Read postmortem</a>
+        </article>
+        <article class="card product-card">
+          <span class="project-status killed">Killed &middot; April 2026</span>
+          <h2>HardChoice</h2>
+          <p>A structured decision tool for couples. Real product, wrong audience for this brand. I wasn't willing to run a parallel B2C consumer brand for one product.</p>
+          <a class="tool-link" href="/blog/why-i-killed-hardchoice/">Read postmortem</a>
+        </article>
+        <article class="card product-card">
+          <span class="project-status killed">Killed &middot; April 2026</span>
+          <h2>DearMeWiser</h2>
+          <p>A reflection app: ask a question, get an answer from your wiser future self. Killed because a single ChatGPT prompt did the same job. If a prompt replaces your product, you don't have one.</p>
+          <a class="tool-link" href="/blog/why-i-killed-dearmewiser/">Read postmortem</a>
+        </article>
+        <article class="card product-card">
+          <span class="project-status killed">Idea only &middot; never built</span>
+          <h2>NeverMissAgain AI</h2>
+          <p>An idea: AI text-back for missed calls at small businesses. Written down, never shipped. The lesson: ideas you don't build are usually ideas you don't believe in enough to grind through. Honesty about that beats a half-built product page.</p>
+          <a class="tool-link" href="/blog/">Read the build log</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" aria-labelledby="timeline-heading">
+      <div class="section-header">
+        <span class="eyebrow">Build timeline</span>
+        <h2 id="timeline-heading" class="section-title">Order of operations. What shipped, what got cut.</h2>
+        <p class="section-copy">
+          Every product, in the order I worked on it, with one honest line on what happened. Useful if you're a builder trying to read the shape of a portfolio rather than just its winners.
+        </p>
+      </div>
+
+      <ol class="build-timeline">
+        <li class="build-timeline-item">
+          <div class="build-timeline-date">Mar 2026</div>
+          <div class="build-timeline-body">
+            <h3>First batch shipped: ReplyWisely, TwitMix, IkigaiNiche, FinSec Scorecard, CompliQuiz</h3>
+            <p>Five products in one wave to test which problems people actually wanted solved. Four survived. <a class="text-link" href="/blog/why-i-killed-compliquiz/">CompliQuiz did not</a> &mdash; the quiz answered an awareness question that founders solve for free.</p>
+            <p class="build-timeline-lesson"><strong>Lesson:</strong> ship in batches when you don't know which problem is real. The market votes with attention faster than any pre-launch survey will tell you.</p>
+          </div>
+        </li>
+        <li class="build-timeline-item">
+          <div class="build-timeline-date">Mar &ndash; Apr 2026</div>
+          <div class="build-timeline-body">
+            <h3>HardChoice and DearMeWiser: built, shipped, cut</h3>
+            <p>HardChoice was a real product for couples. DearMeWiser was a reflection-app learning project. Both came off the lineup in April. <a class="text-link" href="/blog/why-i-killed-hardchoice/">HardChoice was killed</a> because it was the wrong audience for the brand. <a class="text-link" href="/blog/why-i-killed-dearmewiser/">DearMeWiser was killed</a> because a single ChatGPT prompt replaced it.</p>
+            <p class="build-timeline-lesson"><strong>Lesson:</strong> niche discipline is what you take off the page. A wrapper around an LLM is not a product. Both rules are easy to read and hard to apply when it's your work.</p>
+          </div>
+        </li>
+        <li class="build-timeline-item">
+          <div class="build-timeline-date">Apr 2026</div>
+          <div class="build-timeline-body">
+            <h3>DomainNameNow shipped</h3>
+            <p>Built to compress naming and domain search into one working session, because slow domain hunts kill indie launches that were otherwise ready.</p>
+            <p class="build-timeline-lesson"><strong>Lesson:</strong> the products that earn their place are the ones that remove a small, sticky step every builder hits. Boring is fine. Useful is the bar.</p>
+          </div>
+        </li>
+        <li class="build-timeline-item">
+          <div class="build-timeline-date">May 2026</div>
+          <div class="build-timeline-body">
+            <h3>CampfireX: 8 days from idea to kill</h3>
+            <p>Built around private circles. Ran the indie-hacker playbook end to end: features, landing page, demo videos, pre-pay validation. <a class="text-link" href="/blog/why-i-killed-campfirex/">200 clicks, zero customers, killed on day eight</a>. Network products need a busy room before any single visitor stays. At 1,200 followers, the math doesn't work yet.</p>
+            <p class="build-timeline-lesson"><strong>Lesson:</strong> run the audience math before the first commit. If "build it and they will come" is your distribution plan for a network product, you do not have one.</p>
+          </div>
+        </li>
+        <li class="build-timeline-item">
+          <div class="build-timeline-date">May 2026</div>
+          <div class="build-timeline-body">
+            <h3>CompliQuiz killed; pivot toward execution-layer compliance</h3>
+            <p>The CompliQuiz domain was redirected here. The product page came down. The new bet is the harder, more valuable problem: helping small fintech companies actually achieve compliance, via <a class="text-link" href="/products/finsecscorecard/">FinSec Scorecard</a> and a fintech compliance handbook in progress.</p>
+            <p class="build-timeline-lesson"><strong>Lesson:</strong> awareness problems are usually solved for free. Execution problems get paid. If a smart user can answer your tool's question with twenty minutes and a search bar, you have a quiz, not a product.</p>
+          </div>
+        </li>
+        <li class="build-timeline-item">
+          <div class="build-timeline-date">Idea only</div>
+          <div class="build-timeline-body">
+            <h3>NeverMissAgain AI: written down, never built</h3>
+            <p>An AI text-back tool for missed calls at small businesses. The idea has been sitting on the list. It has not been shipped. Keeping the idea visible without pretending it's a product is the more useful entry on this timeline.</p>
+            <p class="build-timeline-lesson"><strong>Lesson:</strong> the gap between idea and ship is usually conviction, not capacity. Ideas you don't build are usually ideas you don't believe in enough to grind through. An honest "not yet" beats a misleading "shipping."</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
     <section>

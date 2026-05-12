@@ -5,9 +5,7 @@
   <url><loc>https://chamsdel.online/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://chamsdel.online/tools/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
-  <url><loc>https://chamsdel.online/products/nevermissagain/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://chamsdel.online/products/replywisely/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://chamsdel.online/products/compliquiz/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://chamsdel.online/products/twitmix/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://chamsdel.online/products/ikigainiche/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://chamsdel.online/products/finsecscorecard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -34,7 +32,8 @@
   <url><loc>https://chamsdel.online/blog/why-i-built-twitmix-for-content-repurposing/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://chamsdel.online/blog/how-ikigainiche-helps-you-find-a-better-niche/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://chamsdel.online/blog/how-domainnamenow-helps-founders-claim-a-brand-ready-domain/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://chamsdel.online/blog/why-i-removed-dearmewiser-from-my-product-list/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://chamsdel.online/blog/why-i-removed-hardchoice-from-my-product-list/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://chamsdel.online/blog/why-i-killed-campfirex/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chamsdel.online/blog/why-i-killed-compliquiz/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chamsdel.online/blog/why-i-killed-hardchoice/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chamsdel.online/blog/why-i-killed-dearmewiser/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I killed DearMeWiser | ChamsDel Online</title>
+  <meta name="description" content="DearMeWiser was a thin wrapper on a single ChatGPT prompt. The lesson: if a smart user can replicate your whole product in one prompt, you do not have a product.">
+  <meta name="author" content="Chaminda Delpagodage">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F5EFE4">
+  <link rel="canonical" href="https://chamsdel.online/blog/why-i-killed-dearmewiser/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ChamsDel Online">
+  <meta property="og:title" content="Why I killed DearMeWiser">
+  <meta property="og:description" content="DearMeWiser was a thin wrapper on a single ChatGPT prompt. If a smart user can replicate your whole product in one prompt, you do not have a product.">
+  <meta property="og:url" content="https://chamsdel.online/blog/why-i-killed-dearmewiser/">
+  <meta property="og:image" content="https://chamsdel.online/og/default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ChamsDel Online. Building at 43.">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Chaminda Delpagodage">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@chams_builds">
+  <meta name="twitter:creator" content="@chams_builds">
+  <meta name="twitter:title" content="Why I killed DearMeWiser">
+  <meta name="twitter:description" content="DearMeWiser was a thin wrapper on a single ChatGPT prompt. If a smart user can replicate your whole product in one prompt, you do not have a product.">
+  <meta name="twitter:image" content="https://chamsdel.online/og/default.png">
+  <meta name="twitter:image:alt" content="ChamsDel Online. Building at 43.">
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Why I killed DearMeWiser", "author": { "@type": "Person", "name": "Chaminda Delpagodage" }, "url": "https://chamsdel.online/blog/why-i-killed-dearmewiser/", "datePublished": "2026-04-19", "dateModified": "2026-05-09" }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="ChamsDel Online home"><span>ChamsDel</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/#story">Story</a>
+        <a href="/products/">Products</a>
+        <a href="/blog/">Blog</a>
+        <a href="/tools/">Tools</a>
+        <a class="button" href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">Follow @chams_builds</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-shell page">
+    <article class="card article-body">
+      <div class="eyebrow">Postmortem</div>
+      <h1 class="article-title">Why I killed DearMeWiser.</h1>
+      <div class="article-meta"><span>By Chaminda Delpagodage</span><span>April 19, 2026</span><span>Build in public</span></div>
+
+      <p>DearMeWiser is shut down. It was an app I built mostly as a learning project, and the more honest I got about what it actually did, the harder it became to justify keeping it on the page.</p>
+
+      <h2>It was a wrapper, and I knew it</h2>
+      <p>The product was simple: ask a question, get an answer back as if it came from an older, wiser version of yourself. Reflection app, journaling angle, soft tone, friendly prompts. I learned a lot building it. I am glad I built it.</p>
+      <p>I am also clear-eyed that the entire user-facing experience could be reproduced inside ChatGPT with one well-written system prompt. "Answer me as a wiser, older version of myself." That is the whole product. Add a few interface touches, a reflection prompt or two, and you still arrive at the same place: a thin shell around a model call that any user can do for free, today, in a tool they already have open.</p>
+      <p>If a smart user can replicate your whole product in one prompt, you do not have a product. You have a UI on top of someone else's product.</p>
+
+      <h2>Why "I learned a lot" is not a good reason to keep it shipping</h2>
+      <p>The trap with learning projects is that the time you spent building them feels like a reason to keep them on the page. It is not. The page is a promise to a specific person about what they should expect from this brand. A thin wrapper that any reflective user can replicate in ChatGPT does not strengthen that promise. It quietly weakens it, because a visitor who tries it and goes "I could just do this in ChatGPT" now knows something uncomfortable about the rest of the lineup, too.</p>
+      <p>Killing it is the cleaner move. The learning stays. The shipped product does not need to.</p>
+
+      <h2>The lesson worth keeping</h2>
+      <p>Before shipping anything that wraps an LLM, ask: what does my product do that a single ChatGPT prompt cannot? Real answers look like proprietary data, real workflow integration, multi-step orchestration, opinionated UI for a specific job, or a context the model does not have. "Nicer onboarding" and "softer tone" are not real answers. If the honest answer is "nothing the user could not do with a prompt," ship the prompt as a free tool, do not ship a product.</p>
+      <p>This is going to be the test for every AI-flavored product I ship from here on. If the value lives in the wrapper, not in the work the wrapper unlocks, it does not get a product page.</p>
+
+      <p><strong>See what survived the cut:</strong> <a class="text-link" href="/products/">What I'm building</a></p>
+      <p><strong>Related postmortems:</strong> <a class="text-link" href="/blog/why-i-killed-hardchoice/">HardChoice</a> &middot; <a class="text-link" href="/blog/why-i-killed-compliquiz/">CompliQuiz</a> &middot; <a class="text-link" href="/blog/why-i-killed-campfirex/">CampfireX</a></p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <div class="footer-copy">ChamsDel Online LLC. Built by Chaminda Delpagodage.</div>
+      <div class="footer-links">
+        <a class="text-link" href="/privacy.html">Privacy</a>
+        <a class="text-link" href="/terms.html">Terms</a>
+        <a class="text-link" href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">X</a>
+        <a class="text-link" href="https://www.linkedin.com/in/chamindadelpagodage/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

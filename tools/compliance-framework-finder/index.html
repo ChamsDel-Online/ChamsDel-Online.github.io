@@ -128,7 +128,7 @@
     <section class="card">
       <div class="eyebrow">Free Tool · Cybersecurity</div>
       <h1 class="product-title">Compliance Framework <span>Finder</span></h1>
-      <p class="lead">Answer eight questions about your business and instantly see which compliance frameworks likely apply to you, from SOC 2 and PCI DSS to GDPR and FedRAMP. If you want hands-on compliance training after identifying your frameworks, this pairs well with <a class="tool-link" href="/products/compliquiz/">CompliQuiz</a>.</p>
+      <p class="lead">Answer eight questions about your business and instantly see which compliance frameworks likely apply to you, from SOC 2 and PCI DSS to GDPR and FedRAMP. Once you know which frameworks apply, the harder problem is actually achieving readiness &mdash; that's where <a class="tool-link" href="/products/finsecscorecard/">FinSec Scorecard</a> comes in for fintech teams on AWS.</p>
     </section>
 
     <section class="tool-card" style="padding:26px">
@@ -205,7 +205,7 @@
       <div class="tool-actions">
         <button class="button" type="button" data-action="compliance-finder">Find My Frameworks</button>
       </div>
-      <p class="tool-note">Everything runs in your browser. No data is sent anywhere. For hands-on compliance training, try <a class="tool-link" href="/products/compliquiz/">CompliQuiz</a>.</p>
+      <p class="tool-note">Everything runs in your browser. No data is sent anywhere. Once you know which frameworks apply, the harder problem is achieving readiness &mdash; <a class="tool-link" href="/products/finsecscorecard/">FinSec Scorecard</a> covers PCI DSS and SOC 2 readiness for fintech teams on AWS.</p>
       <div class="tool-result" data-result="compliance-finder"></div>
     </section>
 
@@ -217,15 +217,15 @@
     <section class="grid two">
       <article class="panel">
         <div class="project-tag">Related product</div>
-        <h2 class="card-title">CompliQuiz</h2>
-        <p class="copy">Once you know which frameworks apply, train your team with interactive compliance quizzes.</p>
-        <a class="card-link" href="/products/compliquiz/">Try CompliQuiz →</a>
+        <h2 class="card-title">FinSec Scorecard</h2>
+        <p class="copy">Once you know which frameworks apply, the harder work is actually achieving readiness. FinSec Scorecard helps small fintech teams assess PCI DSS and SOC 2 readiness across AWS infrastructure.</p>
+        <a class="card-link" href="/products/finsecscorecard/">Try FinSec Scorecard →</a>
       </article>
       <article class="panel">
-        <div class="project-tag">Related product</div>
-        <h2 class="card-title">FinSec Scorecard</h2>
-        <p class="copy">Assess your organization's security posture across the frameworks you need to comply with.</p>
-        <a class="card-link" href="/products/finsecscorecard/">Try FinSec Scorecard →</a>
+        <div class="project-tag">Postmortem</div>
+        <h2 class="card-title">Why I killed CompliQuiz</h2>
+        <p class="copy">CompliQuiz used to live as a paid framework-discovery quiz. It is shut down. The reason is a useful lesson for builders thinking about awareness vs. execution problems.</p>
+        <a class="card-link" href="/blog/why-i-killed-compliquiz/">Read postmortem →</a>
       </article>
     </section>
 
@@ -242,8 +242,8 @@
         <p>Yes, if you have users in the EU or UK, or if you monitor EU residents' behavior (analytics, ad targeting). Location of your company doesn't matter, location of the data subject does. Minimum you need: a lawful basis for processing, a privacy notice, a way to handle data subject requests, and a Data Processing Agreement with every sub-processor.</p>
         <h3 style="margin-top:14px">What's the difference between SOC 2 and ISO 27001?</h3>
         <p>SOC 2 is a US-led attestation focused on service organization controls against five trust principles. ISO 27001 is an international certification for an Information Security Management System (ISMS). US buyers usually ask for SOC 2; European and APAC buyers often prefer ISO 27001. Many companies eventually do both because 70, 80% of the controls overlap.</p>
-        <h3 style="margin-top:14px">How do I train my team on compliance once I know which framework applies?</h3>
-        <p>Identify the framework first, then drill the controls into muscle memory. <a class="tool-link" href="/products/compliquiz/">CompliQuiz</a> is a question-based compliance training tool covering SOC 2, PCI DSS, HIPAA, GDPR, ISO 27001, and more, useful for onboarding new engineers and keeping the existing team audit-ready without sitting through another PDF.</p>
+        <h3 style="margin-top:14px">How do I move from "knowing which framework applies" to actually being compliant?</h3>
+        <p>Identifying the framework is the easy part. The hard part is mapping controls, closing gaps, and producing audit-ready evidence without burning a quarter on it. For fintech teams on AWS, <a class="tool-link" href="/products/finsecscorecard/">FinSec Scorecard</a> walks through PCI DSS and SOC 2 readiness control by control, so you know exactly where you stand before you start writing checks to consultants.</p>
       </div>
     </section>
   </main>
@@ -415,7 +415,7 @@
 
         html += "</div>";
 
-        html += "<p style=\"margin-top:20px;font-size:.88rem;opacity:.7;line-height:1.5\">Use <a class=\"tool-link\" href=\"/products/compliquiz/\">CompliQuiz</a> to train your team on the frameworks that matter, or assess your current posture with <a class=\"tool-link\" href=\"/products/finsecscorecard/\">FinSec Scorecard</a>.</p>";
+        html += "<p style=\"margin-top:20px;font-size:.88rem;opacity:.7;line-height:1.5\">Once you know which frameworks apply, the harder problem is achieving readiness. <a class=\"tool-link\" href=\"/products/finsecscorecard/\">FinSec Scorecard</a> assesses PCI DSS and SOC 2 readiness for fintech teams on AWS.</p>";
 
         container.innerHTML = html;
       }
