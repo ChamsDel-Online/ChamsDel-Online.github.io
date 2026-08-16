@@ -2,7 +2,16 @@
   "version": 2,
   "routes": [
     {
+      "src": "/products/soundaiadvisors/?",
+      "status": 301,
+      "headers": { "Location": "/advisory/" }
+    },
+    {
       "handle": "filesystem"
+    },
+    {
+      "src": "/advisory/?",
+      "dest": "/advisory/index.html"
     },
     {
       "src": "/products/?",
