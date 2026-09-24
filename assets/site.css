@@ -1685,11 +1685,23 @@ input:focus, select:focus, textarea:focus,
 .newsletter-copy .eyebrow { margin-bottom: 1.25rem; }
 .newsletter-copy .section-title { margin-bottom: 1rem; }
 .newsletter-copy .lead { margin-bottom: 0.75rem; }
-.newsletter-form { text-align: center; }
+.newsletter-form { text-align: left; }
 
 /* Reserve space so the page does not jump when the beehiiv form loads. */
 .newsletter-embed { min-height: 80px; max-height: 360px; border-radius: 20px; overflow: hidden; }
-.newsletter-fallback { margin-top: 0.25rem; font-size: 0.95rem; }
+.newsletter-fallback {
+  margin: 0.9rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.newsletter-fallback a,
+.article-body .newsletter-fallback a {
+  color: var(--accent-orange);
+  text-decoration: none;
+}
+.newsletter-fallback a::after { content: " \2192"; }
+.newsletter-fallback a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 @media (max-width: 980px) {
   .newsletter-panel { grid-template-columns: 1fr; }
