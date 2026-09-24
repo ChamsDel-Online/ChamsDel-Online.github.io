@@ -1641,7 +1641,46 @@ input:focus, select:focus, textarea:focus,
 }
 
 @media (max-width: 420px) {
-  .brand span:last-child { display: none; }
+  .brand span:last-child:not(:only-child) { display: none; }
+}
+
+/* ── Advisory, newsletter, builds helpers ────────────────────── */
+
+.hero-note {
+  margin-top: 1.25rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.block { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.block > .eyebrow { display: inline-block; margin-bottom: 1.25rem; }
+.block > .pullquote { margin-block: 1.5rem; }
+.section-header .pullquote { margin-top: 0.5rem; }
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.5rem;
+  margin-top: auto;
+}
+
+.builds-more { margin-top: 2rem; }
+
+/* Reserve space so the page does not jump when the beehiiv form loads. */
+.newsletter-embed { min-height: 210px; }
+.newsletter-fallback { margin-top: 0.75rem; }
+
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+.cta-links a { color: var(--text-on-dark); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 640px) {
+  .topbar-inner { flex-wrap: wrap; gap: 10px 24px; }
+  .topbar-inner .nav { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

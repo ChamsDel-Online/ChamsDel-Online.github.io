@@ -23,7 +23,7 @@ constant only.
 
 ## AI tools setup
 
-The homepage includes two AI-powered builder tools that call `/api/ai-tools`:
+The /tools/ pages include two AI-powered builder tools that call `/api/ai-tools`:
 
 - `Micro SaaS Idea Scorecard`
 - `Build in Public Post Angle Generator`
