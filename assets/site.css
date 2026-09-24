@@ -1018,6 +1018,11 @@ section {
   text-underline-offset: 3px;
 }
 .article-body a:hover { color: var(--accent-orange-hover); }
+.article-body a.button,
+.article-body a.button:hover { color: #FFFFFF; text-decoration: none; }
+.article-body a.button-ghost { color: var(--text-primary); text-decoration: none; }
+.article-body .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.newsletter-panel.article-newsletter { margin: 2.5rem 0 1.5rem; padding: clamp(1.25rem, 3vw, 2rem); grid-template-columns: 1fr; box-shadow: none; }
 
 .article-meta {
   display: flex;
