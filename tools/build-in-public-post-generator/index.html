@@ -94,11 +94,6 @@
       },
       {
         "@type": "Question",
-        "name": "I have bookmarks full of great posts — how do I turn those into my own posts?",
-        "acceptedAnswer": { "@type": "Answer", "text": "That's exactly what TwitMix is for. It takes posts you've bookmarked on X and remixes them into original drafts in your own voice — no blank page, no copying. Pair it with this angle generator to go from raw inspiration to finished post in a few minutes." }
-      },
-      {
-        "@type": "Question",
         "name": "How do I keep my build in public posts on-brand?",
         "acceptedAnswer": { "@type": "Answer", "text": "Pick a brand archetype and write every post in that voice. A Sage teaches in frameworks; a Rebel names what the niche is pretending not to see; a Jester keeps it under 20 words and weird. The free Brand Archetype Quiz gives you your archetype in under three minutes, and ReplyWisely keeps your replies on that same voice at scale." }
       }
@@ -136,7 +131,7 @@
     <section class="tool-card" style="padding:26px">
       <div class="project-tag">Free Tool 05</div>
       <h2 style="margin:12px 0 8px;font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.1">Build in Public Post Angle Generator</h2>
-      <p>Describe the product, the audience, and the tension. OpenAI turns that into reusable post angles for X, LinkedIn, or a launch thread. If you already collect strong source material in bookmarks, this pairs naturally with <a class="tool-link" href="https://twitmix.com" target="_blank" rel="noopener noreferrer">TwitMix</a>, which remixes bookmarked posts into fresh drafts.</p>
+      <p>Describe the product, the audience, and the tension. OpenAI turns that into reusable post angles for X, LinkedIn, or a launch thread.</p>
       <form class="tool-form three" data-tool="content">
         <label class="tool-field">
           <span class="tool-label">What are you building?</span>
@@ -166,7 +161,7 @@
       <div class="tool-actions">
         <button class="button" type="button" data-ai-action="content">Generate post angles</button>
       </div>
-      <p class="tool-note">AI output is generated on demand so the page stays static until you ask for it. For bookmark-based remixing instead of blank-page ideation, try <a class="tool-link" href="https://twitmix.com" target="_blank" rel="noopener noreferrer">TwitMix</a>.</p>
+      <p class="tool-note">AI output is generated on demand so the page stays static until you ask for it.</p>
       <div class="tool-result" data-result="content"></div>
     </section>
 
@@ -201,8 +196,6 @@
         <p>Three to five posts a week is the floor for the X algorithm to notice you. Daily is better if you can sustain the quality. The trap is posting daily with nothing to say, skip those days and ship a real update instead of filler. Consistency matters, but relevance matters more.</p>
         <h3 style="margin-top:14px">What's the difference between build in public on X and LinkedIn?</h3>
         <p>X rewards short, sharp, personality-driven posts with strong hooks. LinkedIn rewards slightly longer narrative arcs with a clear lesson at the end. Same raw angle, different packaging. This generator gives you angles you can re-cut for either surface.</p>
-        <h3 style="margin-top:14px">I have bookmarks full of great posts, how do I turn those into my own posts?</h3>
-        <p>That's exactly what <a class="tool-link" href="/products/twitmix/">TwitMix</a> is for. It takes posts you've bookmarked on X and remixes them into original drafts in your own voice, no blank page, no copying. Pair it with this angle generator to go from raw inspiration to finished post in a few minutes.</p>
         <h3 style="margin-top:14px">How do I keep my build in public posts on-brand?</h3>
         <p>Pick a brand archetype and write every post in that voice. A Sage teaches in frameworks; a Rebel names what the niche is pretending not to see; a Jester keeps it under 20 words and weird. The free <a class="tool-link" href="/tools/brand-archetype-quiz/">Brand Archetype Quiz</a> gives you your archetype in under three minutes, and <a class="tool-link" href="/products/replywisely/">ReplyWisely</a> keeps your replies on that same voice at scale.</p>
       </div>
@@ -236,8 +229,7 @@
       if (container) {
         container.innerHTML =
           "<strong>Ready to generate</strong>" +
-          "<p>Fill in the fields above, then generate AI-assisted post angles shaped around your product, audience, and tension.</p>" +
-          "<p>If you want to remix bookmarked inspiration into publishable drafts, use <a class=\"tool-link\" href=\"https://twitmix.com\" target=\"_blank\" rel=\"noopener noreferrer\">TwitMix</a>.</p>";
+          "<p>Fill in the fields above, then generate AI-assisted post angles shaped around your product, audience, and tension.</p>";
       }
 
       var aiBtn = document.querySelector('[data-ai-action="content"]');
@@ -271,8 +263,7 @@
             var sanitized = angles.map(function (angle) { return "<li>" + escapeHtml(angle) + "</li>"; }).join("");
             container.innerHTML =
               "<strong>" + (angles.length || 0) + " AI-generated post angles</strong>" +
-              "<ul class=\"tool-list\">" + sanitized + "</ul>" +
-              "<p>If these angles came from ideas you saved earlier, <a class=\"tool-link\" href=\"https://twitmix.com\" target=\"_blank\" rel=\"noopener noreferrer\">TwitMix</a> is the more direct workflow for remixing bookmarked posts into new drafts.</p>";
+              "<ul class=\"tool-list\">" + sanitized + "</ul>";
           } catch (error) {
             container.classList.add("is-error");
             container.innerHTML =
