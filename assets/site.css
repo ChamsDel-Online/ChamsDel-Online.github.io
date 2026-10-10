@@ -1687,7 +1687,7 @@ input:focus, select:focus, textarea:focus,
 .newsletter-copy .lead { margin-bottom: 0.75rem; }
 .newsletter-form { text-align: left; }
 
-/* Reserve space so the page does not jump when the beehiiv form loads. */
+/* Reserve space so the page does not jump when the Substack form loads. */
 .newsletter-embed { min-height: 80px; max-height: 360px; border-radius: 20px; overflow: hidden; }
 .newsletter-fallback {
   margin: 0.9rem 0 0;
