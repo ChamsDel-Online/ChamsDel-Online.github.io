@@ -1,10 +1,17 @@
 # ChamsDel-Online.github.io
 ChamsDel-Online website
 
+## Site structure
+
+The homepage is a builder profile: builds first, then free tools, then a compact
+AI advisory section that holds the newsletter, then the story. The nav is
+Builds, Tools, Blog, Story, AI Advisory and is identical on every page.
+
 ## Advisory
 
-The advisory practice lives on-site at `/advisory/`. It is the single destination
-for the offer; there is no outbound link to a separate advisory site.
+AI advisory is a secondary offer. It lives on-site at `/advisory/` with a compact
+section on the homepage; there is no outbound link to a separate advisory site.
+The newsletter (The Boring AI Runbook) sits inside the advisory area.
 
 The old path `/products/soundaiadvisors/` 301s to `/advisory/` via `vercel.json`.
 

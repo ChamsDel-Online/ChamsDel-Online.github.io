@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://chamsdel.online/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://chamsdel.online/advisory/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chamsdel.online/advisory/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://chamsdel.online/products/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://chamsdel.online/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://chamsdel.online/tools/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -29,6 +29,14 @@
   <url><loc>https://chamsdel.online/tools/brand-archetype-wheel/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://chamsdel.online/tools/branding-iq-quiz/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <url><loc>https://chamsdel.online/blog/steady-two-paid-subscriptions-and-the-rule-behind-them/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chamsdel.online/blog/the-roller-coaster-of-wanting-to-quit-the-day-job/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chamsdel.online/blog/nobody-is-checking-your-stripe-dashboard-but-you/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chamsdel.online/blog/the-fastest-ai-approval-starts-with-a-will-not-list/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chamsdel.online/blog/ai-sped-up-the-middle-fix-the-gate/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chamsdel.online/blog/five-checks-before-you-trust-an-ai-number/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chamsdel.online/blog/pick-a-family-safe-word-tonight/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chamsdel.online/blog/two-prompts-that-make-ai-a-better-teacher/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://chamsdel.online/blog/ai-adoption-without-failing-the-audit/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://chamsdel.online/blog/why-i-started-the-boring-ai-runbook/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://chamsdel.online/blog/steady-a-fasting-app-for-the-hard-hour/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

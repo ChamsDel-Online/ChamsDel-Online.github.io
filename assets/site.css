@@ -1734,3 +1734,36 @@ input:focus, select:focus, textarea:focus,
   }
   body::before, body::after { display: none; }
 }
+
+/* Homepage: free tool mini cards as links */
+a.tool-mini {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.tool-mini p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+a.tool-mini:hover strong,
+a.tool-mini:focus-visible strong {
+  color: var(--accent-orange);
+}
+
+#tools .tools-overview {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  #tools .tools-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  #tools .tools-overview {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
