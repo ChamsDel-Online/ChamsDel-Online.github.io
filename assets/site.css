@@ -753,6 +753,19 @@ section {
   color: var(--text-secondary);
 }
 
+/* ── Revenue proof line ─────────────────────────────────────── */
+
+.proof {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.project-card .proof { margin-top: -0.25rem; }
+
 /* ── Status pills ────────────────────────────────────────────── */
 
 .status,
