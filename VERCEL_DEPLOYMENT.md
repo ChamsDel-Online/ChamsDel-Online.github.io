@@ -100,7 +100,7 @@ vercel dev
 
 For issues or questions:
 - Email: chaminda@chamsdel.online
-- X: [@chams_builds](https://x.com/chams_builds)
+- X: [@chamsdel](https://x.com/chamsdel)
 
 ---
 

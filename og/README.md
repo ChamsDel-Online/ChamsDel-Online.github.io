@@ -30,7 +30,7 @@ Install on macOS with `brew install librsvg`.
 - Background: `#0E0E0B`
 - Headline font: Lora 400, 56px, `#F2EDE4`, left-aligned, 80px left padding
 - Label: Inter 500, 13px, amber (`#C8913A`) for site/product, green (`#4A9B6F`) for free tool
-- Byline: `Chaminda Delpagodage. @chams_builds` bottom-left
+- Byline: `Chaminda Delpagodage. @chamsdel` bottom-left
 - Amber accent bar 48x3px, bottom-right
 - Subtle grid pattern, top-right quadrant, very low opacity
 
