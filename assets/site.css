@@ -388,6 +388,22 @@ strong, .article-body strong {
 
 .section-header .section-title { margin-bottom: 1.25rem; }
 
+/* Page hero stack, pills inside cards, and copy that follows a card grid */
+section > .eyebrow { margin-bottom: 1.25rem; }
+.product-title { margin-bottom: 1.25rem; }
+.lead + .pullquote { margin-top: 2rem; }
+.card > .eyebrow { margin-bottom: 1rem; }
+.grid + .section-copy { margin-top: 2rem; }
+
+.proof-stat {
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem;
+}
+
 section {
   padding-block: clamp(4rem, 8vw, 7rem);
   position: relative;
