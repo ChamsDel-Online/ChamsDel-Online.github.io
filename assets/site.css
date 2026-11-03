@@ -395,6 +395,25 @@ section > .eyebrow { margin-bottom: 1.25rem; }
 .card > .eyebrow { margin-bottom: 1rem; }
 .grid + .section-copy { margin-top: 2rem; }
 
+.card.highlight {
+  background: #FFF6C7;
+  border-color: var(--accent-yellow-deep);
+}
+.card.highlight p { color: var(--text-primary); }
+.card.highlight .highlight-line {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-weight: 500;
+  margin: 0.25rem 0 0;
+}
+
+.grid + .price-jump { margin-top: 1.5rem; }
+.price-jump + .section-copy { margin-top: 2rem; }
+.price-jump .proof-stat { margin-bottom: 0.5rem; }
+.price-jump p:last-child { margin-bottom: 0; }
+
 .proof-stat {
   font-family: var(--font-serif);
   font-size: 1.9rem;
