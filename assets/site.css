@@ -400,11 +400,6 @@ section > .eyebrow { margin-bottom: 1.25rem; }
   border-color: var(--accent-yellow-deep);
 }
 .card.highlight p { color: var(--text-primary); }
-.card.highlight-green {
-  background: #E6F7E6;
-  border-color: #7ED481;
-}
-.card.highlight-green p { color: var(--text-primary); }
 .card.highlight .highlight-line {
   font-family: var(--font-serif);
   font-style: italic;
@@ -414,10 +409,13 @@ section > .eyebrow { margin-bottom: 1.25rem; }
   margin: 0.25rem 0 0;
 }
 
-.offer-box { max-width: 68ch; margin-top: 1.75rem; }
-.offer-box > .eyebrow { margin-bottom: 1rem; }
-.offer-box p { font-size: 1.125rem; line-height: 1.65; margin: 0; }
-.offer-box + .pullquote { margin-top: 2rem; }
+.offer-box {
+  background: #DDF5DE;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  max-width: 64ch;
+  margin-bottom: 0;
+}
 
 .grid + .price-jump { margin-top: 1.5rem; }
 .price-jump + .section-copy { margin-top: 2rem; }
