@@ -10,8 +10,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SaaS Pricing Calculator | ChamsDel Online</title>
-  <meta name="description" content="What should you charge? Work backwards from what you need. Reverse-engineer a sensible subscription price in 60 seconds.">
+  <title>SaaS Spend, Cost &amp; Pricing Calculator | ChamsDel Online</title>
+  <meta name="description" content="Free SaaS spend calculator. Add your tools and seats to see monthly and annual cost, cost per employee, and savings from unused seats. Plus pricing math.">
   <meta name="author" content="Chaminda Delpagodage">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#F5EFE4">
@@ -22,34 +22,45 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ChamsDel Online">
-  <meta property="og:title" content="SaaS Pricing Calculator">
-  <meta property="og:description" content="What should you charge? Work backwards from what you need. Reverse-engineer a sensible subscription price in 60 seconds.">
+  <meta property="og:title" content="SaaS Spend, Cost and Pricing Calculator">
+  <meta property="og:description" content="Free SaaS spend calculator. Add your tools and seats to see monthly and annual cost, cost per employee, and savings from unused seats. Plus pricing math.">
   <meta property="og:url" content="https://chamsdel.online/tools/saas-pricing-calculator/">
   <meta property="og:image" content="https://chamsdel.online/og/saas-pricing-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="SaaS Pricing Calculator">
+  <meta property="og:image:alt" content="SaaS Spend, Cost and Pricing Calculator">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@chamsdel">
   <meta name="twitter:creator" content="@chamsdel">
-  <meta name="twitter:title" content="SaaS Pricing Calculator">
-  <meta name="twitter:description" content="What should you charge? Work backwards from what you need. Reverse-engineer a sensible subscription price in 60 seconds.">
+  <meta name="twitter:title" content="SaaS Spend, Cost and Pricing Calculator">
+  <meta name="twitter:description" content="Free SaaS spend calculator. Add your tools and seats to see monthly and annual cost, cost per employee, and savings from unused seats. Plus pricing math.">
   <meta name="twitter:image" content="https://chamsdel.online/og/saas-pricing-calculator.png">
-  <meta name="twitter:image:alt" content="SaaS Pricing Calculator">
+  <meta name="twitter:image:alt" content="SaaS Spend, Cost and Pricing Calculator">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Indie Hacker Pricing Calculator",
+    "@type": "WebApplication",
+    "name": "SaaS Spend, Cost and Pricing Calculator",
+    "alternateName": ["SaaS Spend Calculator", "SaaS Savings Calculator", "SaaS Cost Calculator", "SaaS Pricing Calculator"],
     "url": "https://chamsdel.online/tools/saas-pricing-calculator/",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Any",
-    "description": "Enter your monthly income goal, tool costs, expected customer count, and a buffer for tax and churn. Get an instant recommended monthly price and revenue target.",
+    "browserRequirements": "Requires JavaScript. Runs entirely in your browser.",
+    "description": "List the SaaS tools you pay for with seats, price per seat, billing period and seats actually used. See total monthly and annual SaaS spend, cost per employee, and savings from removing unused seats or moving monthly plans to annual billing. Also includes a pricing calculator that backs into what to charge for your own SaaS from an income goal, costs, customers and a buffer.",
+    "featureList": [
+      "Total monthly and annual SaaS spend",
+      "Cost per employee from your headcount",
+      "Savings from removing unused seats",
+      "Savings from switching monthly plans to annual at a discount you enter",
+      "Per-tool cost breakdown",
+      "SaaS pricing calculator for what to charge"
+    ],
     "isAccessibleForFree": true,
     "author": { "@type": "Person", "name": "Chaminda Delpagodage", "url": "https://chamsdel.online" },
+    "publisher": { "@type": "Organization", "name": "ChamsDel Online", "url": "https://chamsdel.online" },
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
@@ -61,54 +72,97 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chamsdel.online/" },
       { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://chamsdel.online/tools/" },
-      { "@type": "ListItem", "position": 3, "name": "Pricing Calculator", "item": "https://chamsdel.online/tools/saas-pricing-calculator/" }
+      { "@type": "ListItem", "position": 3, "name": "SaaS Spend and Pricing Calculator", "item": "https://chamsdel.online/tools/saas-pricing-calculator/" }
     ]
   }
   </script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I price a SaaS product?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Price a SaaS product by starting from your income goal, not your competitors. Add your monthly income target to your tool costs, gross that up by 20 to 30 percent for tax and churn, then divide by the realistic number of paying customers you expect in year one. That gives you a price that clears your actual goal, not a price that just feels right." }
-      },
-      {
-        "@type": "Question",
-        "name": "How much should I charge for my SaaS?",
-        "acceptedAnswer": { "@type": "Answer", "text": "For a B2B micro SaaS solving a specific pain, $19 to $49 per month is the common sweet spot. Below $15 the support load per customer eats the margin, and above $99 most indie hackers don't have the distribution or trust to close at that price. If the math demands a higher price, either go niche B2B with value pricing or cut your customer count target." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the SaaS pricing calculator formula?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Recommended price = (income target + tool costs) × (1 + buffer percent) ÷ expected paying customers. The buffer typically ranges from 20 to 40 percent to cover tax, refunds, failed payments, and churn. This reverse-engineers the price from the outcome you actually need, not from vague competitor benchmarks." }
-      },
-      {
-        "@type": "Question",
-        "name": "How many paying customers do I need to make $3000 MRR?",
-        "acceptedAnswer": { "@type": "Answer", "text": "At $30 per month, you need 100 paying customers for $3000 MRR. At $50 per month, 60 customers. At $99 per month, just over 30. The higher your price, the fewer customers you need and the more support-efficient your business becomes — but the harder the sale. Indie hackers almost always underprice, not overprice." }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I price my SaaS monthly or annually?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Offer both, and discount annual by 15 to 20 percent to reward commitment. Monthly converts better on first purchase because the perceived risk is lower. Annual improves cash flow and cuts churn dramatically — annual customers churn at roughly one-fifth the rate of monthly ones. Most healthy SaaS businesses end up with 30 to 50 percent of MRR on annual plans." }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I price a SaaS product with no traction?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Launch with a founding-member price (30 to 50 percent off the target price) capped at a set number of customers. This gives early adopters a reason to buy now, gives you pricing validation, and lets you raise to the real price once the founding cohort is full. Avoid a free tier at this stage — it attracts users who won't reveal whether your real price works." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate SaaS spend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For each subscription, multiply the seats you pay for by the price per seat. If a tool is billed yearly, divide the yearly price per seat by 12 first. Add all tools together for total monthly SaaS spend, and multiply by 12 for annual spend. The spend calculator on this page does this for you."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate SaaS cost per employee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide total SaaS spend by your headcount. Enter your headcount in the spend calculator and it shows SaaS cost per employee per month and per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate SaaS savings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check two things. Unused seats: seats paid minus seats actually used, times the price per seat, times 12 for the yearly saving. Annual billing: for tools billed monthly, used seats times the monthly price times 12 times the annual discount the vendor offers. The calculator removes unused seats first, so savings are not counted twice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is annual SaaS billing cheaper than monthly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only when the vendor offers a lower price for paying yearly, and only for tools you will keep all year. Look up each vendor's actual annual price, enter the discount in the calculator, and compare it with the flexibility you give up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate what to charge for my SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add your monthly income target and your monthly tool costs, divide by (1 minus a buffer percentage for tax, refunds and churn) to get a monthly revenue target, then divide that by the number of paying customers you realistically expect. The pricing calculator on this page runs this formula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many paying customers do I need to make $3,000 MRR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the revenue goal by the price. At $30 per month you need 100 paying customers, at $50 per month you need 60, and at $99 per month you need 31. A higher price needs fewer customers but is a harder sale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator save or send my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Both calculators run entirely in your browser with plain JavaScript. Nothing you type is sent to a server or stored, and the page never asks for passwords or payment details."
+      }
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    .spend-rows { display: grid; gap: 12px; margin-top: 16px; }
+    .spend-row { display: grid; grid-template-columns: 1.6fr 0.8fr 0.8fr 1fr 1.1fr auto; gap: 10px; align-items: end; padding: 12px; border: 1px solid rgba(0,0,0,.08); border-radius: 14px; }
+    .spend-row .tool-label { font-size: .8rem; }
+    .spend-remove { font-size: .8rem; padding: 8px 10px; white-space: nowrap; }
+    .spend-settings { margin-top: 18px; }
+    .spend-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: .92rem; }
+    .spend-table th, .spend-table td { text-align: left; padding: 8px 6px; border-bottom: 1px solid rgba(0,0,0,.08); }
+    .spend-table td.num, .spend-table th.num { text-align: right; }
+    .spend-note { font-size: .85rem; color: var(--text-secondary); margin-top: 10px; }
+    .jump-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    @media (max-width: 760px) {
+      .spend-row { grid-template-columns: 1fr 1fr; }
+      .spend-row .spend-name { grid-column: 1 / -1; }
+      .spend-table { font-size: .82rem; }
+    }
+  </style>
 </head>
 <body>
     <header class="topbar">
@@ -129,15 +183,41 @@
 
   <main class="site-shell page stack">
     <section class="card">
-      <div class="eyebrow">Free Tool · Revenue</div>
-      <h1 class="product-title">Indie Hacker Pricing <span>Calculator</span></h1>
-      <p class="lead">Stop guessing your price. Enter your target monthly income, tool costs, expected paying customers, and a buffer for tax and churn. The calculator backs into a recommended price instantly. The math works only when the niche supports the price, <a class="tool-link" href="/products/ikigainiche/">IkigaiNiche</a> helps you pick one with actual willingness to pay.</p>
+      <div class="eyebrow">Free Tool · Spend and Revenue</div>
+      <h1 class="product-title">SaaS Spend, Savings and Pricing <span>Calculator</span></h1>
+      <p class="lead">Add up what your team pays for SaaS tools, see the cost per employee, and find the savings hiding in unused seats and monthly plans. If you are on the other side of the bill, the pricing calculator further down backs into what to charge for your own SaaS. Everything runs in your browser. Nothing you type is sent anywhere or saved.</p>
+      <div class="jump-links">
+        <a class="button" href="#spend">SaaS spend and savings calculator</a>
+        <a class="button-ghost" href="#pricing">SaaS pricing calculator</a>
+      </div>
     </section>
 
-    <section class="tool-card" style="padding:26px">
-      <div class="project-tag">Free Tool 03</div>
-      <h2 style="margin:12px 0 8px;font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.1">Indie Hacker Pricing Calculator</h2>
-      <p>Reverse-engineer a sensible subscription price from your monthly target, costs, and customer assumptions.</p>
+    <section class="tool-card" id="spend" style="padding:26px">
+      <div class="project-tag">Calculator 1 · What you spend</div>
+      <h2 style="margin:12px 0 8px;font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.1">SaaS Spend and Savings Calculator</h2>
+      <p>Add one row per tool. Enter the seats you pay for, the seats people actually use, the price per seat, and whether it is billed monthly or yearly. For yearly plans, enter the yearly price per seat. The rows below are example values to show how it works. Replace them with your own tools and prices from your invoices.</p>
+      <div class="spend-rows" data-spend-rows></div>
+      <div class="tool-actions" style="margin-top:12px">
+        <button class="button-ghost" type="button" data-spend-add style="font-size:.85rem">+ Add tool</button>
+        <button class="button-ghost" type="button" data-spend-clear style="font-size:.85rem">Clear all rows</button>
+      </div>
+      <form class="tool-form two spend-settings" data-spend-settings onsubmit="return false;">
+        <label class="tool-field">
+          <span class="tool-label">Headcount (optional, for cost per employee)</span>
+          <input class="tool-input" type="number" min="0" step="1" name="headcount" value="" placeholder="e.g. 12">
+        </label>
+        <label class="tool-field">
+          <span class="tool-label">Annual billing discount you could get (%). Example value, check each vendor's real annual price.</span>
+          <input class="tool-input" type="number" min="0" max="100" step="1" name="annualDiscount" value="15">
+        </label>
+      </form>
+      <div class="tool-result" data-result="spend" aria-live="polite"></div>
+    </section>
+
+    <section class="tool-card" id="pricing" style="padding:26px">
+      <div class="project-tag">Calculator 2 · What you charge</div>
+      <h2 style="margin:12px 0 8px;font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.1">SaaS Pricing Calculator for Indie Builders</h2>
+      <p>Reverse-engineer a subscription price from your monthly income target, costs, and customer assumptions. The starting numbers are examples. Replace them with yours.</p>
       <form class="tool-form two" data-tool="pricing">
         <label class="tool-field">
           <span class="tool-label">Monthly income target (USD)</span>
@@ -159,18 +239,48 @@
       <div class="tool-result" data-result="pricing"></div>
     </section>
 
-    <section class="panel">
-      <h2 class="card-title">How it works</h2>
-      <p class="copy">The calculator adds your income goal and tool costs, then grosses up by your buffer percentage to arrive at a gross revenue target. Dividing by expected customers gives you the recommended monthly price. All calculations happen instantly in your browser.</p>
-      <ol class="list" style="margin-top:14px">
-        <li>Enter the monthly income you need after expenses.</li>
-        <li>Add your monthly tool and infrastructure costs.</li>
-        <li>Estimate realistic paying customers, not sign-ups, paying ones.</li>
-        <li>Set a buffer for tax, churn, and failed payments (25% is a reasonable starting point).</li>
-      </ol>
+    <section class="panel" id="how-to-calculate-saas-spend">
+      <h2 class="card-title">How to calculate SaaS spend</h2>
+      <div class="copy">
+        <p>SaaS spend is the total you pay for software subscriptions over a period. For each tool, multiply the seats you pay for by the price per seat. If a tool is billed yearly, divide the yearly price per seat by 12 to get a monthly figure, so every tool is compared on the same basis.</p>
+        <ol class="list" style="margin-top:14px">
+          <li>List every subscription. Card statements and invoices are the most reliable source, because tools get added by different people.</li>
+          <li>For each one, note seats paid, price per seat, and whether the price is monthly or yearly.</li>
+          <li>Monthly spend per tool = seats × monthly price per seat. Annual spend = monthly spend × 12.</li>
+          <li>Add the tools together for total SaaS spend. Divide by headcount for SaaS cost per employee.</li>
+        </ol>
+        <p>Flat-fee tools with no seats work too: enter 1 seat and the full price.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="how-to-find-saas-savings">
+      <h2 class="card-title">How to find SaaS savings</h2>
+      <div class="copy">
+        <p>The calculator looks at two savings levers that you can check yourself, without guessing:</p>
+        <ul class="list" style="margin-top:14px">
+          <li><strong>Unused seats.</strong> Seats paid minus seats actually used, times the price per seat. Admin panels usually show last login or last active dates, which is the honest way to count used seats.</li>
+          <li><strong>Monthly to annual billing.</strong> If a vendor offers a lower price for paying yearly, the saving is the used seats times the monthly price times 12 times that discount. The calculator applies this only to tools you marked as billed monthly, and only after unused seats are removed, so the same dollar is never counted twice.</li>
+        </ul>
+        <p>Annual billing is a commitment. It only saves money on tools you are sure you will keep for the year. If you are deciding which overlapping tools to cut, the <a class="tool-link" href="/tools/decision-matrix/">Weighted Decision Matrix</a> helps you compare them on the criteria that matter to you.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="how-to-calculate-saas-pricing">
+      <h2 class="card-title">How to calculate SaaS pricing (what to charge)</h2>
+      <div class="copy">
+        <p>The pricing calculator starts from the outcome you need, not from what other products charge. It adds your monthly income target and tool costs, then divides by (1 minus your buffer) to cover tax, refunds, failed payments and churn. That gives a monthly revenue target. Dividing the revenue target by your expected paying customers gives the recommended monthly price.</p>
+        <p>The number only holds if the niche can pay it. Before committing to a price, check the idea with the <a class="tool-link" href="/tools/saas-idea-scorecard/">SaaS Idea Scorecard</a> and the niche with the <a class="tool-link" href="/tools/niche-clarity-scorecard/">Niche Clarity Scorecard</a>. If you are not sure what income target to type in, the <a class="tool-link" href="/tools/freedom-calculator/">Freedom Calculator</a> works out what your life actually needs.</p>
+        <p>I built the spend calculator after seeing that most searches landing on this page were about what teams spend on SaaS, not what to charge. Both sides of the bill now live here.</p>
+      </div>
     </section>
 
     <section class="grid two">
+      <article class="panel">
+        <div class="project-tag">Related program</div>
+        <h2 class="card-title">First Dollar Sprint</h2>
+        <p class="copy">Have a price but no product yet? A two-week sprint for busy parents to ship a first web app and make a first internet dollar.</p>
+        <a class="card-link" href="/first-dollar/">See the sprint →</a>
+      </article>
       <article class="panel">
         <div class="project-tag">Related product</div>
         <h2 class="card-title">IkigaiNiche</h2>
@@ -180,7 +290,7 @@
       <article class="panel">
         <div class="project-tag">Related tool</div>
         <h2 class="card-title">SaaS Idea Scorecard</h2>
-        <p class="copy">Validate whether your idea has the audience willing to pay the price this calculator suggests.</p>
+        <p class="copy">Validate whether your idea has an audience willing to pay the price this calculator suggests.</p>
         <a class="card-link" href="/tools/saas-idea-scorecard/">Use the scorecard →</a>
       </article>
       <article class="panel">
@@ -191,21 +301,31 @@
       </article>
     </section>
 
+    <section class="panel">
+      <h2 class="card-title">From the build log</h2>
+      <ul class="list copy">
+        <li><a class="tool-link" href="/blog/steady-two-paid-subscriptions-and-the-rule-behind-them/">Steady: two paid subscriptions and the rule behind them</a></li>
+        <li><a class="tool-link" href="/blog/nobody-is-checking-your-stripe-dashboard-but-you/">Nobody is checking your Stripe dashboard but you</a></li>
+      </ul>
+    </section>
+
     <section class="panel" id="faq">
       <h2 class="card-title">Frequently asked questions</h2>
       <div class="copy">
-        <h3 style="margin-top:14px">How do I price a SaaS product?</h3>
-        <p>Price a SaaS product by starting from your income goal, not your competitors. Add your monthly income target to your tool costs, gross that up by 20 to 30 percent for tax and churn, then divide by the realistic number of paying customers you expect in year one. That gives you a price that clears your actual goal, not a price that just feels right.</p>
-        <h3 style="margin-top:14px">How much should I charge for my SaaS?</h3>
-        <p>For a B2B micro SaaS solving a specific pain, $19 to $49 per month is the common sweet spot. Below $15 the support load per customer eats the margin, and above $99 most indie hackers don't have the distribution or trust to close at that price. If the math demands a higher price, either go niche B2B with value pricing or cut your customer count target.</p>
-        <h3 style="margin-top:14px">What is the SaaS pricing calculator formula?</h3>
-        <p>Recommended price = (income target + tool costs) × (1 + buffer percent) ÷ expected paying customers. The buffer typically ranges from 20 to 40 percent to cover tax, refunds, failed payments, and churn. This reverse-engineers the price from the outcome you actually need, not from vague competitor benchmarks.</p>
-        <h3 style="margin-top:14px">How many paying customers do I need to make $3000 MRR?</h3>
-        <p>At $30 per month, you need 100 paying customers for $3000 MRR. At $50 per month, 60 customers. At $99 per month, just over 30. The higher your price, the fewer customers you need and the more support-efficient your business becomes, but the harder the sale. Indie hackers almost always underprice, not overprice.</p>
-        <h3 style="margin-top:14px">Should I price my SaaS monthly or annually?</h3>
-        <p>Offer both, and discount annual by 15 to 20 percent to reward commitment. Monthly converts better on first purchase because the perceived risk is lower. Annual improves cash flow and cuts churn dramatically, annual customers churn at roughly one-fifth the rate of monthly ones. Most healthy SaaS businesses end up with 30 to 50 percent of MRR on annual plans.</p>
-        <h3 style="margin-top:14px">How do I price a SaaS product with no traction?</h3>
-        <p>Launch with a founding-member price (30 to 50 percent off the target price) capped at a set number of customers. This gives early adopters a reason to buy now, gives you pricing validation, and lets you raise to the real price once the founding cohort is full. Avoid a free tier at this stage, it attracts users who won't reveal whether your real price works. Before you publish a price, pressure-test the idea with the <a class="tool-link" href="/tools/saas-idea-scorecard/">SaaS Idea Scorecard</a>.</p>
+        <h3 style="margin-top:14px">How do I calculate SaaS spend?</h3>
+        <p>For each subscription, multiply the seats you pay for by the price per seat. If a tool is billed yearly, divide the yearly price per seat by 12 first. Add all tools together for total monthly SaaS spend, and multiply by 12 for annual spend. The spend calculator on this page does this for you.</p>
+        <h3 style="margin-top:14px">How do I calculate SaaS cost per employee?</h3>
+        <p>Divide total SaaS spend by your headcount. Enter your headcount in the spend calculator and it shows SaaS cost per employee per month and per year.</p>
+        <h3 style="margin-top:14px">How do I calculate SaaS savings?</h3>
+        <p>Check two things. Unused seats: seats paid minus seats actually used, times the price per seat, times 12 for the yearly saving. Annual billing: for tools billed monthly, used seats times the monthly price times 12 times the annual discount the vendor offers. The calculator removes unused seats first, so savings are not counted twice.</p>
+        <h3 style="margin-top:14px">Is annual SaaS billing cheaper than monthly?</h3>
+        <p>Only when the vendor offers a lower price for paying yearly, and only for tools you will keep all year. Look up each vendor's actual annual price, enter the discount in the calculator, and compare it with the flexibility you give up.</p>
+        <h3 style="margin-top:14px">How do I calculate what to charge for my SaaS?</h3>
+        <p>Add your monthly income target and your monthly tool costs, divide by (1 minus a buffer percentage for tax, refunds and churn) to get a monthly revenue target, then divide that by the number of paying customers you realistically expect. The pricing calculator on this page runs this formula.</p>
+        <h3 style="margin-top:14px">How many paying customers do I need to make $3,000 MRR?</h3>
+        <p>Divide the revenue goal by the price. At $30 per month you need 100 paying customers, at $50 per month you need 60, and at $99 per month you need 31. A higher price needs fewer customers but is a harder sale.</p>
+        <h3 style="margin-top:14px">Does this calculator save or send my data?</h3>
+        <p>No. Both calculators run entirely in your browser with plain JavaScript. Nothing you type is sent to a server or stored, and the page never asks for passwords or payment details.</p>
       </div>
     </section>
   </main>
@@ -222,6 +342,68 @@
     </div>
   </footer>
 
+  <script id="spend-logic">
+    /* SaaS spend logic. Pure functions, no DOM, no network. */
+    var SaasSpend = (function () {
+      function num(value) {
+        if (value === null || value === undefined || value === "") return 0;
+        var n = Number(value);
+        return Number.isFinite(n) ? n : 0;
+      }
+      function isEmptyRow(row) {
+        var name = String(row.name || "").trim();
+        return !name && num(row.seats) <= 0 && num(row.price) <= 0;
+      }
+      function compute(rows, options) {
+        options = options || {};
+        var headcount = Math.max(Math.floor(num(options.headcount)), 0);
+        var discount = Math.min(Math.max(num(options.annualDiscount), 0), 100) / 100;
+        var items = [];
+        var totals = { monthly: 0, annual: 0, unusedSeats: 0, unusedSavingsAnnual: 0, switchSavingsAnnual: 0, tools: 0, overUsedTools: 0 };
+        (rows || []).forEach(function (row, index) {
+          if (!row || isEmptyRow(row)) return;
+          var seats = Math.max(Math.floor(num(row.seats)), 0);
+          var price = Math.max(num(row.price), 0);
+          var billing = row.billing === "annual" ? "annual" : "monthly";
+          var usedRaw = row.used;
+          var usedGiven = !(usedRaw === null || usedRaw === undefined || String(usedRaw).trim() === "");
+          var used = usedGiven ? Math.max(Math.floor(num(usedRaw)), 0) : seats;
+          var overUsed = used > seats;
+          if (overUsed) used = seats;
+          var perSeatMonthly = billing === "annual" ? price / 12 : price;
+          var monthly = seats * perSeatMonthly;
+          var annual = monthly * 12;
+          var unused = seats - used;
+          var unusedSavingsAnnual = unused * perSeatMonthly * 12;
+          var switchSavingsAnnual = billing === "monthly" ? used * price * 12 * discount : 0;
+          var item = {
+            name: String(row.name || "").trim() || "Tool " + (index + 1),
+            seats: seats, used: used, unused: unused, billing: billing, price: price,
+            perSeatMonthly: perSeatMonthly, monthly: monthly, annual: annual,
+            unusedSavingsAnnual: unusedSavingsAnnual, switchSavingsAnnual: switchSavingsAnnual,
+            overUsed: overUsed
+          };
+          items.push(item);
+          totals.tools += 1;
+          totals.monthly += monthly;
+          totals.annual += annual;
+          totals.unusedSeats += unused;
+          totals.unusedSavingsAnnual += unusedSavingsAnnual;
+          totals.switchSavingsAnnual += switchSavingsAnnual;
+          if (overUsed) totals.overUsedTools += 1;
+        });
+        totals.savingsAnnual = totals.unusedSavingsAnnual + totals.switchSavingsAnnual;
+        totals.optimizedAnnual = Math.max(totals.annual - totals.savingsAnnual, 0);
+        totals.savingsPercent = totals.annual > 0 ? (totals.savingsAnnual / totals.annual) * 100 : 0;
+        totals.perEmployeeMonthly = headcount > 0 ? totals.monthly / headcount : null;
+        totals.perEmployeeAnnual = headcount > 0 ? totals.annual / headcount : null;
+        items.sort(function (a, b) { return b.annual - a.annual; });
+        return { items: items, totals: totals, headcount: headcount, discountPercent: discount * 100 };
+      }
+      return { compute: compute, isEmptyRow: isEmptyRow };
+    }());
+    if (typeof module !== "undefined" && module.exports) { module.exports = SaasSpend; }
+  </script>
   <script>
     (function () {
       function clamp(value, min, max) { return Math.min(Math.max(value, min), max); }
@@ -230,10 +412,136 @@
         var value = field ? Number(field.value) : fallback;
         return Number.isFinite(value) ? value : fallback;
       }
-      function formatCurrency(value) {
-        return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value);
+      function formatCurrency(value, digits) {
+        var d = typeof digits === "number" ? digits : 0;
+        return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: d, maximumFractionDigits: d }).format(value);
+      }
+      function escapeHtml(text) {
+        return String(text).replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[c];
+        });
       }
 
+      /* Spend and savings calculator UI */
+      var rowsBox = document.querySelector("[data-spend-rows]");
+      var settings = document.querySelector("[data-spend-settings]");
+      var spendResult = document.querySelector('[data-result="spend"]');
+      var MAX_ROWS = 60;
+      var exampleRows = [
+        { name: "Example: team chat", seats: 12, used: 10, price: 8, billing: "monthly" },
+        { name: "Example: design tool", seats: 5, used: 3, price: 15, billing: "monthly" },
+        { name: "Example: CRM", seats: 4, used: 4, price: 600, billing: "annual" }
+      ];
+
+      function field(label, input, extraClass) {
+        var wrap = document.createElement("label");
+        wrap.className = "tool-field" + (extraClass ? " " + extraClass : "");
+        var span = document.createElement("span");
+        span.className = "tool-label";
+        span.textContent = label;
+        wrap.appendChild(span);
+        wrap.appendChild(input);
+        return wrap;
+      }
+      function makeInput(type, key, value, attrs) {
+        var input = document.createElement("input");
+        input.className = "tool-input";
+        input.type = type;
+        input.setAttribute("data-key", key);
+        input.autocomplete = "off";
+        if (value !== undefined && value !== null) input.value = value;
+        Object.keys(attrs || {}).forEach(function (k) { input.setAttribute(k, attrs[k]); });
+        return input;
+      }
+      function addRow(data) {
+        if (!rowsBox || rowsBox.children.length >= MAX_ROWS) return;
+        data = data || { name: "", seats: "", used: "", price: "", billing: "monthly" };
+        var row = document.createElement("div");
+        row.className = "spend-row";
+        row.setAttribute("data-spend-row", "");
+        row.appendChild(field("Tool", makeInput("text", "name", data.name, { maxlength: "60", placeholder: "Tool name" }), "spend-name"));
+        row.appendChild(field("Seats paid", makeInput("number", "seats", data.seats, { min: "0", step: "1" })));
+        row.appendChild(field("Seats used", makeInput("number", "used", data.used, { min: "0", step: "1", placeholder: "all" })));
+        row.appendChild(field("Price per seat (USD)", makeInput("number", "price", data.price, { min: "0", step: "0.01" })));
+        var select = document.createElement("select");
+        select.className = "tool-input";
+        select.setAttribute("data-key", "billing");
+        [["monthly", "Monthly"], ["annual", "Yearly"]].forEach(function (opt) {
+          var o = document.createElement("option");
+          o.value = opt[0];
+          o.textContent = opt[1];
+          if (data.billing === opt[0]) o.selected = true;
+          select.appendChild(o);
+        });
+        row.appendChild(field("Billed", select));
+        var remove = document.createElement("button");
+        remove.type = "button";
+        remove.className = "button-ghost spend-remove";
+        remove.setAttribute("aria-label", "Remove this tool");
+        remove.textContent = "Remove";
+        remove.addEventListener("click", function () { row.remove(); renderSpend(); });
+        row.appendChild(remove);
+        rowsBox.appendChild(row);
+      }
+      function readRows() {
+        var rows = [];
+        rowsBox.querySelectorAll("[data-spend-row]").forEach(function (row) {
+          var data = {};
+          row.querySelectorAll("[data-key]").forEach(function (el) { data[el.getAttribute("data-key")] = el.value; });
+          rows.push(data);
+        });
+        return rows;
+      }
+      function kpi(label, value) {
+        return "<div class=\"tool-kpi\"><span>" + label + "</span><strong>" + value + "</strong></div>";
+      }
+      function renderSpend() {
+        if (!rowsBox || !spendResult) return;
+        var result = SaasSpend.compute(readRows(), {
+          headcount: settings.elements.namedItem("headcount").value,
+          annualDiscount: settings.elements.namedItem("annualDiscount").value
+        });
+        var t = result.totals;
+        if (!t.tools) {
+          spendResult.innerHTML = "<strong>Add a tool to see your SaaS spend.</strong><p>Enter at least one tool with seats and a price per seat.</p>";
+          return;
+        }
+        var html = "<strong>" + formatCurrency(t.annual) + " per year in SaaS spend (" + formatCurrency(t.monthly) + " per month)</strong>";
+        html += "<p>Across " + t.tools + " tool" + (t.tools === 1 ? "" : "s") + ". You could save about <b>" + formatCurrency(t.savingsAnnual) + " per year</b>" +
+          (t.annual > 0 ? " (" + Math.round(t.savingsPercent) + "% of spend)" : "") + ", bringing annual spend to " + formatCurrency(t.optimizedAnnual) + ".</p>";
+        html += "<div class=\"tool-kpis\">" +
+          kpi("Monthly spend", formatCurrency(t.monthly)) +
+          kpi("Annual spend", formatCurrency(t.annual)) +
+          (t.perEmployeeMonthly !== null ? kpi("Per employee per month", formatCurrency(t.perEmployeeMonthly, 2)) + kpi("Per employee per year", formatCurrency(t.perEmployeeAnnual)) : "") +
+          kpi("Unused seats", String(t.unusedSeats)) +
+          kpi("Unused seat savings per year", formatCurrency(t.unusedSavingsAnnual)) +
+          kpi("Annual billing savings per year", formatCurrency(t.switchSavingsAnnual)) +
+          "</div>";
+        html += "<table class=\"spend-table\"><thead><tr><th>Tool</th><th class=\"num\">Seats used / paid</th><th class=\"num\">Per month</th><th class=\"num\">Per year</th><th class=\"num\">Possible savings per year</th></tr></thead><tbody>";
+        result.items.forEach(function (item) {
+          html += "<tr><td>" + escapeHtml(item.name) + "</td><td class=\"num\">" + item.used + " / " + item.seats + "</td><td class=\"num\">" + formatCurrency(item.monthly, 2) +
+            "</td><td class=\"num\">" + formatCurrency(item.annual) + "</td><td class=\"num\">" + formatCurrency(item.unusedSavingsAnnual + item.switchSavingsAnnual) + "</td></tr>";
+        });
+        html += "</tbody></table>";
+        if (t.perEmployeeMonthly === null) html += "<p class=\"spend-note\">Add your headcount to see SaaS cost per employee.</p>";
+        if (t.overUsedTools) html += "<p class=\"spend-note\">" + t.overUsedTools + " tool" + (t.overUsedTools === 1 ? " has" : "s have") + " more seats used than paid. Used seats were capped at seats paid.</p>";
+        html += "<p class=\"spend-note\">Annual billing savings use the discount you entered (" + Math.round(result.discountPercent) + "%) and apply only to tools billed monthly, after unused seats are removed. Check each vendor's real annual price before switching.</p>";
+        spendResult.innerHTML = html;
+      }
+      if (rowsBox && settings && spendResult) {
+        exampleRows.forEach(addRow);
+        rowsBox.addEventListener("input", renderSpend);
+        rowsBox.addEventListener("change", renderSpend);
+        settings.addEventListener("input", renderSpend);
+        settings.addEventListener("change", renderSpend);
+        var addBtn = document.querySelector("[data-spend-add]");
+        if (addBtn) addBtn.addEventListener("click", function () { addRow(); renderSpend(); });
+        var clearBtn = document.querySelector("[data-spend-clear]");
+        if (clearBtn) clearBtn.addEventListener("click", function () { rowsBox.innerHTML = ""; addRow(); renderSpend(); });
+        renderSpend();
+      }
+
+      /* Pricing calculator (what to charge) */
       function renderPricing(form, container) {
         var income = Math.max(numberValue(form, "income", 3000), 0);
         var costs = Math.max(numberValue(form, "costs", 150), 0);
