@@ -4,12 +4,16 @@
     {
       "src": "/products/soundaiadvisors/?",
       "status": 301,
-      "headers": { "Location": "/advisory/" }
+      "headers": {
+        "Location": "/advisory/"
+      }
     },
     {
       "src": "/products/nicheslapme/?",
       "status": 301,
-      "headers": { "Location": "/products/nicheslap/" }
+      "headers": {
+        "Location": "/products/nicheslap/"
+      }
     },
     {
       "handle": "filesystem"
@@ -44,7 +48,8 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "status": 404,
+      "dest": "/404.html"
     }
   ]
 }
