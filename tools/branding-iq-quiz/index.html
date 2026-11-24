@@ -47,7 +47,7 @@
     "url": "https://chamsdel.online/tools/branding-iq-quiz/",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Any",
-    "description": "A free 15-question quiz on branding fundamentals — positioning, voice, niche, visual identity, and content output. Returns a score and a personalized weakness recommendation.",
+    "description": "A free 15-question quiz on branding fundamentals: positioning, voice, niche, visual identity, and content output. Returns a score and a personalized weakness recommendation.",
     "isAccessibleForFree": true,
     "author": { "@type": "Person", "name": "Chaminda Delpagodage", "url": "https://chamsdel.online" },
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -89,17 +89,17 @@
       {
         "@type": "Question",
         "name": "What's the difference between a brand archetype quiz and a branding quiz?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A brand archetype quiz identifies the personality your brand embodies (Sage, Rebel, Hero, etc.). A branding quiz tests whether your overall brand system — niche, voice, identity, output — is strong. Archetype is one input; branding IQ measures the whole output." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A brand archetype quiz identifies the personality your brand embodies (Sage, Rebel, Hero, etc.). A branding quiz tests whether your overall brand system (niche, voice, identity, output) is strong. Archetype is one input; branding IQ measures the whole output." }
       },
       {
         "@type": "Question",
         "name": "Is this quiz useful if I don't have a business yet?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. It works for personal brands, indie creators on X or LinkedIn, solopreneurs, and founders who haven't launched yet. The fundamentals — niche, voice, positioning — apply before you have revenue." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. It works for personal brands, indie creators on X or LinkedIn, solopreneurs, and founders who haven't launched yet. The fundamentals (niche, voice, positioning) apply before you have revenue." }
       },
       {
         "@type": "Question",
         "name": "What do I do if I score low on niche?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A weak niche is the most common reason creators fail to get traction. Use the Ikigai framework to find where your passion, skill, market demand, and monetization potential overlap — IkigaiNiche is built exactly for this." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A weak niche is the most common reason creators fail to get traction. Use the Ikigai framework to find where your passion, skill, market demand, and monetization potential overlap, IkigaiNiche is built exactly for this." }
       }
     ]
   }
@@ -367,9 +367,9 @@
       var fixes = {
         niche:       { title: "Fix your niche first", copy: "Everything else compounds off niche. Use the Ikigai framework to find where passion, skill, demand, and reward intersect.", cta: { href: "/products/ikigainiche/", text: "Explore IkigaiNiche →" }, secondary: { href: "/tools/niche-clarity-scorecard/", text: "Score your niche across 6 dimensions →" } },
         positioning: { title: "Sharpen your positioning", copy: "You need a sentence that names your audience, their pain, and your angle. Work back from the Ikigai intersection to find your unfair wedge.", cta: { href: "/products/ikigainiche/", text: "Explore IkigaiNiche →" }, secondary: { href: "/tools/niche-clarity-scorecard/", text: "Score your niche across 6 dimensions →" } },
-        voice:       { title: "Lock your voice", copy: "Inconsistent voice is the most expensive brand problem on X. Nail your archetype, then write every reply in it — ReplyWisely keeps you on-voice at scale.", cta: { href: "/products/replywisely/", text: "Explore ReplyWisely →" }, secondary: { href: "/tools/brand-archetype-quiz/", text: "Find your archetype →" } },
-        identity:    { title: "Tighten your visual identity", copy: "Start with the bio — it's the most-visited part of your brand. Make it niche-specific with a hook and proof.", cta: { href: "/tools/x-bio-generator/", text: "Generate an optimized bio →" }, secondary: { href: "/tools/brand-archetype-wheel/", text: "Anchor visuals to your archetype →" } },
-        output:      { title: "Build a content pipeline", copy: "You don't have a content problem — you have a system problem. Start every post from a proven hook so the blank page stops being the bottleneck.", cta: { href: "/tools/tweet-hook-generator/", text: "Generate hooks for posts →" }, secondary: { href: "/tools/build-in-public-post-generator/", text: "Generate post angles →" } }
+        voice:       { title: "Lock your voice", copy: "Inconsistent voice is the most expensive brand problem on X. Nail your archetype, then write every reply in it, ReplyWisely keeps you on-voice at scale.", cta: { href: "/products/replywisely/", text: "Explore ReplyWisely →" }, secondary: { href: "/tools/brand-archetype-quiz/", text: "Find your archetype →" } },
+        identity:    { title: "Tighten your visual identity", copy: "Start with the bio, it's the most-visited part of your brand. Make it niche-specific with a hook and proof.", cta: { href: "/tools/x-bio-generator/", text: "Generate an optimized bio →" }, secondary: { href: "/tools/brand-archetype-wheel/", text: "Anchor visuals to your archetype →" } },
+        output:      { title: "Build a content pipeline", copy: "You don't have a content problem, you have a system problem. Start every post from a proven hook so the blank page stops being the bottleneck.", cta: { href: "/tools/tweet-hook-generator/", text: "Generate hooks for posts →" }, secondary: { href: "/tools/build-in-public-post-generator/", text: "Generate post angles →" } }
       };
 
       function numberValue(form, name) {
@@ -401,10 +401,10 @@
         });
 
         var level, verdict;
-        if (score >= 80) { level = "Strong brand foundation"; verdict = "Your branding foundation is genuinely solid. Most creators at this level have already seen compounding results — the work now is staying consistent and resisting scope creep."; }
+        if (score >= 80) { level = "Strong brand foundation"; verdict = "Your branding foundation is genuinely solid. Most creators at this level have already seen compounding results, the work now is staying consistent and resisting scope creep."; }
         else if (score >= 60) { level = "Solid with one weak link"; verdict = "You have a real foundation but one pillar is dragging the whole brand down. Fix that pillar and the rest of your work will compound faster."; }
-        else if (score >= 40) { level = "Foundation is fuzzy"; verdict = "Multiple pillars need work. Don't try to fix everything at once — start with the weakest and let the others follow."; }
-        else { level = "Start with niche"; verdict = "You're early. That's fine. Build from niche up — without a clear niche, voice and output can't compound."; }
+        else if (score >= 40) { level = "Foundation is fuzzy"; verdict = "Multiple pillars need work. Don't try to fix everything at once, start with the weakest and let the others follow."; }
+        else { level = "Start with niche"; verdict = "You're early. That's fine. Build from niche up, without a clear niche, voice and output can't compound."; }
 
         var pillarLabel = {};
         pillars.forEach(function (p) { pillarLabel[p.key] = p.label; });

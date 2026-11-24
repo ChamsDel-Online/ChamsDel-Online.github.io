@@ -74,12 +74,12 @@
       {
         "@type": "Question",
         "name": "How do I write a tweet hook that actually gets engagement?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A strong hook does one of three things in under 15 words: asks a question that creates curiosity, states something that contradicts what the reader believes, or opens a story they want the ending to. Write the hook before the rest of the post — if the hook doesn't stop the scroll, nothing else in the thread matters." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A strong hook does one of three things in under 15 words: asks a question that creates curiosity, states something that contradicts what the reader believes, or opens a story they want the ending to. Write the hook before the rest of the post, if the hook doesn't stop the scroll, nothing else in the thread matters." }
       },
       {
         "@type": "Question",
         "name": "What makes a good tweet opener on X?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Good openers have stakes, specificity, and an identity trigger. Stakes make the reader care (what happens if they don't read this?). Specificity (a number, a timeframe, a named thing) beats vague claims. Identity triggers signal to a specific audience that this post is for them. Avoid throat-clearing — start with the sharpest line you have." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Good openers have stakes, specificity, and an identity trigger. Stakes make the reader care (what happens if they don't read this?). Specificity (a number, a timeframe, a named thing) beats vague claims. Identity triggers signal to a specific audience that this post is for them. Avoid throat-clearing, start with the sharpest line you have." }
       },
       {
         "@type": "Question",
@@ -94,7 +94,7 @@
       {
         "@type": "Question",
         "name": "Can I use these hooks for Twitter threads and LinkedIn too?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The formulas are platform-agnostic attention patterns — they work on X threads, LinkedIn posts, YouTube titles, and email subject lines. The tone shifts (LinkedIn rewards contrarian takes less aggressively than X), but the underlying structures transfer cleanly." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The formulas are platform-agnostic attention patterns, they work on X threads, LinkedIn posts, YouTube titles, and email subject lines. The tone shifts (LinkedIn rewards contrarian takes less aggressively than X), but the underlying structures transfer cleanly." }
       }
     ]
   }
@@ -247,42 +247,42 @@
         var t = toneMap[tone] || toneMap.bold;
         var hooks = [];
 
-        /* 1 — The Question Hook (type: questions) */
+        /* 1: The Question Hook (type: questions) */
         hooks.push({
           type: "questions",
           formula: "The Question Hook",
           text: t.prefix + "What if " + topic + " was " + t.intensifier + " about what " + audience + " secretly want most?"
         });
 
-        /* 2 — The Contrarian Hook (type: statements) */
+        /* 2: The Contrarian Hook (type: statements) */
         hooks.push({
           type: "statements",
           formula: "The Contrarian Hook",
           text: t.prefix + "Unpopular opinion: most " + audience + " get " + topic + " completely wrong."
         });
 
-        /* 3 — The Number Hook (type: statements) */
+        /* 3: The Number Hook (type: statements) */
         hooks.push({
           type: "statements",
           formula: "The Number Hook",
           text: t.prefix + "3 things I learned about " + topic + " that " + t.verb + " how I work:"
         });
 
-        /* 4 — The Story Hook (type: stories) */
+        /* 4: The Story Hook (type: stories) */
         hooks.push({
           type: "stories",
           formula: "The Story Hook",
           text: t.prefix + "I spent 6 months on " + topic + ". Here's what nobody tells " + audience + ":"
         });
 
-        /* 5 — The Challenge Hook (type: statements) */
+        /* 5: The Challenge Hook (type: statements) */
         hooks.push({
           type: "statements",
           formula: "The Challenge Hook",
           text: t.prefix + "Stop doing " + topic + " the hard way. " + capitalize(audience) + ", this is for you:"
         });
 
-        /* 6 — The Vulnerable Hook (type: stories) */
+        /* 6: The Vulnerable Hook (type: stories) */
         hooks.push({
           type: "stories",
           formula: "The Vulnerable Hook",

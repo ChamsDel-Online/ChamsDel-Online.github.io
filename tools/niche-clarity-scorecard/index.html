@@ -47,7 +47,7 @@
     "url": "https://chamsdel.online/tools/niche-clarity-scorecard/",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Any",
-    "description": "A free niche validation tool. Rate six dimensions — passion, expertise, market demand, competition, monetization clarity, and audience accessibility — and get an instant weighted clarity score.",
+    "description": "A free niche validation tool. Rate six dimensions (passion, expertise, market demand, competition, monetization clarity, and audience accessibility) and get an instant weighted clarity score.",
     "isAccessibleForFree": true,
     "author": { "@type": "Person", "name": "Chaminda Delpagodage", "url": "https://chamsdel.online" },
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -74,7 +74,7 @@
       {
         "@type": "Question",
         "name": "How do I pick a niche that will actually work?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A workable niche sits at the overlap of four things: what you care about, what you're good at, what people will pay for, and what you can reach. Score each on a 1-10 scale and look at the weakest dimension — that's the one that kills most niches before they start. The Niche Clarity Scorecard automates this and gives you a weighted 0-100 score in seconds." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A workable niche sits at the overlap of four things: what you care about, what you're good at, what people will pay for, and what you can reach. Score each on a 1-10 scale and look at the weakest dimension, that's the one that kills most niches before they start. The Niche Clarity Scorecard automates this and gives you a weighted 0-100 score in seconds." }
       },
       {
         "@type": "Question",
@@ -84,7 +84,7 @@
       {
         "@type": "Question",
         "name": "How do I validate a niche before investing months of work?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Before building anything, talk to 10 people in the niche and get at least 3 to describe the problem in the same words. Check search volume on the core queries. Verify there's an existing paid tool or service — competition is a demand signal, not a warning. If all three check out, your niche is validated enough to ship an MVP." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Before building anything, talk to 10 people in the niche and get at least 3 to describe the problem in the same words. Check search volume on the core queries. Verify there's an existing paid tool or service, competition is a demand signal, not a warning. If all three check out, your niche is validated enough to ship an MVP." }
       },
       {
         "@type": "Question",
@@ -94,12 +94,12 @@
       {
         "@type": "Question",
         "name": "How is Ikigai used for finding a niche?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ikigai maps the overlap of four dimensions: what you love, what you're good at, what the world needs, and what you can be paid for. The center is your niche. IkigaiNiche turns that framework into a structured discovery process — it's the full version of what the scorecard checks at a glance." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Ikigai maps the overlap of four dimensions: what you love, what you're good at, what the world needs, and what you can be paid for. The center is your niche. IkigaiNiche turns that framework into a structured discovery process, it's the full version of what the scorecard checks at a glance." }
       },
       {
         "@type": "Question",
         "name": "What score means my niche is ready to commit to?",
-        "acceptedAnswer": { "@type": "Answer", "text": "80+ means strong alignment across all six dimensions — commit and build. 60-79 means the foundation is solid but one or two areas need sharpening first. Below 60 means dig deeper before investing serious time. The scorecard also tells you which single dimension is dragging your score down so you know exactly what to fix." }
+        "acceptedAnswer": { "@type": "Answer", "text": "80+ means strong alignment across all six dimensions, commit and build. 60-79 means the foundation is solid but one or two areas need sharpening first. Below 60 means dig deeper before investing serious time. The scorecard also tells you which single dimension is dragging your score down so you know exactly what to fix." }
       }
     ]
   }
@@ -290,10 +290,10 @@
           verdict = "Promising but needs sharpening";
           recommendation = "The foundation is solid, but one or two dimensions are holding you back. Focus on improving your weakest area before going all in.";
         } else if (score >= 40) {
-          verdict = "Fuzzy — dig deeper before committing";
+          verdict = "Fuzzy: dig deeper before committing";
           recommendation = "There are enough question marks that committing now would be risky. Spend more time validating demand and clarifying your monetization path.";
         } else {
-          verdict = "Not ready — explore more options";
+          verdict = "Not ready: explore more options";
           recommendation = "This niche needs significantly more exploration. Consider using <a class=\"tool-link\" href=\"/products/ikigainiche/\">IkigaiNiche</a> to systematically discover where your passion, skill, and market opportunity overlap.";
         }
 
@@ -307,7 +307,7 @@
           "<div class=\"tool-analysis\">" +
             "<h4>" + verdict + "</h4>" +
             "<p>" + recommendation + "</p>" +
-            (score < 80 ? "<p>For a structured approach to niche discovery, try <a class=\"tool-link\" href=\"/products/ikigainiche/\">IkigaiNiche</a> — it maps where passion, skill, demand, and reward intersect.</p>" : "") +
+            (score < 80 ? "<p>For a structured approach to niche discovery, try <a class=\"tool-link\" href=\"/products/ikigainiche/\">IkigaiNiche</a>, it maps where passion, skill, demand, and reward intersect.</p>" : "") +
           "</div>";
       }
 

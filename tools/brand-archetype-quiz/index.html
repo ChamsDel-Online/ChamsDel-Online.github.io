@@ -74,7 +74,7 @@
       {
         "@type": "Question",
         "name": "What is a brand archetype quiz?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A brand archetype quiz is a short assessment that maps your answers to one of the 12 Jungian archetypes — Innocent, Sage, Explorer, Rebel, Hero, Magician, Everyman, Lover, Jester, Caregiver, Creator, or Ruler. The result tells you the personality your brand should embody across voice, visuals, and content." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A brand archetype quiz is a short assessment that maps your answers to one of the 12 Jungian archetypes: Innocent, Sage, Explorer, Rebel, Hero, Magician, Everyman, Lover, Jester, Caregiver, Creator, or Ruler. The result tells you the personality your brand should embody across voice, visuals, and content." }
       },
       {
         "@type": "Question",
@@ -84,7 +84,7 @@
       {
         "@type": "Question",
         "name": "What are the 12 brand archetypes?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Innocent, Sage, Explorer, Rebel, Hero, Magician, Everyman, Lover, Jester, Caregiver, Creator, and Ruler. Each represents a distinct motivation — from safety and wisdom to freedom, liberation, mastery, and control — and translates to a measurably different brand voice." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Innocent, Sage, Explorer, Rebel, Hero, Magician, Everyman, Lover, Jester, Caregiver, Creator, and Ruler. Each represents a distinct motivation, from safety and wisdom to freedom, liberation, mastery, and control, and translates to a measurably different brand voice." }
       },
       {
         "@type": "Question",
@@ -99,7 +99,7 @@
       {
         "@type": "Question",
         "name": "What's the difference between this and a personality quiz?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A personality quiz tells you who you are privately. A brand archetype quiz tells you who your brand is publicly — the persona your audience should experience consistently. They can overlap, but they don't have to." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A personality quiz tells you who you are privately. A brand archetype quiz tells you who your brand is publicly, the persona your audience should experience consistently. They can overlap, but they don't have to." }
       }
     ]
   }
@@ -305,14 +305,14 @@
       var archetypes = {
         innocent:   { name: "Innocent",   motto: "Keep it honest, hopeful, and simple.", voice: "Warm, sincere, unironic. Speaks in plain language. Avoids cynicism.", reply: "\"Love this. Small honest wins like this are the ones that compound.\"", post: "\"You don't need a clever hook. You need one true sentence shipped every day for 90 days. That's the whole game.\"" },
         sage:       { name: "Sage",       motto: "Teach what you've figured out.", voice: "Clear, evidence-led, teacher-like. Favors frameworks and receipts.", reply: "\"Two things worth noting here: (1) the effect only shows up at scale, (2) the mechanism matters more than the outcome. Here's what I've tested…\"", post: "\"Most founders conflate retention with engagement. They aren't the same. Here's a 3-part framework that separates them cleanly:\"" },
-        explorer:   { name: "Explorer",   motto: "Go further than the map suggests.", voice: "Restless, curious, wide-lens. Asks 'what if' and names new territory.", reply: "\"Interesting — have you tried the inverse? I ran a 2-week detour on this and the edge was somewhere unexpected.\"", post: "\"I built this week in a cabin with no wifi. Three product insights came from boredom. Here's what comfort was costing me:\"" },
+        explorer:   { name: "Explorer",   motto: "Go further than the map suggests.", voice: "Restless, curious, wide-lens. Asks 'what if' and names new territory.", reply: "\"Interesting, have you tried the inverse? I ran a 2-week detour on this and the edge was somewhere unexpected.\"", post: "\"I built this week in a cabin with no wifi. Three product insights came from boredom. Here's what comfort was costing me:\"" },
         rebel:      { name: "Rebel",      motto: "Break the rule that shouldn't be there.", voice: "Sharp, contrarian, provocative. Names the emperor's missing clothes.", reply: "\"Respectfully, this is the advice that keeps 90% of founders stuck. Here's the opposite move and why it works:\"", post: "\"Everyone's optimizing their funnel. Nobody's fixing the product. Your funnel is fine. Your thing is just not that good yet. Say it with me.\"" },
         hero:       { name: "Hero",       motto: "Show up. Do the hard thing. Win.", voice: "Rallying, challenging, action-oriented. Shorter sentences. Verbs up front.", reply: "\"Stop debating. Ship the smallest embarrassing version this week. Momentum beats perfection every time.\"", post: "\"You are one hard decision away from the next level. Make it today. Publicly. The version of you on the other side already made it.\"" },
-        magician:   { name: "Magician",   motto: "Change how people see the problem.", voice: "Visionary, reframing. Turns ordinary questions into bigger ones.", reply: "\"You're solving the symptom. The real leverage is one layer up — reframe it as a distribution problem, not a product problem.\"", post: "\"Pricing isn't a number. It's a story about who you think you are. Change the story, the number follows. Here's how that plays out in practice:\"" },
-        everyman:   { name: "Everyman",   motto: "We're all in this together.", voice: "Grounded, honest, same-boat. No pedestal, no jargon.", reply: "\"Same here — I was also stuck on this last month. What finally helped was the unsexy thing nobody talks about:\"", post: "\"Real talk: most of us are figuring it out as we go. Here's the messy version of my week, including the part I'd rather not share:\"" },
+        magician:   { name: "Magician",   motto: "Change how people see the problem.", voice: "Visionary, reframing. Turns ordinary questions into bigger ones.", reply: "\"You're solving the symptom. The real leverage is one layer up, reframe it as a distribution problem, not a product problem.\"", post: "\"Pricing isn't a number. It's a story about who you think you are. Change the story, the number follows. Here's how that plays out in practice:\"" },
+        everyman:   { name: "Everyman",   motto: "We're all in this together.", voice: "Grounded, honest, same-boat. No pedestal, no jargon.", reply: "\"Same here, I was also stuck on this last month. What finally helped was the unsexy thing nobody talks about:\"", post: "\"Real talk: most of us are figuring it out as we go. Here's the messy version of my week, including the part I'd rather not share:\"" },
         lover:      { name: "Lover",      motto: "Make it feel, and make it beautiful.", voice: "Poetic, vulnerable, sensory. Craft-led. Takes its time on a sentence.", reply: "\"This is tender and true. The quiet parts are where the real craft lives. Thank you for writing it this way.\"", post: "\"Some products are functional. A few are beautiful. A handful make you fall in love with the act of using them. I want to build the third kind.\"" },
         jester:     { name: "Jester",     motto: "Seriousness is the enemy.", voice: "Playful, irreverent, absurd. Subverts expectations. Low word count, high surprise.", reply: "\"This is giving 'I peaked in onboarding.' Respectfully.\"", post: "\"Started a SaaS. Named it. Bought the domain. Built nothing. Anyway, update: I am now a founder.\"" },
-        caregiver:  { name: "Caregiver",  motto: "Look after the ones you're building for.", voice: "Supportive, empathic, protective. Uses 'you' often. Safe to land in.", reply: "\"You're not behind. You're in the middle of a hard thing. Rest counts as progress here — I mean that.\"", post: "\"If you're a builder reading this at 1am: drink water. Close the laptop. Your users will still be there tomorrow. Your nervous system might not.\"" },
+        caregiver:  { name: "Caregiver",  motto: "Look after the ones you're building for.", voice: "Supportive, empathic, protective. Uses 'you' often. Safe to land in.", reply: "\"You're not behind. You're in the middle of a hard thing. Rest counts as progress here, I mean that.\"", post: "\"If you're a builder reading this at 1am: drink water. Close the laptop. Your users will still be there tomorrow. Your nervous system might not.\"" },
         creator:    { name: "Creator",    motto: "Make the thing that doesn't exist yet.", voice: "Original, aesthetic, maker-driven. Shares process, textures, decisions.", reply: "\"Love the restraint on the typography here. What made you choose the tighter leading? That's the move that sells the whole composition.\"", post: "\"Spent three hours on a button. Moved it 4px. It's better. Nobody will notice. This is the job.\"" },
         ruler:      { name: "Ruler",      motto: "Set the standard everyone else chases.", voice: "Decisive, elevated, premium. Speaks with authority. No hedging.", reply: "\"This is a solved problem. The playbook is three steps. Most people skip step two because it's inconvenient. It's also the one that matters.\"", post: "\"Stop competing on price. Your category has a ceiling and a floor. Move to the ceiling and the rules change entirely. Here's how that transition works:\"" }
       };
@@ -371,7 +371,7 @@
             "<div class=\"tool-kpi\"><span>Primary score</span><strong>" + primaryScore + "/10</strong></div>" +
           "</div>" +
           "<div class=\"tool-analysis\">" +
-            "<h4>" + p.name + " — " + p.motto + "</h4>" +
+            "<h4>" + p.name + ": " + p.motto + "</h4>" +
             "<p><strong>Voice:</strong> " + p.voice + "</p>" +
             "<p><strong>Sample reply voice:</strong> " + p.reply + "</p>" +
             "<p><strong>Sample post voice:</strong> " + p.post + "</p>" +
@@ -380,8 +380,8 @@
             "<h4 style=\"margin-top:18px\">Put your archetype to work on X</h4>" +
             "<p>Knowing your archetype is step one. The harder part is sounding like it every day, across dozens of replies and posts. These help:</p>" +
             "<ul>" +
-              "<li><a class=\"tool-link\" href=\"/products/replywisely/\">ReplyWisely</a> — reply on X in your archetype's tone so every reply reinforces your brand instead of diluting it.</li>" +
-              "<li><a class=\"tool-link\" href=\"/products/ikigainiche/\">IkigaiNiche</a> — find the niche where a " + p.name + " has the strongest edge.</li>" +
+              "<li><a class=\"tool-link\" href=\"/products/replywisely/\">ReplyWisely</a>, reply on X in your archetype's tone so every reply reinforces your brand instead of diluting it.</li>" +
+              "<li><a class=\"tool-link\" href=\"/products/ikigainiche/\">IkigaiNiche</a>, find the niche where a " + p.name + " has the strongest edge.</li>" +
             "</ul>" +
           "</div>";
       }
