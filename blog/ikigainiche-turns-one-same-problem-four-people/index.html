@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IkigaiNiche turns one: same problem, four different people | ChamsDel Online</title>
+  <meta name="description" content="A year of commits on IkigaiNiche: three renames, four people it was built for, one problem that never moved. What the log taught me about staying vs pivoting, and how to write your own.">
+  <meta name="author" content="Chaminda Delpagodage">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F5EFE4">
+  <link rel="canonical" href="https://chamsdel.online/blog/ikigainiche-turns-one-same-problem-four-people/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ChamsDel Online">
+  <meta property="og:title" content="IkigaiNiche turns one: same problem, four different people">
+  <meta property="og:description" content="I kept the problem for a year and kept changing who it was for. The pivot log from my own commits, what I read in it, and five steps to write yours tomorrow.">
+  <meta property="og:url" content="https://chamsdel.online/blog/ikigainiche-turns-one-same-problem-four-people/">
+  <meta property="og:image" content="https://chamsdel.online/og/blog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ChamsDel Online. Building at 43.">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Chaminda Delpagodage">
+  <meta property="article:published_time" content="2026-11-25">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@chamsdel">
+  <meta name="twitter:creator" content="@chamsdel">
+  <meta name="twitter:title" content="IkigaiNiche turns one: same problem, four different people">
+  <meta name="twitter:description" content="I kept the problem for a year and kept changing who it was for. The pivot log from my own commits, what I read in it, and five steps to write yours tomorrow.">
+  <meta name="twitter:image" content="https://chamsdel.online/og/blog.png">
+  <meta name="twitter:image:alt" content="ChamsDel Online. Building at 43.">
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "IkigaiNiche turns one: same problem, four different people", "description": "A year of commits on IkigaiNiche: three renames, four people it was built for, one problem that never moved. What the log taught me about staying vs pivoting, and how to write your own.", "author": {"@type": "Person", "name": "Chaminda Delpagodage", "url": "https://chamsdel.online/"}, "publisher": {"@type": "Organization", "name": "ChamsDel Online", "url": "https://chamsdel.online/"}, "url": "https://chamsdel.online/blog/ikigainiche-turns-one-same-problem-four-people/", "mainEntityOfPage": "https://chamsdel.online/blog/ikigainiche-turns-one-same-problem-four-people/", "image": "https://chamsdel.online/og/blog.png", "datePublished": "2026-11-25", "dateModified": "2026-11-25"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://chamsdel.online/"}, {"@type": "ListItem", "position": 2, "name": "Build Log", "item": "https://chamsdel.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "IkigaiNiche turns one: same problem, four different people", "item": "https://chamsdel.online/blog/ikigainiche-turns-one-same-problem-four-people/"}]}]}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="Chaminda Delpagodage home"><span>Chaminda Delpagodage</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/products/">Builds</a>
+        <a href="/tools/">Tools</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#story">Story</a>
+        <a href="/first-dollar/">Sprint</a>
+        <a href="/advisory/">AI Advisory</a>
+        <a class="button" href="https://x.com/chamsdel" target="_blank" rel="noopener noreferrer">Follow @chamsdel</a>
+      </nav>
+
+    </div>
+  </header>
+
+        <main class="site-shell page">
+    <article class="card article-body">
+      <div class="eyebrow">Build log</div>
+      <h1 class="article-title">IkigaiNiche turns one: same problem, four different people.</h1>
+      <div class="article-meta"><span>By Chaminda Delpagodage</span><span>November 25, 2026</span><span>Staying or pivoting</span></div>
+
+      <p>One year ago tomorrow, on November 26, 2025, I made the first commit on the project that is now <a class="text-link" href="/products/ikigainiche/">IkigaiNiche</a>. Since then it has been renamed three times and built for four different people. Four of my products have postmortems on this site. IkigaiNiche is not one of them.</p>
+      <p>This week I went back through the commit history and wrote down every change that mattered. Here is the log, what I see in it now, and how to write the same log for your own project tomorrow.</p>
+
+      <h2>The log, from my own commits</h2>
+      <ul>
+        <li><strong>November 26, 2025.</strong> First version, called JanFifteenth: a community for working parents starting their founder journey, with an ikigai finder and a waitlist.</li>
+        <li><strong>November 28, 2025.</strong> Two days later. The commit message, word for word: "Pivoting away from working parents, to helping people find their ikigai niche." The ikigai finder became the product, with AI helping fill in the four circles.</li>
+        <li><strong>December 2, 2025.</strong> Renamed to ikigainiche.app.</li>
+        <li><strong>February 28, 2026.</strong> Rebranded as Ikigai Niche Finder, with a PDF report, pitched as profitable niche discovery.</li>
+        <li><strong>April 16, 2026.</strong> Made it permanently free ("always free" replaced "free for a limited time") and added a "start from your job role" option so experienced professionals did not have to list their skills by hand. By then it was a five-step tool with AI suggestions, traffic light scoring, reflective tests and ranked results.</li>
+        <li><strong>November 16, 2026.</strong> Rebuilt as a guided journey for someone who has never had a business idea.</li>
+        <li><strong>November 19, 2026.</strong> Renamed IkigaiNiche, and rewrote the terms to match the free product it is now.</li>
+      </ul>
+
+      <h2>Why the last rebuild happened</h2>
+      <p>This is how I <a class="text-link" href="https://x.com/chams_builds/status/2122415313593504127" target="_blank" rel="noopener noreferrer">put it on X</a> on November 16:</p>
+      <blockquote class="pullquote" style="margin:0 0 1.4rem"><p>My wife has to write a business plan for a class.</p><p>I told her: don't invent one for the grade. Find one you'd actually start.</p><p>Problem: she's never had a business idea and didn't know where to begin.</p><p>So I rebuilt Ikigai Niche Finder for exactly that person.</p></blockquote>
+      <p>Reading the log back, that is the first version I built for one person I could name. Every earlier version was written for a group: working parents, people curious about their ikigai, people looking for a profitable niche, professionals with a job title.</p>
+      <p>Building for her changed what the product asks. It never asks for an idea, because she did not have one. It asks about you, one question per screen: what you lose hours to, what people come to you for, who you find yourself rooting for. Then a person you would enjoy helping for years, their problem in their own words, and an honest read on whether anyone pays to fix it. The rebuild also deleted most of what the older version did: skill cataloging, traffic light scoring, reflective tests, AI chat, the PDF download and the community features. Those were for the earlier people.</p>
+
+      <h2>What I see in the log now</h2>
+      <p><strong>The problem never moved.</strong> Every version is for someone who wants to start something and does not know what. What kept moving was the person. Changing who it is for is a pivot too, even when the problem stays the same, and each one means the feedback you get next comes from somebody new.</p>
+      <p><strong>Some changes were not answers.</strong> The first pivot came two days after the first commit. I cannot find anything in the history that says a user asked for it. That change came from me. It is the same pattern I wrote about in <a class="text-link" href="/blog/small-bets-only-work-if-you-stay/">small bets only work if you stay</a>: some exits are answers, and some happen before the idea had a chance to say anything.</p>
+      <p><strong>A real person is easier to build for than a group.</strong> This morning I <a class="text-link" href="https://x.com/chams_builds/status/2125558797074862232" target="_blank" rel="noopener noreferrer">posted</a>:</p>
+      <blockquote class="pullquote" style="margin:0 0 1.4rem"><p>single most important skill for a new founder:</p><p>putting yourself in the shoes of your ICP.</p><p>two things can happen when you do that:</p><p>a) you see what's actually bothering your ICP.</p><p>b) you realize that's not your actual ICP.</p><p>either one is a big win.</p></blockquote>
+      <p>With "working parents" I could only imagine their shoes. With one real person, I can ask her where she gets stuck.</p>
+      <p>I cannot tell you yet whether this version works. It is nine days old. What I can say is that it is the first version where I know exactly who to ask.</p>
+
+      <h2>How to write your own pivot log tomorrow</h2>
+      <ol>
+        <li><strong>Print your history oldest first.</strong> In a git repo: <code>git log --reverse --date=short --format="%ad %s"</code>. If you do not use git, your old landing pages, launch posts and pricing emails work too.</li>
+        <li><strong>Mark every change to four things:</strong> the name, the headline, the price, and who it is for.</li>
+        <li><strong>Write one line per mark:</strong> who it was for before, who it was for after, and what told you to change.</li>
+        <li><strong>Read the "what told you" column.</strong> If most lines are empty or say "me", you are changing on mood, not on anything a user did.</li>
+        <li><strong>If the person keeps changing and the problem does not,</strong> pick one real person you can name and build the next version for them. Ask them before you change it again.</li>
+      </ol>
+
+      <h2>One thing to do tomorrow</h2>
+      <p>Before you change who your product is for, write down what the current person did with it: came back, asked for something, paid, or nothing. If you cannot fill that line in, you have not given them a fair run yet. The <a class="text-link" href="/blog/two-questions-before-i-pick-a-problem-worth-solving/">two questions I ask before I pick a problem</a> help with the other half: whether the problem itself is worth staying with.</p>
+
+      <h2>If you have never had a business idea</h2>
+      <p>That is the person IkigaiNiche is built for now. I wrote the steps it walks you through, so you can do them with a notebook, in <a class="text-link" href="https://ikigainiche.app/blog/how-to-come-up-with-a-business-idea">how to come up with a business idea when you have never had one</a>. Or try <a class="text-link" href="https://ikigainiche.app/">IkigaiNiche</a> itself: about 10 minutes, free, no sign-up.</p>
+
+      <p><strong>Related:</strong> <a class="text-link" href="/blog/how-ikigainiche-helps-you-find-a-better-niche/">How IkigaiNiche helps you find a niche</a> &middot; <a class="text-link" href="/blog/small-bets-only-work-if-you-stay/">Small bets only work if you stay</a> &middot; <a class="text-link" href="/blog/two-questions-before-i-pick-a-problem-worth-solving/">Two questions before I pick a problem</a> &middot; <a class="text-link" href="/blog/painkiller-or-vitamin-ask-your-posts-first/">Painkiller or vitamin?</a></p>
+      <p><strong>Follow the build:</strong> <a class="text-link" href="https://x.com/chams_builds" target="_blank" rel="noopener noreferrer">@chams_builds on X</a></p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <div class="footer-copy">ChamsDel Online LLC. Built by Chaminda Delpagodage.</div>
+      <div class="footer-links">
+        <a class="text-link" href="/privacy.html">Privacy</a>
+        <a class="text-link" href="/terms.html">Terms</a>
+        <a class="text-link" href="https://x.com/chamsdel" target="_blank" rel="noopener noreferrer">X</a>
+        <a class="text-link" href="https://www.linkedin.com/in/chamindadelpagodage/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
